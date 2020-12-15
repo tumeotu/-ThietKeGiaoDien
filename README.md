@@ -10,6 +10,8 @@
   
   "!" Nếu thêm chức năng. VD:  ! Chỉnh sửa màu nút đăng nhập
   
+  Nội dung commit phải có ý nghĩa
+  
  2. Cách chạy
  
   run "npm install" để cài đặt các packages nếu chưa cài đặt
