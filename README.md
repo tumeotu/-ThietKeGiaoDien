@@ -1,6 +1,6 @@
 # -ThietKeGiaoDien
 
-1. Cach commit 
+1. Cach commit \n
   Mỗi lần commit phải fetch trước khi push
   "+" Nếu thêm chức năng. VD:  + Thêm giao diện nút đăng nhập
   "-" Nếu xóa chức năng. VD:   - Xóa giao diện nút đăng nhập
