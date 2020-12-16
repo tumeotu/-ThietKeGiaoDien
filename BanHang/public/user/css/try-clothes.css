@@ -46,6 +46,38 @@
     display: inline-block;
     font-size: 16px;
 }
-.dropdown-toggle{
+.card{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.image{
+    border-radius:8px 8px 0 0;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
 
+.container {
+    position: relative;
+    text-align: center;
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.buttonFile {
+    border: none;
+    background: rgba(76, 175, 80, 0);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
