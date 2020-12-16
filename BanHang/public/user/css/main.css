@@ -5,11 +5,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
-body {
-    font-family: 'Roboto', sans-serif;
-    position: relative;
-    font-weight: 400px;
-}
+/*body {*/
+/*    font-family: 'Roboto', sans-serif;*/
+/*    position: relative;*/
+/*    font-weight: 400px;*/
+/*}*/
 
 ul li {
     list-style: none;
@@ -1028,23 +1028,17 @@ h2.title {
 }
 
 #recommended-item-carousel .carousel-inner .item {
-    padding-left: 0;
+    padding: 10px;
 }
 
 .recommended-item-control {
     position: absolute;
-    top: 41%;
+    top: 40%;
 }
 
 .recommended-item-control i {
-    background: none repeat scroll 0 0 #FE980F;
-    color: #FFFFFF;
-    font-size: 20px;
-    padding: 4px 10px;
-}
-
-.recommended-item-control i:hover {
-    background: #ccccc6;
+    color: #000000;
+    font-size: 40px;
 }
 
 .recommended_items h2 {}
