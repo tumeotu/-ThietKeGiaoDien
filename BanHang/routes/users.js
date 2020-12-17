@@ -5,9 +5,6 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('user/home', { title: 'Trang chủ',layout: 'user' });
 });
-router.get('/index.html', function(req, res, next) {
-  res.render('user/home', { title: 'Trang chủ',layout: 'user'});
-});
 
 router.get('/checkout.html', function(req, res, next) {
   res.render('user/checkout', { title: 'Thanh toán',layout: 'user' });
