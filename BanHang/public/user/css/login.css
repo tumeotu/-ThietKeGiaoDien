@@ -1,0 +1,38 @@
+#loginbanner{
+    width: 900px;
+    padding-left: 3%;
+}
+
+#email{
+    background-color: #F1F1F1;
+    width: 80%;
+    border-radius: 10px;
+    height: 40px;
+    font-size: medium;
+}
+
+#password{
+    background-color: #F1F1F1;
+    width: 80%;
+    border-radius: 10px;
+    height: 40px;
+    font-size: medium;
+}
+
+.emailLab{
+    font-size: larger;
+    font-weight: lighter;
+}
+
+.passwordLab{
+    font-size: larger;
+    font-weight: lighter;
+}
+
+#loginBtn{
+    font-weight: bold;
+    margin:0 25%;
+    position: relative;
+    font-size: medium;
+    border-radius: 10px;
+}
