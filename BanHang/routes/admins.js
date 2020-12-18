@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
-    res.render('admin/dashboard', { title: 'Trang chủ',layout: 'admin' });
+    res.render('admin/dashboard', { title: 'Trang chủ', layout: 'admin' });
 });
 router.get('/general_statistics.html', function(req, res, next) {
     res.render('admin/general_statistics', { title: 'Thống kê chung',layout: 'admin' });

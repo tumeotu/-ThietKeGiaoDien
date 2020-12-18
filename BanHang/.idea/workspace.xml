@@ -20,10 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="add tempplate">
-      <change afterPath="$PROJECT_DIR$/public/user/css/login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/login/loginbanner.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/images/home/giatuan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/images/home/tanvinh.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/images/home/tuanla.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/images/home/tumeo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/admin/images/home/tungnguyen.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/login.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admins.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/admin/dashboard.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/admin/dashboard.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/element/admin/css.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/admin/css.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/element/admin/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/admin/head.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,14 +58,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/user/images/login" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../PTUDW/final/ptudw_thematrix_admin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\admin\css" />
+      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\admin\images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\home_admin" />
       <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\login" />
       <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\try-clothes" />
     </key>
@@ -72,7 +85,8 @@
       <updated>1608055189600</updated>
       <workItem from="1608055191028" duration="2557000" />
       <workItem from="1608102936454" duration="26467000" />
-      <workItem from="1608216404031" duration="6645000" />
+      <workItem from="1608216404031" duration="10395000" />
+      <workItem from="1608267471093" duration="3139000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -102,5 +116,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add tempplate" />
     <option name="LAST_COMMIT_MESSAGE" value="add tempplate" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1608270758772">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608270758772" />
   </component>
 </project>

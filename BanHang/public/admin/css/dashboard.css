@@ -1,0 +1,29 @@
+.summary{
+    border-width: 0px;
+}
+
+.card-body{
+    border-radius: 20px;
+}
+
+.card-title, .text-white{
+    font-weight: bolder;
+}
+
+.fa{
+    font-size:48px;
+    color: white;
+}
+
+.member{
+    border-width: 5x;
+    border-color: black;
+}
+
+.memberName{
+    font-weight: bolder;
+}
+
+.roleName{
+    font-weight: lighter;
+}
