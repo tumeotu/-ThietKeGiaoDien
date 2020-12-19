@@ -1,0 +1,71 @@
+.list-group{
+    max-height: 600px;
+    overflow-y: scroll;
+    margin: 2px;
+    padding: 10px;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.list-group-item{
+    margin: 5px;
+}
+
+/* width */
+.list-group::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.list-group::-webkit-scrollbar-track {
+    background: #F6EAEA;
+}
+
+/* Handle */
+.list-group::-webkit-scrollbar-thumb {
+
+    background: #6e6e6e;
+}
+
+/* Handle on hover */
+.list-group::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.appColor{
+    color: #0b7dda;
+}
+
+.button {
+    background-color: #8C4DF3; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.image{
+    border-radius:8px 0px 0px 8px;
+}
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card-top{
+    border-radius: 10px 10px 0 0;
+    padding: 20px;
+    background: #F1F1F1;
+}
+.vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+

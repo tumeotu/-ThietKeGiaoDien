@@ -8,8 +8,10 @@
 }
 
 .img-map-footer{
+    margin-top: 20px;
+    border-radius: 10px;
     width: 250px;
-    height: 170px
+    height: 150px
 }
 
 .copyright{
@@ -30,4 +32,8 @@
 
 .chat-container{
     padding: 15px;
+}
+.line{
+    text-align: center;
+    border-top: 1px solid #6e6e6e;
 }
