@@ -36,16 +36,31 @@
 }
 
 .button {
+
+}
+
+.button {
     background-color: #8C4DF3; /* Green */
     border: none;
     border-radius: 10px;
     color: white;
-    padding: 10px 30px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
 }
+.button:active {
+    transform: translateY(3px);
+    outline: none;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.button:focus {
+    outline:0;}
+
+
 .card{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
