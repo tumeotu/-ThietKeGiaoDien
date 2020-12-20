@@ -1,1 +1,318 @@
-<h1>Thong ke chung</h1>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="admin/css/header.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"><script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    $(function () {  
+    $("#datepicker").datepicker({         
+    autoclose: true,         
+    todayHighlight: true 
+    }).datepicker('update', new Date());
+    });
+    </script>
+    <script type="text/javascript">
+        $(function () {  
+        $("#datepicker2").datepicker({         
+        autoclose: true,         
+        todayHighlight: true 
+        }).datepicker('update', new Date());
+        });
+        </script>
+    <style>
+        .menu{
+    background-color: #8C4DF3;
+    color: white;
+}
+    a:link{
+        text-decoration: none;
+        color: white;
+    }
+
+.navbar a {
+
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropbtn{
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.dropdown{
+    border: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.boder-bottom {
+    border-bottom: 1px solid #ccc;
+}
+.title {
+    box-shadow: 0px 3px 3px #ccc;
+    padding: 15px 30px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 53px;
+  height: 25px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 1px;
+  bottom: 1px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #8C4DF3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 26px;
+ 
+}
+
+.slider.round:before {
+  border-radius: 50%;
+
+}
+label{
+margin-left: 20px;
+}
+#datepicker{
+width:180px; 
+margin: 0 20px 20px 20px;
+}
+#datepicker > span:hover{
+cursor: pointer;
+}
+
+.table-border{
+    border: 2px solid #8C4DF3;
+    border-radius: 8px;
+    margin: 30px;
+}
+th{
+    background-color: #8C4DF3;
+    color: white;
+    border: 1px solid #8C4DF3;
+}
+td {
+    color:#8C4DF3;
+}
+.tr-even{
+    background-color: #8c4df321;
+}
+
+    </style>
+</head>
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-2 menu">
+            <a class="boder-bottom"><i class="material-icons">av_timer</i>Trang chủ</a>
+
+            <div class="dropdown">
+                <button class="dropbtn"><i class="material-icons">equalizer</i>Thống kê 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">Tổng hợp</a>
+                    <a class="dropdown-item" href="#">Chi tiết</a>
+                </div>
+              </div> 
+            <div class="dropdown">
+                <button class="dropbtn"><i class="material-icons">view_comfy</i>Bảng biểu<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a class="dropdown-item" href="#">Tổng hợp</a>
+                    <a class="dropdown-item" href="#">Chi tiết</a>
+                </div>
+            </div>
+            <a class="boder-bottom"><i class="material-icons">perm_identity</i>Khách hàng</a>
+        </div>
+        <div class="col-10" style="padding: 0;">           
+            <div class="d-flex justify-content-between title">
+                <h1>Thống kê</h1>
+                <div class="d-flex justify-content-end align-self-center"> 
+                    <p style="margin: 0px; font-size: 20px">Chi tiết</p>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-start">
+                    <p>Từ</p>
+                    <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" readonly="" type="text"> <span class="input-group-addon"><i class="fa fa-caret-down"></i></span> 
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <p>Đến</p>
+                    <div id="datepicker2" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" readonly="" type="text"> <span class="input-group-addon"><i class="fa fa-caret-down"></i></span> 
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-around">
+                <div class="d-flex justify-content-start">
+                    <div class="d-flex justify-content-start">
+                        <p>Danh mục</p>
+                        <select>
+                            <option selected>Nam</option>
+                            <option>Nữ</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-start">
+                    <div class="d-flex justify-content-start">
+                        <p>Sản phẩm</p>
+                        <select>
+                            <option selected>Quần</option>
+                            <option>Áo vest</option>
+                            <option>Áo khoác</option>
+                            <option>Áo thun</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center table-border" >
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th id="table-header-first-item">STT</th>
+                            <th>Tên</th>
+                            <th>Giá cả</th>
+                            <th>Doanh thu</th>
+                            <th id="table-header-last-item">Số lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="tr-even">
+                            <td >1</td>
+                            <td>Quần dài</td>
+                            <td>125000</td>
+                            <td>125000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Quần dài</td>
+                            <td>125000</td>
+                            <td>125000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr class="tr-even">
+                            <td>3</td>
+                            <td>Quần dài</td>
+                            <td>125000</td>
+                            <td>125000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Quần dài</td>
+                            <td>125000</td>
+                            <td>125000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr class="tr-even">
+                            <td>5</td>
+                            <td>Quần dài</td>
+                            <td>125000</td>
+                            <td>125000</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Quần dài</td>
+                            <td>125000</td>
+                            <td>125000</td>
+                            <td>50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
