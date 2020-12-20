@@ -34,13 +34,8 @@
 .appColor{
     color: #0b7dda;
 }
-
 .button {
-
-}
-
-.button {
-    background-color: #8C4DF3; /* Green */
+    background-color: #8C4DF3;
     border: none;
     border-radius: 10px;
     color: white;

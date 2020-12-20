@@ -267,7 +267,7 @@
                             </div>
                         </div>
                         <div class="row justify-content-center" style="margin: 20px">
-                            <button type="submit" class="button col-sm-9">
+                            <button type="submit" data-toggle="modal" class="button col-sm-9" data-target="#myModal">
                                 <a style="font-size: large;" class="appColor">Tiến hành thanh toán</a>
                             </button>
                         </div>
@@ -276,6 +276,31 @@
             </div>
         </div>
         <div class="col-sm-1"></div>
-
+        <!-- The Modal -->
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="mr-auto p-2 bd-highlight">
+                        <b style="color: #7A7676; font-size: large">Đặt hàng thành công</b>
+                    </div>
+                    <div class="p-2 bd-highlight">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p>Cảm ơn quý khách đã đặt hàng</p>
+                    <p>Thông tin chi tiết về đơn hàng sẽ được gửi tới email</p>
+                    <p>Nếu có bất kỳ sự cố nào quý khách có thể liên hệ trực tiếp với shop thông qua thông tin liên lạc phía dưới</p>
+                    <p>Xin chân thành cảm ơn!!!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
 </section>

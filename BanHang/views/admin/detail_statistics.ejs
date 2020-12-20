@@ -2,22 +2,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="admin/css/header.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    
     <link rel="stylesheet prefetch" href="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"><script src="http://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
 <script src="js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript">
-    $(function () {  
-    $("#datepicker").datepicker({         
-    autoclose: true,         
-    todayHighlight: true 
+    $(function () {
+    $("#datepicker").datepicker({
+    autoclose: true,
+    todayHighlight: true
     }).datepicker('update', new Date());
     });
     </script>
     <script type="text/javascript">
-        $(function () {  
-        $("#datepicker2").datepicker({         
-        autoclose: true,         
-        todayHighlight: true 
+        $(function () {
+        $("#datepicker2").datepicker({
+        autoclose: true,
+        todayHighlight: true
         }).datepicker('update', new Date());
         });
         </script>
@@ -42,7 +41,7 @@
 
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 16px;
 
   outline: none;
   color: white;
@@ -151,7 +150,7 @@ input:checked + .slider:before {
 /* Rounded sliders */
 .slider.round {
   border-radius: 26px;
- 
+
 }
 
 .slider.round:before {
@@ -162,7 +161,7 @@ label{
 margin-left: 20px;
 }
 #datepicker{
-width:180px; 
+width:180px;
 margin: 0 20px 20px 20px;
 }
 #datepicker > span:hover{
@@ -194,14 +193,14 @@ td {
             <a class="boder-bottom"><i class="material-icons">av_timer</i>Trang chủ</a>
 
             <div class="dropdown">
-                <button class="dropbtn"><i class="material-icons">equalizer</i>Thống kê 
+                <button class="dropbtn"><i class="material-icons">equalizer</i>Thống kê
                   <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
                     <a class="dropdown-item" href="#">Tổng hợp</a>
                     <a class="dropdown-item" href="#">Chi tiết</a>
                 </div>
-              </div> 
+              </div>
             <div class="dropdown">
                 <button class="dropbtn"><i class="material-icons">view_comfy</i>Bảng biểu<i class="fa fa-caret-down"></i></button>
                 <div class="dropdown-content">
@@ -211,10 +210,10 @@ td {
             </div>
             <a class="boder-bottom"><i class="material-icons">perm_identity</i>Khách hàng</a>
         </div>
-        <div class="col-10" style="padding: 0;">           
+        <div class="col-10" style="padding: 0;">
             <div class="d-flex justify-content-between title">
                 <h1>Thống kê</h1>
-                <div class="d-flex justify-content-end align-self-center"> 
+                <div class="d-flex justify-content-end align-self-center">
                     <p style="margin: 0px; font-size: 20px">Chi tiết</p>
                     <label class="switch">
                         <input type="checkbox">
@@ -225,12 +224,12 @@ td {
             <div class="d-flex justify-content-around">
                 <div class="d-flex justify-content-start">
                     <p>Từ</p>
-                    <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" readonly="" type="text"> <span class="input-group-addon"><i class="fa fa-caret-down"></i></span> 
+                    <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" readonly="" type="text"> <span class="input-group-addon"><i class="fa fa-caret-down"></i></span>
                     </div>
                 </div>
                 <div class="d-flex justify-content-start">
                     <p>Đến</p>
-                    <div id="datepicker2" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" readonly="" type="text"> <span class="input-group-addon"><i class="fa fa-caret-down"></i></span> 
+                    <div id="datepicker2" class="input-group date" data-date-format="dd-mm-yyyy"> <input class="form-control" readonly="" type="text"> <span class="input-group-addon"><i class="fa fa-caret-down"></i></span>
                     </div>
                 </div>
             </div>

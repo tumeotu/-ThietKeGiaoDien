@@ -35,32 +35,56 @@
     color: #0b7dda;
 }
 
-.button {
+.abc {
     background-color: #8C4DF3; /* Green */
     border: none;
     border-radius: 10px;
     color: white;
     padding: 10px 10px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 }
-.button:active {
+.abc:active {
     transform: translateY(3px);
     outline: none;
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.button:focus {
+.abc:focus {
     outline:0;}
+
+a:link, a:visited {
+    background-color: #8C4DF3; /* Green */
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropdown-toggle{
+    width: 100%;
+}
+
+.dropdown-item{
+    padding-top: 10px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+a:hover, a:active {
+    background-color: #8C4DF3; /* Green */
+}
+
+
 .card{
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     position: relative;
     text-align: center;
-    color: white;
 }
 .image{
     border-radius:8px 8px 0 0;
@@ -71,7 +95,6 @@
 
 .container {
     position: relative;
-    text-align: center;
 }
 .centered {
     position: absolute;
@@ -79,7 +102,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 .buttonFile {
     border: none;
