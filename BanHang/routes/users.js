@@ -1,10 +1,18 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('user/home', { title: 'Trang chủ',layout: 'user' });
+  res.render('user/home', {layout: 'user' });
 });
+
+router.get('/products-men' , (rep,res,next)=>{
+  res.render('user/products-men',{layout: 'user'});
+});
+
+router.get('/products-women' , (rep,res,next)=>{
+  res.render('user/products-women',{layout: 'user'});
+});
+
 
 router.get('/checkout.html', function(req, res, next) {
   res.render('user/checkout', { title: 'Thanh toán',layout: 'user' });
