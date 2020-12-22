@@ -1,7 +1,22 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="../../public/user/css/header.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+  integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 <style>
+
+  
   .navbar {
     margin-bottom: 0;
     background-color: #8C4DF3;
+
   }
 
   .navbar .nav-bottom {
@@ -17,11 +32,15 @@
     border-radius: 25px;
   }
 </style>
-<nav class="rounded-0 navbar navbar-expand-sm  navbar-dark">
-  <!-- Brand/logo -->
+<nav class="rounded-0 navbar navbar-expand-sm  navbar-dark py-md-0 py-0">
+  
   <a class="navbar-brand" href="#">Mélter</a>
-  <!-- Links -->
+
+ 
+
   <ul class="navbar-nav ml-auto">
+
+
     <li class="nav-item">
       <a class="nav-link  align-items-end " href="#">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor" class="bi bi-person-circle"
@@ -36,4 +55,47 @@
 
   </ul>
 </nav>
+<nav class="rounded-0 navbar navbar-expand-sm  navbar-light bg-light py-md-0 py-0 ">
+  <!-- Links -->
  
+  <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h2>Nam</h2></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h2>Nữ</h2></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><h2>Thử đồ</h2></a>
+      </li>
+    </ul>
+     <form class="ml-3 my-auto d-inline w-50" action="/action_page.php">
+      <div class="  input-group">
+        <div class="input-group-prepend " >
+          <span class="input-group-text" style="border-radius: 10px 0 0 10px;"><i class="fa fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control" placeholder="Tìm kiếm" style="border-radius: 0 10px 10px 0;">
+      </div>
+    </form>  
+ 
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <div class="d-flex flex-row">
+          <h1 style="padding-bottom: 7px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-minecart" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M4 15a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm8-1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 1a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM.115 3.18A.5.5 0 0 1 .5 3h15a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 14 12H2a.5.5 0 0 1-.491-.408l-1.5-8a.5.5 0 0 1 .106-.411zm.987.82l1.313 7h11.17l1.313-7H1.102z"/>
+            </svg>
+          </h1>
+        
+          <a class="nav-link" href="#"><h2>Giỏ hàng</h2></a>
+        </div>
+     
+      </li>
+     
+    </ul>
+  </div>
+</nav>
