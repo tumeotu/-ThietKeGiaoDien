@@ -33,6 +33,51 @@
   </style>
 </header>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn-size-1").click(function(){
+    $("#span-size").text($("#btn-size-1").val());
+    $("#btn-size-1").addClass("isSelected");
+    $("#btn-size-2").removeClass("isSelected");
+    $("#btn-size-3").removeClass("isSelected");
+  });
+  $("#btn-size-2").click(function(){
+    $("#span-size").text($("#btn-size-2").val());
+    $("#btn-size-2").addClass("isSelected");
+    $("#btn-size-1").removeClass("isSelected");
+    $("#btn-size-3").removeClass("isSelected");
+  });
+  $("#btn-size-3").click(function(){
+    $("#span-size").text($("#btn-size-3").val());
+    $("#btn-size-3").addClass("isSelected");
+    $("#btn-size-2").removeClass("isSelected");
+    $("#btn-size-1").removeClass("isSelected");
+   
+  });
+
+  $("#btn-color-1").click(function(){
+    $("#span-color").text($("#btn-color-1").val());
+    $("#btn-color-1").addClass("isSelected");
+    $("#btn-color-2").removeClass("isSelected");
+    $("#btn-color-3").removeClass("isSelected");
+  });
+  $("#btn-color-2").click(function(){
+    $("#span-color").text($("#btn-color-2").val());
+    $("#btn-color-2").addClass("isSelected");
+    $("#btn-color-1").removeClass("isSelected");
+    $("#btn-color-3").removeClass("isSelected");
+  });
+  $("#btn-color-3").click(function(){
+    $("#span-color").text($("#btn-color-3").val());
+    $("#btn-color-3").addClass("isSelected");
+    $("#btn-color-2").removeClass("isSelected");
+    $("#btn-color-1").removeClass("isSelected");
+   
+  });
+});
+</script>
+
 
 <div class="container" style="margin-top: 32px;">
   <div class="row">
@@ -105,7 +150,7 @@
       <hr />
       <h3 class="text-danger">250 000 VNĐ</h3>
       <div style="height: 16px;"></div>
-      <h4>Chọn màu sắc: <span>Đen</span></h4>
+      <h4>Chọn màu sắc: <span id="span-color">Đen</span></h4>
       <div>
 
       </div>
@@ -113,39 +158,39 @@
         <form action="/" class="row" style="margin: auto;">
           <div class="form-check" style="padding: auto;">
             <label class="form-check-label" for="radio1">
-              <input type="button" value="Trắng">
+              <input  id="btn-color-2" type="button" value="Trắng">
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label" for="radio2">
-              <input class="isSelected" type="button" name="optradio" value="Đen" checked>
+              <input id="btn-color-1" class="isSelected"  type="button" name="optradio" value="Đen" checked>
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label" for="radio3">
-              <input type="button" name="optradio" value="Xanh">
+              <input  id="btn-color-3" type="button" name="optradio" value="Xanh">
             </label>
           </div>
         </form>
 
       </div>
       <div style="height: 16px;"></div>
-      <h4>Chọn kích cỡ: <span>S</span></h4>
+      <h4>Chọn kích cỡ: <span id="span-size">S</span></h4>
       <div>
         <form action="/" class="row" style="margin: auto;">
           <div class="form-check" style="padding: auto;">
             <label class="form-check-label" for="radio1">
-              <input class="isSelected" type="button" value="S">
+              <input class="isSelected" id="btn-size-1" type="button" value="S">
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label" for="radio2">
-              <input type="button" name="optradio" value="M" checked>
+              <input type="button" id="btn-size-2" name="optradio" value="M" checked>
             </label>
           </div>
           <div class="form-check">
             <label class="form-check-label" for="radio3">
-              <input type="button" name="optradio" value="L">
+              <input type="button" id="btn-size-3" name="optradio" value="L">
             </label>
           </div>
         </form>
@@ -194,18 +239,21 @@
     <h1>MÔ TẢ SẢN PHẨM</h1>
     <div style="padding: 3em;">
 
-      <h3 class="font-weight-light" style="line-height: 1.5em;">
+      <h3 style="line-height: 1.5em;">
         Áo sơ mi nam xưa nay vẫn là dòng sản phẩm được cánh mày râu ưa chuộng, Shop sẽ giới thiệu đến các bạn
         nam một mẫu mới ÁO SƠ MI NAM TAY DÀI KHÔNG NHĂN rất trẻ trung và phong cách.<br>
+        <div style="height: 16px;"></div>
         Thiết kế cổ bẻ, tay dài, có nút gài phía trước chắc chắn, đường may tỉ mỉ, áo thiết kế form vừa vặn giúp tôn
-        được
-        đường nét mạnh mẽ, nam tính của các chàng trai<br>
+        được đường nét mạnh mẽ, nam tính của các chàng trai<br>
+        <div style="height: 16px;"></div>
         Màu sắc tinh tế và chất vải không nhăn, mang đến sự thanh lịch, cuốn hút và trẻ trung cho các bạn nam<br>
         Sử dụng thoải mái cho môi trường công sở, mẫu áo có thiết kế như thế này sẽ giúp các bạn nam thể
         hiện được sự tươi trẻ, năng động, thanh lịch và dễ dàng khoe được vóc dáng cân đối của cơ
         thể.<br>
+        <div style="height: 16px;"></div>
         Với thiết kế này phái mạnh có thể dễ dàng kết hợp cùng các item như quần jean, quần kaki, hay cách điệu với quần
         xắn gấu và phụ kiện thời trang.<br>
+        <div style="height: 16px;"></div>
         Kích thước
         <br>
         S: Dài 50, rộng 40 <br>
