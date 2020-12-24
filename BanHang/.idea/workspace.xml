@@ -19,13 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa bố cục hình cho trang đăng nhập">
+    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa bố cục trang thanh toán">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/css/checkout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/element/user/css.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/css.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/checkout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/checkout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/element/user/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/head.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/product-detail.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/product-detail.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +82,9 @@
       <workItem from="1608386521122" duration="578000" />
       <workItem from="1608387403128" duration="9647000" />
       <workItem from="1608469086266" duration="9384000" />
-      <workItem from="1608647411266" duration="4183000" />
+      <workItem from="1608647411266" duration="4820000" />
+      <workItem from="1608739163829" duration="1571000" />
+      <workItem from="1608827189990" duration="310000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -115,7 +114,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608647683848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="! Chỉnh sửa bố cục trang thanh toán">
+      <created>1608653626263</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608653626263</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,6 +144,7 @@
     <MESSAGE value="! Thêm animation khi click button" />
     <MESSAGE value="! Chỉnh sửa giao diện" />
     <MESSAGE value="! Chỉnh sửa bố cục hình cho trang đăng nhập" />
-    <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa bố cục hình cho trang đăng nhập" />
+    <MESSAGE value="! Chỉnh sửa bố cục trang thanh toán" />
+    <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa bố cục trang thanh toán" />
   </component>
 </project>
