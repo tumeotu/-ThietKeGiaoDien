@@ -1,0 +1,139 @@
+.topnav {
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.header-nav{
+    padding: 10px;
+    background: #8C4DF3;
+}
+
+
+.topnav p {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav p:hover {
+    background-color: #8C4DF3;
+    color: black;
+}
+
+.topnav p.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav .search-container {
+    width: 100%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+.ButtonLogIn:focus{
+    border: none;
+    outline: none;
+}
+
+input[type="button"] {
+    width: 120px;
+    height: 60px;
+    margin-left: 35px;
+    display: block;
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+.topnav input[type=text] {
+    padding: 8px;
+    width: 90%;
+    background: #ECECEC;
+    margin-top: 8px;
+    font-size: 17px;
+    border-radius: 0px 10px 10px 0px;
+    border: none;
+}
+
+.topnav .search-container button {
+    float: left;
+    width: 10%;
+    border-radius: 10px 0px 0px 10px;
+    padding: 8px;
+    background: #ECECEC;
+    color: black;
+    font-size: 17px;
+    margin-top: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: #ccc;
+}
+
+.cart-container{
+    padding-top: 8px;
+    padding-right: 10%;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: left;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
+.DangNhap {
+    background-color: #8C4DF3; /* Green */
+    border: none;
+    border-radius: 7px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+.DangNhap:active {
+    transform: translateY(3px);
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+}
+
+.DangNhap:focus {
+    outline:0;}
+
+.GioHang {
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+}
+.GioHang:active {
+    transform: translateY(3px);
+    outline: none;
+    border: none;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.2);
+}
+
+.GioHang:focus {
+    outline:0;}
