@@ -1,40 +1,29 @@
 var express = require('express');
 var router = express.Router();
+const userController = require('../controllers/userController')
 
-router.get('/', function(req, res, next) {
-  res.render('user/home', {layout: 'user' });
-});
+router.get('/', userController.index);
 
-router.get('/products-men' , (rep,res,next)=>{
-  res.render('user/products-men',{layout: 'user'});
-});
+router.get('/products-men' , userController.products_men);
 
-router.get('/products-women' , (rep,res,next)=>{
-  res.render('user/products-women',{layout: 'user'});
-});
+router.get('/products-women' , userController.products_women);
 
 
-router.get('/checkout.html', function(req, res, next) {
-  res.render('user/checkout', { title: 'Thanh toán',layout: 'user' });
-});
+router.get('/checkout', userController.checkout);
 
-router.get('/login.html', function(req, res, next) {
+router.get('/login', function(req, res, next) {
   res.render('user/login', { title: 'Đăng nhập' ,layout: 'user'});
 });
-router.get('/register.html', function(req, res, next) {
+router.get('/register', function(req, res, next) {
   res.render('user/register', { title: 'Đăng ký',layout: 'user' });
 });
 
-router.get('/products-detail.html', function(req, res, next) {
-  res.render('user/product-detail', { title: 'Sản phẩm' ,layout: 'user'});
-});
+router.get('/products-detail', userController.products_detail);
 
-router.get('/products.html', function(req, res, next) {
+router.get('/products', function(req, res, next) {
   res.render('user/products', { title: 'Sản phẩm' ,layout: 'user'});
 });
 
-router.get('/try-clothes.html', function(req, res, next) {
-  res.render('user/try-clothes', { title: 'Thử đồ' ,layout: 'user'});
-});
+router.get('/try-clothes', userController.try_clothes);
 
 module.exports = router;

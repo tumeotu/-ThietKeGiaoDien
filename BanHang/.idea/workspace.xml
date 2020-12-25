@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa bố cục trang thanh toán">
-      <change afterPath="$PROJECT_DIR$/public/user/css/header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/element/user/head.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/head.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/element/user/headers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/headers.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/try-clothes.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/try-clothes.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../footer.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../login.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../menu.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="1lhhMrLHjT6t8QpMXNhvX5deOiR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -54,23 +49,47 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../NAM 3/LTUDW/DO AN GIUA KY/1712863/Source/BanHang" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\register" />
-      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\home_admin" />
-      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\login" />
-      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\try-clothes" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\admin\css" />
       <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\admin\images" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\Desktop\ThietKeGiaoDien-main\ThietKeGiaoDien-main\BanHang\public" />
+      <recent name="D:\OneDrive\Desktop\ThietKeGiaoDien-main\ThietKeGiaoDien-main\BanHang" />
+      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\register" />
+      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\home_admin" />
+      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\login" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -91,6 +110,8 @@
       <workItem from="1608739163829" duration="1571000" />
       <workItem from="1608827189990" duration="473000" />
       <workItem from="1608829738008" duration="6220000" />
+      <workItem from="1608877420753" duration="9834000" />
+      <workItem from="1608887288782" duration="87000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -166,5 +187,75 @@
     <MESSAGE value="! Chỉnh sửa bố cục hình cho trang đăng nhập" />
     <MESSAGE value="! Chỉnh sửa bố cục trang thanh toán" />
     <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa bố cục trang thanh toán" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1608880580309">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608880580309" />
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1608887374887">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374887" />
+    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1608887374887">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374887" />
+    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1608887374887">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374887" />
+    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1608887374887">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374887" />
+    <state width="1345" height="227" key="GridCell.Tab.1.bottom" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.bottom/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.1.center" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.center/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.1.left" timestamp="1608887374887">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.left/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374887" />
+    <state width="1345" height="227" key="GridCell.Tab.1.right" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.1.right/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.2.bottom" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.2.bottom/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.2.center" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.2.center/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.2.left" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.2.left/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.2.right" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.2.right/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.3.bottom" timestamp="1608887374889">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.3.bottom/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374889" />
+    <state width="1345" height="227" key="GridCell.Tab.3.center" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.3.center/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.3.left" timestamp="1608887374888">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.3.left/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374888" />
+    <state width="1345" height="227" key="GridCell.Tab.3.right" timestamp="1608887374889">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1345" height="227" key="GridCell.Tab.3.right/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1608887374889" />
   </component>
 </project>

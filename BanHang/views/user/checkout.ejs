@@ -1,6 +1,6 @@
 <header>
-    <link href="user/css/checkout.css" rel="stylesheet">
-    <script src="user/js/checkout.js"></script>
+    <link href="/user/css/checkout.css" rel="stylesheet">
+    <script src="/user/js/checkout.js"></script>
 </header>
 <section style="background: #E7EDF0;">
     <div class="container">
@@ -8,274 +8,67 @@
             <div class="col-sm-8">
                 <div class="row" style="padding-left: 30px">
                     <p style="font-size: large">Giỏ hàng &nbsp;</p>
-                    <p style="font-size: large">(3 sản phẩm)</p>
+                    <p style="font-size: large">(<span id="productAmount" style="font-weight: bolder;"><%= selectedProducts.length %></span> sản phẩm)</p>
                 </div>
                 <div class="list-group">
-                    <!--item-->
-                    <div>
-                        <div class="card" style="padding: 0px; margin-bottom: 15px">
-                            <div class="row" style="padding: 0px; margin: 0px">
-                                <div class="col-sm-2" style="padding: 0px">
-                                    <img class="image" src="user/images/try-clothes/image1.jpg">
-                                </div>
-                                <div class="col-sm-5" style="padding-left: 30px">
-                                    <div class="row">
-                                        <h3>Áo hoodie nam tay dài</h3>
+                    <% selectedProducts.forEach(function (product){ %>
+                        <!--item-->
+                        <div id="<%- product._id %>DIV">
+                            <div class="card" style="padding: 0px; margin-bottom: 15px">
+                                <div class="row" style="padding: 0px; margin: 0px">
+                                    <div class="col-sm-2" style="padding: 0px">
+                                        <img class="image" src="<%= product.images[0] %>">
                                     </div>
-                                    <div class="row">
-                                        <div class="col-sm-2" style="padding: 0px">
-                                            <p style="color: #0b7dda">Xóa</p>
-                                        </div>
-                                        <div class="col-sm-5" style="padding: 0px">
-                                            <p style="color: #0b7dda">Để dành mua sau</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5" style="padding: 20px">
-                                    <div class="col-sm-6" style="padding-right: 30px" >
-                                        <div class="row justify-content-end">
-                                            <h4>700.000đ</h4>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <p>
-                                            <h5 style="text-decoration-line: line-through; color: #6e6e6e">350.000đ</h5>
-                                            <h5>&nbsp;| 50%</h5>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-5" style="padding-left: 30px">
                                         <div class="row">
-                                            <div class="input-group number-spinner" style="width: 120px">
+                                            <h3><%= product.name %></h3>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-2" style="padding: 0px">
+                                                <p style="color: #0b7dda"
+                                                   onclick="deleteProduct('<%- product._id %>', '<%- product.price %>');">
+                                                    Xóa</p>
+                                            </div>
+                                            <div class="col-sm-5" style="padding: 0px">
+                                                <p style="color: #0b7dda" onclick="deleteProduct('<%- product._id %>', '<%- product.price %>');">Để dành mua sau</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-5" style="padding: 20px">
+                                        <div class="col-sm-6" style="padding-right: 30px">
+                                            <div class="row justify-content-end">
+                                                <h4><%= product.price %>đ</h4>
+                                            </div>
+                                            <div class="row justify-content-end">
+                                                <p>
+                                                <h5 style="text-decoration-line: line-through; color: #6e6e6e"><%= product.price * 2 %>
+                                                    đ</h5>
+                                                <h5>&nbsp;| 50%</h5>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="row">
+                                                <div class="input-group number-spinner" style="width: 120px">
                                             <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="dwn">
+                                                <button class="btn btn-default" data-dir="dwn" onclick="subOne('<%- product.price %>');">
                                                     <span class="glyphicon glyphicon-minus"></span>
                                                 </button>
                                             </span>
-                                                <input type="text" class="form-control text-center" value="1">
-                                                <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="up">
+                                                    <input id="<%- product._id %>AMOUNT" type="text" class="form-control text-center" value="1">
+                                                    <span class="input-group-btn">
+                                                <button class="btn btn-default" data-dir="up" onclick="addOne('<%- product.price %>');">
                                                     <span class="glyphicon glyphicon-plus"></span>
                                                 </button>
                                             </span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <div class="card" style="padding: 0px; margin-bottom: 15px">
-                            <div class="row" style="padding: 0px; margin: 0px">
-                                <div class="col-sm-2" style="padding: 0px">
-                                    <img class="image" src="user/images/try-clothes/image1.jpg">
-                                </div>
-                                <div class="col-sm-5" style="padding-left: 30px">
-                                    <div class="row">
-                                        <h3>Áo hoodie nam tay dài</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-2" style="padding: 0px">
-                                            <p style="color: #0b7dda">Xóa</p>
-                                        </div>
-                                        <div class="col-sm-5" style="padding: 0px">
-                                            <p style="color: #0b7dda">Để dành mua sau</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5" style="padding: 20px">
-                                    <div class="col-sm-6" style="padding-right: 30px" >
-                                        <div class="row justify-content-end">
-                                            <h4>700.000đ</h4>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <p>
-                                            <h5 style="text-decoration-line: line-through; color: #6e6e6e">350.000đ</h5>
-                                            <h5>&nbsp;| 50%</h5>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="input-group number-spinner" style="width: 120px">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="dwn">
-                                                    <span class="glyphicon glyphicon-minus"></span>
-                                                </button>
-                                            </span>
-                                                <input type="text" class="form-control text-center" value="1">
-                                                <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="up">
-                                                    <span class="glyphicon glyphicon-plus"></span>
-                                                </button>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <div class="card" style="padding: 0px; margin-bottom: 15px">
-                            <div class="row" style="padding: 0px; margin: 0px">
-                                <div class="col-sm-2" style="padding: 0px">
-                                    <img class="image" src="user/images/try-clothes/image1.jpg">
-                                </div>
-                                <div class="col-sm-5" style="padding-left: 30px">
-                                    <div class="row">
-                                        <h3>Áo hoodie nam tay dài</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-2" style="padding: 0px">
-                                            <p style="color: #0b7dda">Xóa</p>
-                                        </div>
-                                        <div class="col-sm-5" style="padding: 0px">
-                                            <p style="color: #0b7dda">Để dành mua sau</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5" style="padding: 20px">
-                                    <div class="col-sm-6" style="padding-right: 30px" >
-                                        <div class="row justify-content-end">
-                                            <h4>700.000đ</h4>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <p>
-                                            <h5 style="text-decoration-line: line-through; color: #6e6e6e">350.000đ</h5>
-                                            <h5>&nbsp;| 50%</h5>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="input-group number-spinner" style="width: 120px">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="dwn">
-                                                    <span class="glyphicon glyphicon-minus"></span>
-                                                </button>
-                                            </span>
-                                                <input type="text" class="form-control text-center" value="1">
-                                                <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="up">
-                                                    <span class="glyphicon glyphicon-plus"></span>
-                                                </button>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <div class="card" style="padding: 0px; margin-bottom: 15px">
-                            <div class="row" style="padding: 0px; margin: 0px">
-                                <div class="col-sm-2" style="padding: 0px">
-                                    <img class="image" src="user/images/try-clothes/image1.jpg">
-                                </div>
-                                <div class="col-sm-5" style="padding-left: 30px">
-                                    <div class="row">
-                                        <h3>Áo hoodie nam tay dài</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-2" style="padding: 0px">
-                                            <p style="color: #0b7dda">Xóa</p>
-                                        </div>
-                                        <div class="col-sm-5" style="padding: 0px">
-                                            <p style="color: #0b7dda">Để dành mua sau</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5" style="padding: 20px">
-                                    <div class="col-sm-6" style="padding-right: 30px" >
-                                        <div class="row justify-content-end">
-                                            <h4>700.000đ</h4>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <p>
-                                            <h5 style="text-decoration-line: line-through; color: #6e6e6e">350.000đ</h5>
-                                            <h5>&nbsp;| 50%</h5>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="input-group number-spinner" style="width: 120px">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="dwn">
-                                                    <span class="glyphicon glyphicon-minus"></span>
-                                                </button>
-                                            </span>
-                                                <input type="text" class="form-control text-center" value="1">
-                                                <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="up">
-                                                    <span class="glyphicon glyphicon-plus"></span>
-                                                </button>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--item-->
-                    <div>
-                        <div class="card" style="padding: 0px; margin-bottom: 15px">
-                            <div class="row" style="padding: 0px; margin: 0px">
-                                <div class="col-sm-2" style="padding: 0px">
-                                    <img class="image" src="user/images/try-clothes/image1.jpg">
-                                </div>
-                                <div class="col-sm-5" style="padding-left: 30px">
-                                    <div class="row">
-                                        <h3>Áo hoodie nam tay dài</h3>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-sm-2" style="padding: 0px">
-                                            <p style="color: #0b7dda">Xóa</p>
-                                        </div>
-                                        <div class="col-sm-5" style="padding: 0px">
-                                            <p style="color: #0b7dda">Để dành mua sau</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-5" style="padding: 20px">
-                                    <div class="col-sm-6" style="padding-right: 30px" >
-                                        <div class="row justify-content-end">
-                                            <h4>700.000đ</h4>
-                                        </div>
-                                        <div class="row justify-content-end">
-                                            <p>
-                                            <h5 style="text-decoration-line: line-through; color: #6e6e6e">350.000đ</h5>
-                                            <h5>&nbsp;| 50%</h5>
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="row">
-                                            <div class="input-group number-spinner" style="width: 120px">
-                                            <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="dwn">
-                                                    <span class="glyphicon glyphicon-minus"></span>
-                                                </button>
-                                            </span>
-                                                <input type="text" class="form-control text-center" value="1">
-                                                <span class="input-group-btn">
-                                                <button class="btn btn-default" data-dir="up">
-                                                    <span class="glyphicon glyphicon-plus"></span>
-                                                </button>
-                                            </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <% }); %>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -309,7 +102,7 @@
                                     <h4 style="color: #7A7676">Tạm tính</h4>
                                 </div>
                                 <div class="p-2 bd-highlight">
-                                    <h4>700.000đ</h4>
+                                    <h4 id="costTotal1"><%= costTotal %>đ</h4>
                                 </div>
                             </div>
                             <div class="row" style="padding: 0px; margin: 0px">
@@ -317,7 +110,7 @@
                                     <h4 style="color: #7A7676">Giảm giá</h4>
                                 </div>
                                 <div class="p-2 bd-highlight">
-                                    <h4>-200.000đ</h4>
+                                    <h4>0đ</h4>
                                 </div>
                             </div>
                             <div class="row" style="padding: 0px; margin: 0px">
@@ -326,14 +119,14 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h4 style="color: crimson">500.000đ</h4>
+                                        <h4 id="costTotal2" style="color: crimson"><%= costTotal %>đ</h4>
                                         <h5 style="color: #6e6e6e">(Đã bao gồm VAT nếu có)</h5>
                                     </div>
                                 </div>
                             </div>
                             <div class="row justify-content-center" style="margin: 20px">
                                 <button type="submit" class="button col-sm-9">
-                                    <a style="font-size: large;" class="appColor">Tiến hành thanh toán</a>
+                                    <a href="/" style="font-size: large;" class="appColor">Tiến hành thanh toán</a>
                                 </button>
                             </div>
                         </div>

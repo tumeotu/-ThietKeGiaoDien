@@ -84,7 +84,7 @@ $(document).ready(function(){
     <div class="col-sm-7 justify-content-center">
       <div>
         <img
-          src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+          src="<%= product.images[0] %>"
           alt="avt" class="img-thumbnail" width="600px" height="400px">
 
       </div>
@@ -95,17 +95,17 @@ $(document).ready(function(){
               <div class="  row justify-content-center">
                 <div style="margin: 1rem;">
                   <img class="d-block"
-                    src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+                    src="<%= product.images[0] %>"
                     alt="First slide" width="100px" height="100px">
                 </div>
                 <div style="margin: 1rem;">
                   <img class="d-block"
-                    src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+                    src="<%= product.images[0] %>"
                     alt="First slide" width="100px" height="100px">
                 </div>
                 <div style="margin: 1rem;">
                   <img class="d-block"
-                    src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+                    src="<%= product.images[0] %>"
                     alt="First slide" width="100px" height="100px">
                 </div>
 
@@ -138,7 +138,7 @@ $(document).ready(function(){
       </div>
     </div>
     <div class="col-sm-5">
-      <h1 class="font-weight-normal">Áo sơ mi nam 89UY998 (Tay dài)</h1>
+      <h1 class="font-weight-normal"><%= product.name %></h1>
 
       <div class="row" style="margin: auto;">
         <div>
@@ -148,7 +148,7 @@ $(document).ready(function(){
         <p>(30 đánh giá)</p>
       </div>
       <hr />
-      <h3 class="text-danger">250 000 VNĐ</h3>
+      <h3 class="text-danger"><%= product.price %> VNĐ</h3>
       <div style="height: 16px;"></div>
       <h4>Chọn màu sắc: <span id="span-color">Đen</span></h4>
       <div>
@@ -222,12 +222,12 @@ $(document).ready(function(){
       <hr />
       <div class="row">
         <div class="col-sm" style="margin-top: 1em;">
-          <button type="button" class="button">
+          <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/'">
             THÊM VÀO GIỎ HÀNG
           </button>
         </div>
         <div class="col-sm" style="margin-top: 1em;">
-          <button type="button" class="button">
+          <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/checkout'">
             MUA NGAY
           </button>
         </div>
@@ -422,103 +422,51 @@ $(document).ready(function(){
         <div class="carousel-item active" data-bs-interval="10000">
           <div class="container">
             <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;"></p>
-                  <p style="text-align: center;">300.000</b></p>
+              <% relatedProduct1.forEach(function (product){ %>
+                <div class="col-lg-3 col-md-6"
+                     onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                  <div class="item-container">
+                    <img class="item-img" src="<%= product.images[0] %>">
+                    <p style="text-align: center;"><b><%= product.name %></b></p>
+                    <p style="text-align: center;"></p>
+                    <p style="text-align: center;"><b><%= product.price %></b></p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
+              <% }); %>
             </div>
           </div>
         </div>
         <div class="carousel-item" data-bs-interval="2000">
           <div class="container">
             <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
+              <% relatedProduct2.forEach(function (product){ %>
+                <div class="col-lg-3 col-md-6"
+                     onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                  <div class="item-container">
+                    <img class="item-img" src="<%= product.images[0] %>">
+                    <p style="text-align: center;"><b><%= product.name %></b></p>
+                    <p style="text-align: center;"></p>
+                    <p style="text-align: center;"><b><%= product.price %></b></p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
+              <% }); %>
             </div>
           </div>
         </div>
         <div class="carousel-item">
           <div class="container">
             <div class="row">
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
+              <% relatedProduct3.forEach(function (product){ %>
+                <div class="col-lg-3 col-md-6"
+                     onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                  <div class="item-container">
+                    <img class="item-img" src="<%= product.images[0] %>">
+                    <p style="text-align: center;"><b><%= product.name %></b></p>
+                    <p style="text-align: center;"></p>
+                    <p style="text-align: center;"><b><%= product.price %></b></p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6">
-                <div class="item-container">
-                  <img class="item-img" src="user/images/home/hoodie1.png">
-                  <p style="text-align: center;"><b>Áo sweater</b></p>
-                  <p style="text-align: center;">300.000</b></p>
-                </div>
-              </div>
+              <% }); %>
             </div>
           </div>
         </div>
