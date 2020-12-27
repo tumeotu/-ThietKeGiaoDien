@@ -12,8 +12,18 @@
       color: #c0c0c0;
     }
 
+    .defaultBtn{
+      background-color: #ffffff;
+      border-radius: 8px;
+      border: 1px solid black;
+      margin-right: 15px;
+      padding: 5px 10px 5px 10px;
+    }
+
     .isSelected {
       background-color: #8C4DF3;
+      color: #ffffff;
+      border-radius: 8px;
     }
 
     .btn {
@@ -86,54 +96,67 @@ $(document).ready(function(){
         <img
           src="<%= product.images[0] %>"
           alt="avt" class="img-thumbnail" width="600px" height="400px">
-
       </div>
-      <div class="justify-content-center">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <div>
+        <div id="carouselExampleDark-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="  row justify-content-center">
-                <div style="margin: 1rem;">
-                  <img class="d-block"
-                    src="<%= product.images[0] %>"
-                    alt="First slide" width="100px" height="100px">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                      <div style="margin: 1rem;">
+                        <img class="d-block"
+                          src="<%= product.images[0] %>"
+                          alt="First slide" width="100px" height="100px">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div style="margin: 1rem;">
+                        <img class="d-block"
+                          src="<%= product.images[0] %>"
+                          alt="First slide" width="100px" height="100px">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div style="margin: 1rem;">
+                        <img class="d-block"
+                          src="<%= product.images[0] %>"
+                          alt="First slide" width="100px" height="100px">
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                      <div style="margin: 1rem;">
+                        <img class="d-block"
+                          src="<%= product.images[0] %>"
+                          alt="First slide" width="100px" height="100px">
+                      </div>
+                    </div>
                 </div>
-                <div style="margin: 1rem;">
-                  <img class="d-block"
-                    src="<%= product.images[0] %>"
-                    alt="First slide" width="100px" height="100px">
-                </div>
-                <div style="margin: 1rem;">
-                  <img class="d-block"
-                    src="<%= product.images[0] %>"
-                    alt="First slide" width="100px" height="100px">
-                </div>
-
               </div>
-
             </div>
-
-
+            <div class="carousel-item" data-bs-interval="2000">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-3 col-md-6">
+                    <div style="margin: 1rem;">
+                      <img class="d-block"
+                        src="<%= product.images[0] %>"
+                        alt="First slide" width="100px" height="100px">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-              class="bi bi-chevron-left" viewBox="0 0 16 16" style="color: #333;">
-              <path fill-rule="evenodd"
-                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
-            </svg>
-            <span class="sr-only">Previous</span>
+          <a class="carousel-control-prev" href="#carouselExampleDark-1" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-              class="bi bi-chevron-compact-right" viewBox="0 0 16 16" style="color: #333;">
-              <path fill-rule="evenodd"
-                d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z" />
-            </svg> <span class="sr-only">Next</span>
+          <a class="carousel-control-next" href="#carouselExampleDark-1" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
           </a>
         </div>
-        <!-- <img src="https://cdn2.thecatapi.com/images/ck6.jpg" alt="avt" class="img-thumbnail">
-        <img src="https://cdn2.thecatapi.com/images/ck6.jpg" alt="avt" class="img-thumbnail">
-        <img src="https://cdn2.thecatapi.com/images/ck6.jpg" alt="avt" class="img-thumbnail"> -->
 
       </div>
     </div>
@@ -152,53 +175,22 @@ $(document).ready(function(){
       <div style="height: 16px;"></div>
       <h4>Chọn màu sắc: <span id="span-color">Đen</span></h4>
       <div>
-
       </div>
       <div>
-        <form action="/" class="row" style="margin: auto;">
-          <div class="form-check" style="padding: auto;">
-            <label class="form-check-label" for="radio1">
-              <input  id="btn-color-2" type="button" value="Trắng">
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label" for="radio2">
-              <input id="btn-color-1" class="isSelected"  type="button" name="optradio" value="Đen" checked>
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label" for="radio3">
-              <input  id="btn-color-3" type="button" name="optradio" value="Xanh">
-            </label>
-          </div>
-        </form>
-
+        <button class="defaultBtn" id="btn-color-1" value="Trắng">Trắng</button>
+        <button class="defaultBtn" id="btn-color-2" value="Đen">Đen</button>
+        <button class="defaultBtn" id="btn-color-3" value="Xanh">Xanh</button>
       </div>
       <div style="height: 16px;"></div>
       <h4>Chọn kích cỡ: <span id="span-size">S</span></h4>
       <div>
-        <form action="/" class="row" style="margin: auto;">
-          <div class="form-check" style="padding: auto;">
-            <label class="form-check-label" for="radio1">
-              <input class="isSelected" id="btn-size-1" type="button" value="S">
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label" for="radio2">
-              <input type="button" id="btn-size-2" name="optradio" value="M" checked>
-            </label>
-          </div>
-          <div class="form-check">
-            <label class="form-check-label" for="radio3">
-              <input type="button" id="btn-size-3" name="optradio" value="L">
-            </label>
-          </div>
-        </form>
+        <button class="defaultBtn" id="btn-size-1" value="S">S</button>
+        <button class="defaultBtn" id="btn-size-2" value="M">M</button>
+        <button class="defaultBtn" id="btn-size-3" value="L">L</button>
       </div>
       <div style="height: 16px;"></div>
       <h4>Số lượng</h4>
       <div class="row ">
-      
         <div class="input-group number-spinner">
           <span class="input-group-btn">
             <button class="btn btn-default" data-dir="up">
@@ -207,7 +199,6 @@ $(document).ready(function(){
           </span>
           <div>
             <input type="text" class="form-control text-center" style="width:50px;"  value="1"></input>
-
           </div>
           <span class="input-group-btn">
             <button class="btn btn-default" data-dir="up">
@@ -234,11 +225,12 @@ $(document).ready(function(){
       </div>
     </div>
   </div>
+  <hr>
   <div style="margin-top: 32px;">
-    <h1>MÔ TẢ SẢN PHẨM</h1>
+    <h1>Mô tả sản phẩm</h1>
     <div style="padding: 3em;">
 
-      <h3 style="line-height: 1.5em;">
+      <p style="line-height: 1.5em;">
         Áo sơ mi nam xưa nay vẫn là dòng sản phẩm được cánh mày râu ưa chuộng, Shop sẽ giới thiệu đến các bạn
         nam một mẫu mới ÁO SƠ MI NAM TAY DÀI KHÔNG NHĂN rất trẻ trung và phong cách.<br>
         <div style="height: 16px;"></div>
@@ -258,142 +250,146 @@ $(document).ready(function(){
         S: Dài 50, rộng 40 <br>
         M: Dài 65, rộng 50 <br>
         L: Dài 75, rộng 65
-      </h3>
+      </p>
     </div>
 
   </div>
   <hr />
   <div>
     <h1>Đánh giá sản phẩm</h1>
-    <div class="row" style="margin-left: 32px; margin-top: 32px;">
+    <div class="container">
+      <div class="row" style="margin-left: 32px; margin-top: 32px;">
+        <div class="col">
+          <h3>4.5</h3>
+          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+              class="fa fa-star"></i> 
+          </div>
+          <h5>28 nhận xét</h5>
+        </div>
+        <div class="col" style="padding-left: 2em;">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star"></i>
+              </div>
+              </div>
+              <div class="col">
+                <div class="progress" style="width: 200px; margin: auto;">
+                  <div class="progress-bar" style="width:75%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                  class="fa fa-star i-disable"></i>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress" style="width: 200px; margin: auto;">
+                  <div class="progress-bar" style="width:17%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star i-disable"></i>
+                  <i class="fa fa-star i-disable"></i>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress" style="width: 200px; margin: auto;">
+                  <div class="progress-bar" style="width:3.5%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star i-disable"></i> <i
+                  class="fa fa-star i-disable"></i> <i class="fa fa-star i-disable"></i>
+                </div>
+              </div>
+              <div class="col">
+                <div class="progress" style="width: 200px; margin: auto;">
+                  <div class="progress-bar" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+
+  <div style="margin-bottom: 16px; margin-left: 1em;">
+    <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
+        height="50"> </div>
+    <div style="margin-left: 16px;">
       <div>
-        <h2>4.5 sao</h2>
-        <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-            class="fa fa-star"></i> </div>
-        <h3>28 nhận xét</h3>
-
-      </div>
-
-      <div style="border-right: 1px dashed #333; margin-left: 1em;">
-
-      </div>
-      <div style="padding-left: 2em;">
-        <div class="row">
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star"></i>
-          </div>
-          <div style="width: 16px;"></div>
-          <div class="progress" style="width: 200px; margin: auto;">
-            <div class="progress-bar" style="width:75%"></div>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star i-disable"></i>
-          </div>
-          <div style="width: 16px;"></div>
-          <div class="progress" style="width: 200px; margin: auto;">
-            <div class="progress-bar" style="width:17%"></div>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star i-disable"></i>
-            <i class="fa fa-star i-disable"></i>
-          </div>
-          <div style="width: 16px;"></div>
-          <div class="progress" style="width: 200px; margin: auto;">
-            <div class="progress-bar" style="width:3.5%"></div>
-          </div>
-
-        </div>
-        <div class="row">
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star i-disable"></i> <i
-              class="fa fa-star i-disable"></i> <i class="fa fa-star i-disable"></i>
-          </div>
-          <div style="width: 16px;"></div>
-          <div class="progress" style="width: 200px; margin: auto;">
-            <div class="progress-bar" style="width:0%"></div>
-          </div>
-
-
-        </div>
-
-
-
-
-
-      </div>
-    </div>
-    <hr />
-
-    <div class="row" style="margin-bottom: 16px; margin-left: 1em;">
-      <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
-          height="50"> </div>
-      <div style="margin-left: 16px;">
+        <h5>Mèo Mướp</h5>
         <div>
-          <h5>Mèo Mướp</h5>
-          <div>
-            <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                class="fa fa-star"></i> </div>
-          </div>
+          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+              class="fa fa-star"></i> </div>
         </div>
-
-      </div>
-      <div style="margin-top: 16px; margin-left: 66px;">
-        <h5 style="line-height: 1.5em;">
-          Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
-          mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
-          có
-          ý định mua tham khảo
-        </h5>
-
-      </div>
     </div>
-    <div class="row" style="margin-bottom: 16px; margin: 1em;">
-      <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
-          height="50"> </div>
-      <div style="margin-left: 16px;">
+
+    </div>
+    <div style="margin-top: 16px; margin-left: 66px;">
+      <p style="line-height: 1.5em;">
+        Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
+        mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
+        có
+        ý định mua tham khảo
+      </p>
+
+    </div>
+  </div>
+  <div style="margin-bottom: 16px; margin: 1em;">
+    <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
+        height="50"> 
+    </div>
+    <div style="margin-left: 16px;">
+      <div>
+        <h5>Mèo Mướp</h5>
         <div>
-          <h5>Mèo Mướp</h5>
-          <div>
-            <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                class="fa fa-star"></i> </div>
-          </div>
+          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+              class="fa fa-star"></i> </div>
         </div>
-
-      </div>
-      <div style="margin-top: 16px; margin-left: 66px;">
-        <h5 style="line-height: 1.5em;">
-          Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
-          mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
-          có
-          ý định mua tham khảo
-        </h5>
-        <div class="row">
-          <div style="margin: 1em;">
-            <img
-              src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-              alt="avt" class="img-thumbnail" width="100px" height="100px">
-          </div>
-          <div style="margin: 1em;">
-            <img
-              src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-              alt="avt" class="img-thumbnail" width="100px" height="100px">
-          </div>
-          <div style="margin: 1em;">
-            <img
-              src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-              alt="avt" class="img-thumbnail" width="100px" height="100px">
-          </div>
-
-
-        </div>
-
       </div>
     </div>
+    <div style="margin-top: 16px; margin-left: 66px;">
+      <p style="line-height: 1.5em;">
+        Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
+        mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
+        có
+        ý định mua tham khảo
+      </p>
+      <div class="row" style="display: inline;">
+        <div style="margin: 1em; display: inline;">
+          <img
+            src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+            alt="avt" class="img-thumbnail" width="100px" height="100px">
+        </div>
+        <div style="margin: 1em; display: inline;">
+          <img
+            src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+            alt="avt" class="img-thumbnail" width="100px" height="100px">
+        </div>
+        <div style="margin: 1em; display: inline;">
+          <img
+            src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+            alt="avt" class="img-thumbnail" width="100px" height="100px">
+        </div>
 
+
+      </div>
+
+    </div>
   </div>
 
   <div class="d-flex justify-content-center">
@@ -413,7 +409,7 @@ $(document).ready(function(){
   <div>
     <div class="d-flex justify-content-center">
       <h1>
-        CÁC SẢN PHẨM LIÊN QUAN
+        Các sản phẩm liên quan
       </h1>
 
     </div>

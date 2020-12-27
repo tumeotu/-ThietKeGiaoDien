@@ -1,54 +1,49 @@
-
-<header>
-    <link href="user/css/header.css" rel="stylesheet">
-</header>
-<div class="header-nav row ">
-    <div class="col-sm-4" style="padding-left: 2%; padding-top: 10px">
-       <div class="row">
-           <a href="/" style="font-size: x-large;color:white;font-weight: bolder">Mélter</a>
-       </div>
-    </div>
-    <div class="col-sm-4">
-    </div>
-    <div class="col-sm-4">
-        <div class="cart-container row justify-content-end">
-            <a href="/login" class="DangNhap" style="font-size: medium;color: white;background: #8C4DF3" >
-                <i class="fas fa-user-alt" style="color: white; margin: 2px"></i>
-                Đăng nhập
-            </a>
-
-        </div>
-    </div>
-</div>
-<div class="topnav row" id="myTopnav">
-    <div class="col-sm-4" style="padding-left: 2%">
+<header class="header-container">
+    <div class="container">
         <div class="row">
-            <p onclick="location.href='http://127.0.0.1:3000/products-men'">Nam</p>
-            <p onclick="location.href='http://127.0.0.1:3000/products-women'">Nữ</p>
-            <p onclick="location.href='http://127.0.0.1:3000/try-clothes'">Thử đồ</p>
+            <div class="col-lg-2">
+                <h3><a href="/" style="color:white;font-weight: bolder; text-decoration: none;">Mélter</a></h3>
+            </div>
+            <div class="col-lg-10">
+                <a href="/login" class="DangNhap" style="font-size: medium;color: white;background: #8C4DF3; float:right; text-decoration: none;" >
+                    <img src="user/images/home/user.png">
+                    Đăng nhập
+                </a>            
+            </div>
+            <div class="col"></div>
+    
         </div>
     </div>
-    <div class="col-sm-4">
-        <div class="search-container">
-            <form>
-                <button type="submit"><i class="fa fa-search"></i></button>
-                <input type="text" placeholder="Tìm kiếm..." name="search">
-            </form>
+</header>
+<div style="margin-bottom: 20px;box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2), 0px 3px 4px 0px rgba(0,0,0,0.14), 0px 1px 8px 0px rgba(0,0,0,0.12);">
+    <div class="container nav-container">
+        <div class="row">
+            <div class="col-lg-1">
+                <h4 onclick="location.href='http://127.0.0.1:3000/products-men'">Nam</h4>
+            </div>
+            <div class="col-lg-1">
+                <h4 onclick="location.href='http://127.0.0.1:3000/products-women'">Nữ</h4>
+            </div>
+            <div class="col-lg-2">
+                <h4 onclick="location.href='http://127.0.0.1:3000/try-clothes'">Thử đồ</h4>
+            </div>
+            <div class="col-lg-6">
+                <form class="find-container">
+                    <input class="find-element-style" type="text" placeholder="Tìm kiếm..." name="search">
+                    <button class="find-element-style" type="submit" style="float: right"><img src="user/images/home/search.png"></button>
+                </form>
+            </div>
+            <div class="col-2">
+                <a href="/checkout" class="GioHang" style="font-size: medium;color: black;background: white; text-decoration: none;" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1
+                        .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0
+                        0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2
+                         2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    Giỏ hàng
+                </a>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-4">
-        <div class="cart-container row justify-content-end">
-            <a href="/checkout" class="GioHang" style="font-size: medium;color: black;background: white" >
-                <svg xmlns="http://www.w3.org/2000/svg" width="25px" height="25px" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1
-                    .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0
-                    0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2
-                     2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                </svg>
-                Giỏ hàng
-            </a>
-
-
-        </div>
-    </div>
+    </div>    
 </div>

@@ -1,13 +1,13 @@
-.topnav {
-    overflow: hidden;
-    background-color: #ffffff;
+
+.header-container{
+    background-color: #8C4DF3;
+    padding: 15px 0 15px 0;
 }
 
 .header-nav{
     padding: 10px;
     background: #8C4DF3;
 }
-
 
 .topnav p {
     float: left;
@@ -19,17 +19,13 @@
     font-size: 20px;
 }
 
-.topnav p:hover {
-    background-color: #8C4DF3;
-    color: black;
-}
 
 .topnav p.active {
     background-color: #2196F3;
     color: white;
 }
 
-.topnav .search-container {
+.search-container {
     width: 100%;
 }
 
@@ -62,7 +58,7 @@ input[type="button"] {
     border: none;
 }
 
-.topnav .search-container button {
+.search-container button {
     float: left;
     width: 10%;
     border-radius: 10px 0px 0px 10px;
@@ -75,7 +71,7 @@ input[type="button"] {
     cursor: pointer;
 }
 
-.topnav .search-container button:hover {
+.search-container button:hover {
     background: #ccc;
 }
 
@@ -137,3 +133,20 @@ input[type="button"] {
 
 .GioHang:focus {
     outline:0;}
+
+.find-container{
+    background-color: #ECECEC;
+    width: 80%;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.find-element-style{
+    background: transparent;
+    border: none;
+}
+
+.nav-container{
+    padding: 15px 0 15px 0 ;
+
+}
