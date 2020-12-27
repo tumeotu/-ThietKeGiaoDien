@@ -8,12 +8,18 @@
                     <div class="container">
                         <div class="row">
                             <% highlightProducts.forEach(function (product){ %>
+
                                 <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                                    <div class="item-container">
-                                        <img class="item-img" src="<%= product.images[0] %>">
-                                        <p style="text-align: center;"><b><%= product.name %></b></p>
-                                        <p style="text-align: center;"></p>
-                                        <p style="text-align: center;"><b><%= product.price %></b></p>
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fas fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                                            <i style="color: orange" class="fas fa-square"></i>
+                                        </div>
                                     </div>
                                 </div>
                             <% }); %>
@@ -25,10 +31,16 @@
                         <div class="row">
                             <% topsaleProducts.forEach(function (product){ %>
                                 <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                                    <div class="item-container">
-                                        <img class="item-img" src="<%= product.images[0] %>">
-                                        <p style="text-align: center;"><b><%= product.name %></b></p>
-                                        <p style="text-align: center;"><b><%= product.price %></b></p>
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fas fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                                            <i style="color: orange" class="fas fa-square"></i>
+                                        </div>
                                     </div>
                                 </div>
                             <% }); %>
@@ -40,11 +52,16 @@
                         <div class="row">
                             <% highlightProducts.forEach(function (product){ %>
                                 <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                                    <div class="item-container">
-                                        <img class="item-img" src="<%= product.images[0] %>">
-                                        <p style="text-align: center;"><b><%= product.name %></b></p>
-                                        <p style="text-align: center;"></p>
-                                        <p style="text-align: center;"><b><%= product.price %></b></p>
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fas fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                                            <i style="color: orange" class="fas fa-square"></i>
+                                        </div>
                                     </div>
                                 </div>
                             <% }); %>
@@ -71,10 +88,16 @@
                         <div class="row">
                             <% topsaleProducts.forEach(function (product){ %>
                                 <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                                    <div class="item-container">
-                                        <img class="item-img" src="<%= product.images[0] %>">
-                                        <p style="text-align: center;"><b><%= product.name %></b></p>
-                                        <p style="text-align: center;"><b><%= product.price %></b></p>
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fas fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                                            <i style="color: orange" class="fas fa-square"></i>
+                                        </div>
                                     </div>
                                 </div>
                             <% }); %>
@@ -86,11 +109,16 @@
                         <div class="row">
                             <% highlightProducts.forEach(function (product){ %>
                                 <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                                    <div class="item-container">
-                                        <img class="item-img" src="<%= product.images[0] %>">
-                                        <p style="text-align: center;"><b><%= product.name %></b></p>
-                                        <p style="text-align: center;"></p>
-                                        <p style="text-align: center;"><b><%= product.price %></b></p>
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fas fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                                            <i style="color: orange" class="fas fa-square"></i>
+                                        </div>
                                     </div>
                                 </div>
                             <% }); %>
@@ -102,10 +130,16 @@
                         <div class="row">
                             <% topsaleProducts.forEach(function (product){ %>
                                 <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                                    <div class="item-container">
-                                        <img class="item-img" src="<%= product.images[0] %>">
-                                        <p style="text-align: center;"><b><%= product.name %></b></p>
-                                        <p style="text-align: center;"><b><%= product.price %></b></p>
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fas fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                                            <i style="color: orange" class="fas fa-square"></i>
+                                        </div>
                                     </div>
                                 </div>
                             <% }); %>

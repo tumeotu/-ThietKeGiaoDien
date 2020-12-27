@@ -1,8 +1,7 @@
-$(document).on('click', '.number-spinner button', function () {
+$(document).onclick('.number-spinner button', function () {
     var btn = $(this),
         oldValue = btn.closest('.number-spinner').find('input').val().trim(),
         newVal = 0;
-
     if (btn.attr('data-dir') == 'up') {
         newVal = parseInt(oldValue) + 1;
     } else {
@@ -14,8 +13,6 @@ $(document).on('click', '.number-spinner button', function () {
     }
     btn.closest('.number-spinner').find('input').val(newVal);
 });
-
-
 
 function deleteProduct(id, price) {
     const deletedProductFinder = '#'+ id + 'DIV';

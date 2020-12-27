@@ -1,238 +1,149 @@
 <header>
-  <link href="user/css/checkout.css" rel="stylesheet">
-  <script src="user/js/checkout.js"></script>
-  <style>
-    .stars i {
-      font-size: 18px;
-      color: #ECE316;
-    }
-
-    .stars .i-disable {
-      font-size: 18px;
-      color: #c0c0c0;
-    }
-
-    .defaultBtn{
-      background-color: #ffffff;
-      border-radius: 8px;
-      border: 1px solid black;
-      margin-right: 15px;
-      padding: 5px 10px 5px 10px;
-    }
-
-    .isSelected {
-      background-color: #8C4DF3;
-      color: #ffffff;
-      border-radius: 8px;
-    }
-
-    .btn {
-      background-color: #8C4DF3;
-    }
-
-    .mycontent-left {
-      border-right: 1px dashed #333;
-    }
-
-    hr {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      border: 0;
-      border-top: 1px solid rgba(0, 0, 0, 0.1);
-    }
-  </style>
+  <link href="user/css/product-detail.css" rel="stylesheet">
+  <script src="user/js/product-detail.js"></script>
 </header>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("#btn-size-1").click(function(){
-    $("#span-size").text($("#btn-size-1").val());
-    $("#btn-size-1").addClass("isSelected");
-    $("#btn-size-2").removeClass("isSelected");
-    $("#btn-size-3").removeClass("isSelected");
-  });
-  $("#btn-size-2").click(function(){
-    $("#span-size").text($("#btn-size-2").val());
-    $("#btn-size-2").addClass("isSelected");
-    $("#btn-size-1").removeClass("isSelected");
-    $("#btn-size-3").removeClass("isSelected");
-  });
-  $("#btn-size-3").click(function(){
-    $("#span-size").text($("#btn-size-3").val());
-    $("#btn-size-3").addClass("isSelected");
-    $("#btn-size-2").removeClass("isSelected");
-    $("#btn-size-1").removeClass("isSelected");
-   
-  });
-
-  $("#btn-color-1").click(function(){
-    $("#span-color").text($("#btn-color-1").val());
-    $("#btn-color-1").addClass("isSelected");
-    $("#btn-color-2").removeClass("isSelected");
-    $("#btn-color-3").removeClass("isSelected");
-  });
-  $("#btn-color-2").click(function(){
-    $("#span-color").text($("#btn-color-2").val());
-    $("#btn-color-2").addClass("isSelected");
-    $("#btn-color-1").removeClass("isSelected");
-    $("#btn-color-3").removeClass("isSelected");
-  });
-  $("#btn-color-3").click(function(){
-    $("#span-color").text($("#btn-color-3").val());
-    $("#btn-color-3").addClass("isSelected");
-    $("#btn-color-2").removeClass("isSelected");
-    $("#btn-color-1").removeClass("isSelected");
-   
-  });
-});
-</script>
-
-
-<div class="container" style="margin-top: 32px;">
-  <div class="row">
-    <div class="col-sm-7 justify-content-center">
-      <div>
-        <img
-          src="<%= product.images[0] %>"
-          alt="avt" class="img-thumbnail" width="600px" height="400px">
-      </div>
-      <div>
-        <div id="carouselExampleDark-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <div class="container">
-                <div class="row">
+<section>
+  <div class="container" style="margin-top: 32px;">
+    <div class="row">
+      <div class="col-sm-7 justify-content-center">
+        <div>
+          <img src="<%= product.images[0] %>" alt="avt" class="img-thumbnail" width="600px" height="400px">
+        </div>
+        <div>
+          <div id="carouselExampleDark-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="10000">
+                <div class="container">
+                  <div class="row">
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block"
-                          src="<%= product.images[0] %>"
-                          alt="First slide" width="100px" height="100px">
+                             src="<%= product.images[0] %>"
+                             alt="First slide" width="100px" height="100px">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block"
-                          src="<%= product.images[0] %>"
-                          alt="First slide" width="100px" height="100px">
+                             src="<%= product.images[0] %>"
+                             alt="First slide" width="100px" height="100px">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block"
-                          src="<%= product.images[0] %>"
-                          alt="First slide" width="100px" height="100px">
+                             src="<%= product.images[0] %>"
+                             alt="First slide" width="100px" height="100px">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block"
-                          src="<%= product.images[0] %>"
-                          alt="First slide" width="100px" height="100px">
+                             src="<%= product.images[0] %>"
+                             alt="First slide" width="100px" height="100px">
                       </div>
                     </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                    <div style="margin: 1rem;">
-                      <img class="d-block"
-                        src="<%= product.images[0] %>"
-                        alt="First slide" width="100px" height="100px">
+              <div class="carousel-item" data-bs-interval="2000">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                      <div style="margin: 1rem;">
+                        <img class="d-block"
+                             src="<%= product.images[0] %>"
+                             alt="First slide" width="100px" height="100px">
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <a class="carousel-control-prev" href="#carouselExampleDark-1" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleDark-1" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleDark-1" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleDark-1" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
-        </div>
 
-      </div>
-    </div>
-    <div class="col-sm-5">
-      <h1 class="font-weight-normal"><%= product.name %></h1>
-
-      <div class="row" style="margin: auto;">
-        <div>
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star"></i> </div>
         </div>
-        <p>(30 đánh giá)</p>
       </div>
-      <hr />
-      <h3 class="text-danger"><%= product.price %> VNĐ</h3>
-      <div style="height: 16px;"></div>
-      <h4>Chọn màu sắc: <span id="span-color">Đen</span></h4>
-      <div>
-      </div>
-      <div>
-        <button class="defaultBtn" id="btn-color-1" value="Trắng">Trắng</button>
-        <button class="defaultBtn" id="btn-color-2" value="Đen">Đen</button>
-        <button class="defaultBtn" id="btn-color-3" value="Xanh">Xanh</button>
-      </div>
-      <div style="height: 16px;"></div>
-      <h4>Chọn kích cỡ: <span id="span-size">S</span></h4>
-      <div>
-        <button class="defaultBtn" id="btn-size-1" value="S">S</button>
-        <button class="defaultBtn" id="btn-size-2" value="M">M</button>
-        <button class="defaultBtn" id="btn-size-3" value="L">L</button>
-      </div>
-      <div style="height: 16px;"></div>
-      <h4>Số lượng</h4>
-      <div class="row ">
-        <div class="input-group number-spinner">
-          <span class="input-group-btn">
-            <button class="btn btn-default" data-dir="up">
-              <span class="glyphicon glyphicon-plus"></span>
-            </button>
-          </span>
+      <div class="col-sm-5">
+        <h2 class="font-weight-normal"><%= product.name %></h2>
+        <div class="d-flex flex-row mb-12">
           <div>
-            <input type="text" class="form-control text-center" style="width:50px;"  value="1"></input>
+            <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                      class="fa fa-star"></i> </div>
           </div>
-          <span class="input-group-btn">
-            <button class="btn btn-default" data-dir="up">
-              <span class="glyphicon glyphicon-plus"></span>
+          <p>(30 đánh giá)</p>
+        </div>
+        <hr />
+        <h4 class="text-danger">Giá: <%= product.price %> VNĐ</h4>
+        <div style="height: 16px;"></div>
+        <h4>Chọn màu sắc: <span id="span-color">Đen</span></h4>
+        <div>
+        </div>
+        <div>
+          <button class="defaultBtn" id="btn-color-1" value="Trắng">Trắng</button>
+          <button class="defaultBtn" id="btn-color-2" value="Đen">Đen</button>
+          <button class="defaultBtn" id="btn-color-3" value="Xanh">Xanh</button>
+        </div>
+        <div style="height: 16px;"></div>
+        <h4>Chọn kích cỡ: <span id="span-size">S</span></h4>
+        <div>
+          <button class="defaultBtn" id="btn-size-1" value="S">S</button>
+          <button class="defaultBtn" id="btn-size-2" value="M">M</button>
+          <button class="defaultBtn" id="btn-size-3" value="L">L</button>
+        </div>
+        <div style="height: 16px;"></div>
+        <h4>Số lượng</h4>
+        <div class="flex-row">
+          <div class="input-group number-spinner">
+            <div class="input-group number-spinner" style="width: 120px">
+            <span class="input-group-btn-sub">
+                <button class="btn btn-default" data-dir="dwn">
+                    <i class="fa fa-minus"></i>
+                </button>
+            </span>
+              <input type="text" class="form-control text-center" value="1">
+              <span class="input-group-btn-add">
+                <button class="btn btn-default" data-dir="up">
+                    <i class="fa fa-plus" ></i>
+                </button>
+            </span>
+            </div>
+          </div>
+          <div>Còn lại 10 sản phẩm</div>
+        </div>
+        <div style="height: 16px;"></div>
+        <hr />
+        <div class="row">
+          <div class="col-sm" style="margin-top: 1em;">
+            <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/'">
+              THÊM VÀO GIỎ HÀNG
             </button>
-          </span>
-         
-        </div>
-        <div>Còn lại 10 sản phẩm</div>
-      </div>
-      <div style="height: 16px;"></div>
-      <hr />
-      <div class="row">
-        <div class="col-sm" style="margin-top: 1em;">
-          <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/'">
-            THÊM VÀO GIỎ HÀNG
-          </button>
-        </div>
-        <div class="col-sm" style="margin-top: 1em;">
-          <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/checkout'">
-            MUA NGAY
-          </button>
+          </div>
+          <div class="col-sm" style="margin-top: 1em;">
+            <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/checkout'">
+              MUA NGAY
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <hr>
-  <div style="margin-top: 32px;">
-    <h1>Mô tả sản phẩm</h1>
-    <div style="padding: 3em;">
+    <hr>
+    <div style="margin-top: 32px;">
+      <h1>Mô tả sản phẩm</h1>
+      <div style="padding: 3em;">
 
-      <p style="line-height: 1.5em;">
-        Áo sơ mi nam xưa nay vẫn là dòng sản phẩm được cánh mày râu ưa chuộng, Shop sẽ giới thiệu đến các bạn
-        nam một mẫu mới ÁO SƠ MI NAM TAY DÀI KHÔNG NHĂN rất trẻ trung và phong cách.<br>
+        <p style="line-height: 1.5em;">
+          Áo sơ mi nam xưa nay vẫn là dòng sản phẩm được cánh mày râu ưa chuộng, Shop sẽ giới thiệu đến các bạn
+          nam một mẫu mới ÁO SƠ MI NAM TAY DÀI KHÔNG NHĂN rất trẻ trung và phong cách.<br>
         <div style="height: 16px;"></div>
         Thiết kế cổ bẻ, tay dài, có nút gài phía trước chắc chắn, đường may tỉ mỉ, áo thiết kế form vừa vặn giúp tôn
         được đường nét mạnh mẽ, nam tính của các chàng trai<br>
@@ -250,72 +161,70 @@ $(document).ready(function(){
         S: Dài 50, rộng 40 <br>
         M: Dài 65, rộng 50 <br>
         L: Dài 75, rộng 65
-      </p>
+        </p>
+      </div>
+
     </div>
-
-  </div>
-  <hr />
-  <div>
-    <h1>Đánh giá sản phẩm</h1>
-    <div class="container">
-      <div class="row" style="margin-left: 32px; margin-top: 32px;">
-        <div class="col">
-          <h3>4.5</h3>
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star"></i> 
+    <hr />
+    <div>
+      <h1>Đánh giá sản phẩm</h1>
+      <div class="container">
+        <div class="row" style="margin-left: 32px; margin-top: 32px;">
+          <div class="col-sm-1">
+            <h3>4.5</h3>
+            <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                      class="fa fa-star"></i>
+            </div>
+            <h5>28 nhận xét</h5>
           </div>
-          <h5>28 nhận xét</h5>
-        </div>
-        <div class="col" style="padding-left: 2em;">
-          <div class="container">
-            <div class="row">
-              <div class="col">
-                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                  class="fa fa-star"></i>
-              </div>
-              </div>
-              <div class="col">
-                <div class="progress" style="width: 200px; margin: auto;">
-                  <div class="progress-bar" style="width:75%"></div>
+          <div class="col-sm-6" style="padding-left: 2em;">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                            class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="progress" style="width: 200px; margin: auto;">
+                    <div class="progress-bar" style="width:75%"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                  class="fa fa-star i-disable"></i>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                            class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="progress" style="width: 200px; margin: auto;">
+                    <div class="progress-bar" style="width:50%"></div>
+                  </div>
                 </div>
               </div>
-              <div class="col">
-                <div class="progress" style="width: 200px; margin: auto;">
-                  <div class="progress-bar" style="width:17%"></div>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                            class="fa fa-star"></i>
+                  </div>
+                </div>
+                <div class="col-sm-3">
+                  <div class="progress" style="width: 200px; margin: auto;">
+                    <div class="progress-bar" style="width:45%"></div>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star i-disable"></i>
-                  <i class="fa fa-star i-disable"></i>
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+                            class="fa fa-star"></i>
+                  </div>
                 </div>
-              </div>
-              <div class="col">
-                <div class="progress" style="width: 200px; margin: auto;">
-                  <div class="progress-bar" style="width:3.5%"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col">
-                <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star i-disable"></i> <i
-                  class="fa fa-star i-disable"></i> <i class="fa fa-star i-disable"></i>
-                </div>
-              </div>
-              <div class="col">
-                <div class="progress" style="width: 200px; margin: auto;">
-                  <div class="progress-bar" style="width:0%"></div>
+                <div class="col-sm-3">
+                  <div class="progress" style="width: 200px; margin: auto;">
+                    <div class="progress-bar" style="width:10%"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -323,158 +232,168 @@ $(document).ready(function(){
         </div>
       </div>
     </div>
-  </div>
-  <hr />
-
-  <div style="margin-bottom: 16px; margin-left: 1em;">
-    <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
-        height="50"> </div>
-    <div style="margin-left: 16px;">
-      <div>
-        <h5>Mèo Mướp</h5>
-        <div>
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star"></i> </div>
+    <div style="margin-bottom: 16px; margin-left: 1em;">
+      <div class="row">
+        <div style="width: 50px; margin-right: 10px">
+          <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
+                     height="50"> </div>
         </div>
-    </div>
-
-    </div>
-    <div style="margin-top: 16px; margin-left: 66px;">
-      <p style="line-height: 1.5em;">
-        Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
-        mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
-        có
-        ý định mua tham khảo
-      </p>
-
-    </div>
-  </div>
-  <div style="margin-bottom: 16px; margin: 1em;">
-    <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
-        height="50"> 
-    </div>
-    <div style="margin-left: 16px;">
-      <div>
-        <h5>Mèo Mướp</h5>
-        <div>
-          <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-              class="fa fa-star"></i> </div>
+        <div class="col-sm-10">
+          <h5>Mèo Mướp</h5>
+          <div>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p style="line-height: 1.5em;">
+            Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
+            mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
+            có
+            ý định mua tham khảo
+          </p>
         </div>
       </div>
     </div>
-    <div style="margin-top: 16px; margin-left: 66px;">
-      <p style="line-height: 1.5em;">
-        Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
-        mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
-        có
-        ý định mua tham khảo
-      </p>
-      <div class="row" style="display: inline;">
-        <div style="margin: 1em; display: inline;">
-          <img
-            src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-            alt="avt" class="img-thumbnail" width="100px" height="100px">
+    <hr>
+    <div style="margin-bottom: 16px; margin-left: 1em;">
+      <div class="row">
+        <div style="width: 50px; margin-right: 10px">
+          <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
+                     height="50"> </div>
         </div>
-        <div style="margin: 1em; display: inline;">
-          <img
-            src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-            alt="avt" class="img-thumbnail" width="100px" height="100px">
-        </div>
-        <div style="margin: 1em; display: inline;">
-          <img
-            src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-            alt="avt" class="img-thumbnail" width="100px" height="100px">
-        </div>
+        <div class="col-sm-10">
+          <h5>Mèo Mướp</h5>
+          <div>
+            <div class="stars">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+          <p style="line-height: 1.5em;">
+            Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
+            mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
+            có
+            ý định mua tham khảo
+          </p>
+          <div class="row" style="display: inline;">
+            <div style="margin: 1em; display: inline;">
+              <img
+                      src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+                      alt="avt" class="img-thumbnail" width="100px" height="100px">
+            </div>
+            <div style="margin: 1em; display: inline;">
+              <img
+                      src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+                      alt="avt" class="img-thumbnail" width="100px" height="100px">
+            </div>
+            <div style="margin: 1em; display: inline;">
+              <img
+                      src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
+                      alt="avt" class="img-thumbnail" width="100px" height="100px">
+            </div>
 
 
+          </div>
+        </div>
       </div>
-
     </div>
-  </div>
-
-  <div class="d-flex justify-content-center">
-    <button type="button" class="button" style="width: auto; background-color: #ffffff;">
-      <div>
-          <h3 style="color:#333;">
-              Xem thêm
+    <hr>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="button" style="width: auto; background-color: #ffffff;">
+        <div>
+          <h3 style="color:#0b7dda;">
+            Xem thêm
           </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16" style="color:#333;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16" style="color:#0b7dda;">
             <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
           </svg>
 
-      </div>
-    </button>
-  </div>
-  <hr />
-  <div>
-    <div class="d-flex justify-content-center">
-      <h1>
-        Các sản phẩm liên quan
-      </h1>
+        </div>
+      </button>
+    </div>
+    <hr />
+    <div>
+      <div class="d-flex justify-content-center">
+        <h1>
+          Các sản phẩm liên quan
+        </h1>
 
-    </div>
-    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="10000">
-          <div class="container">
-            <div class="row">
-              <% relatedProduct1.forEach(function (product){ %>
-                <div class="col-lg-3 col-md-6"
-                     onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                  <div class="item-container">
-                    <img class="item-img" src="<%= product.images[0] %>">
-                    <p style="text-align: center;"><b><%= product.name %></b></p>
-                    <p style="text-align: center;"></p>
-                    <p style="text-align: center;"><b><%= product.price %></b></p>
-                  </div>
-                </div>
-              <% }); %>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <div class="container">
-            <div class="row">
-              <% relatedProduct2.forEach(function (product){ %>
-                <div class="col-lg-3 col-md-6"
-                     onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                  <div class="item-container">
-                    <img class="item-img" src="<%= product.images[0] %>">
-                    <p style="text-align: center;"><b><%= product.name %></b></p>
-                    <p style="text-align: center;"></p>
-                    <p style="text-align: center;"><b><%= product.price %></b></p>
-                  </div>
-                </div>
-              <% }); %>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <% relatedProduct3.forEach(function (product){ %>
-                <div class="col-lg-3 col-md-6"
-                     onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
-                  <div class="item-container">
-                    <img class="item-img" src="<%= product.images[0] %>">
-                    <p style="text-align: center;"><b><%= product.name %></b></p>
-                    <p style="text-align: center;"></p>
-                    <p style="text-align: center;"><b><%= product.price %></b></p>
-                  </div>
-                </div>
-              <% }); %>
-            </div>
-          </div>
-        </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </a>
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <div class="container">
+              <div class="row">
+                <% relatedProduct1.forEach(function (product){ %>
+                  <div class="col-lg-3 col-md-6"
+                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                    <div class="card text-center item-container">
+                      <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                      <div class="card-body align-items-center">
+                        <a style="text-align: center;"><%= product.name %></a><br>
+                        <a style="text-align: center;"><%= product.price %></a> <br>
+                        <a style="text-align: center;">M S L</a><br>
+                        <i style="color: #E07A5F" class="fas fa-square"></i>
+                        <i style=" color: #8C4DF3" class="fas fa-square"></i>
+                        <i style="color: orange" class="fas fa-square"></i>
+                      </div>
+                    </div>
+                  </div>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <div class="container">
+              <div class="row">
+                <% relatedProduct2.forEach(function (product){ %>
+                  <div class="col-lg-3 col-md-6"
+                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                    <div class="item-container">
+                      <img class="item-img" src="<%= product.images[0] %>">
+                      <p style="text-align: center;"><b><%= product.name %></b></p>
+                      <p style="text-align: center;"></p>
+                      <p style="text-align: center;"><b><%= product.price %></b></p>
+                    </div>
+                  </div>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row">
+                <% relatedProduct3.forEach(function (product){ %>
+                  <div class="col-lg-3 col-md-6"
+                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                    <div class="item-container">
+                      <img class="item-img" src="<%= product.images[0] %>">
+                      <p style="text-align: center;"><b><%= product.name %></b></p>
+                      <p style="text-align: center;"></p>
+                      <p style="text-align: center;"><b><%= product.price %></b></p>
+                    </div>
+                  </div>
+                <% }); %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
     </div>
   </div>
-</div>
+</section>
+
+

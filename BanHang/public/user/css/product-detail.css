@@ -102,18 +102,6 @@
 .abc:focus {
     outline:0;}
 
-a:link, a:visited {
-    background-color: #8C4DF3; /* Green */
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-a:hover, a:active {
-    background-color: #8C4DF3; /* Green */
-}
-
 
 .input-group-btn-sub{
     background-color: #ffffff; /* Green */
@@ -127,4 +115,14 @@ a:hover, a:active {
     border: 1px solid #b8b7b7;
 }
 
+.defaultBtn{
+    margin: 5px;
+    background-color: #ffffff; /* Green */
+    border-radius: 6px;
+    border: 1px solid #7e7c7c;
+}
+
+.stars{
+    color: #efb914;
+}
 
