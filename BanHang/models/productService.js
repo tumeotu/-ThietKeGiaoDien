@@ -165,3 +165,26 @@ module.exports.female_product_list = async (type) => {
     }
     return products.filter(product => product.gender === 'Female' && product.type === type);
 }
+module.exports.male_product_list_shirt = async () => {
+    return products.filter(function (product){
+        return product.gender == 'Male' && product.category == 'Áo';
+    });
+}
+
+module.exports.male_product_list_pants = async () => {
+    return products.filter(function (product){
+        return product.gender == 'Male' && product.category == 'Quần';
+    });
+}
+
+module.exports.female_product_list_shirt = async () => {
+    return products.filter(function (product){
+        return product.gender == 'Female' && product.category == 'Áo';
+    });
+}
+
+module.exports.female_product_list_pants = async () => {
+    return products.filter(function (product){
+        return product.gender == 'Female' && product.category == 'Quần';
+    });
+}
