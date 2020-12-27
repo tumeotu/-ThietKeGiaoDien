@@ -1,5 +1,76 @@
 <header>
     <link href="user/css/try-clothes.css" rel="stylesheet">
+    <script>
+        let storeGender = <%= curGender%>;
+        let storeType = <%= curType%>;
+        const firsPicDefaultPath = "user/images/try-clothes/image1.jpg";
+        const secondPicDefaulPath = "user/images/try-clothes/image2.jpg";
+        const pic1Key = 'firstPicPath';
+        const pic2Key = 'secondPicPath';
+        let pic = false;
+        let selectID = '';
+        function myClick(gender, type)
+        {
+            storeGender = gender;
+            storeType = type;
+            let url = 'http://127.0.0.1:3000/try-clothes?gender=' + gender + '&&type=' + type;
+            return window.location= url;
+        }
+        function clickLocationProduct(imgPath, ida, productId)
+        {
+            if(ida == 1)
+            {
+                document.getElementById('firstPic').src = imgPath;          
+                localStorage.setItem(pic1Key,imgPath)
+            }
+            else if(ida == 2)
+            {
+                selectID = productId;
+                document.getElementById('secondPic').src = imgPath;
+                localStorage.setItem(pic2Key,imgPath)
+            }
+            else
+            {
+                if(pic)
+                {
+                    document.getElementById('firstPic').src = imgPath;          
+                    localStorage.setItem(pic1Key,imgPath)
+                }
+                else
+                {
+                    selectID = productId;
+                    document.getElementById('secondPic').src = imgPath;
+                    localStorage.setItem(pic2Key,imgPath)
+                }
+            }
+         
+            // if(document.getElementById('firstPic').src == firsPicDefaultPath)
+            //     document.getElementById('firstPic').src = secondPicDefaulPath;
+            // else
+            //     document.getElementById('secondPic').src = firsPicDefaultPath;
+
+        }
+        function loadPic()
+        {
+            if(localStorage.getItem(pic1Key) == 'undefined')
+                localStorage.settItem(pic1Key, firsPicDefaultPath)
+            if(localStorage.getItem(pic2Key) == 'undefined')
+                localStorage.setItem(pic2Key, secondPicDefaulPath)
+
+            document.getElementById('firstPic').src = localStorage.getItem(pic1Key);  
+            document.getElementById('secondPic').src = localStorage.getItem(pic2Key);
+        }
+        function loadFile(event, id)
+        {   
+            clickLocationProduct(URL.createObjectURL(event.target.files[0]), id);
+        }
+        function toDetail()
+        {
+            let url = 'http://127.0.0.1:3000/products-detail?id=' + selectID;
+            return window.location= url;
+        }
+
+    </script>
 </header>
 
 <section style="background: #E7EDF0; padding: 20px">
@@ -10,24 +81,26 @@
                     <div class="col-sm-1"></div>
                     <div class="col-sm-5">
                         <div class="dropdown">
+                            <% let genderDisplay = curGender == '1'? 'Nam' : 'Nữ'%>
+                            <% let typeDisplay = curType == '1' ? 'Áo' : 'Quần' %>
                             <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-                                <b style="font-size: x-large;">Nam</b>
+                                <b style="font-size: x-large;"><%=genderDisplay%></b>
                             </button>
                             <div class="dropdown-menu">
-                                <p class="dropdown-item" >Nam</p>
-                                <p class="dropdown-item" >Nữ</p>
+                                <p class="dropdown-item" onclick="myClick(1, storeType)">Nam</p>
+                                <p class="dropdown-item" onclick="myClick(2,storeType)">Nữ</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-5" >
                         <div class="dropdown">
-                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-                                <b style="font-size: x-large;">Áo</b>
+                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" >
+                                <b style="font-size: x-large;"><%= typeDisplay %></b>
                             </button>
                             <div class="dropdown-menu">
                                 <p class="dropdown-item" >Mới</p>
-                                <p class="dropdown-item" >Áo</p>
-                                <p class="dropdown-item" >Quần</p>
+                                <p class="dropdown-item" onclick="myClick(storeGender, 1)">Áo</p>
+                                <p class="dropdown-item" onclick="myClick(storeGender, 2)">Quần</p>
                                 <p class="dropdown-item" >Túi xách</p>
                                 <p class="dropdown-item" >Túi xách</p>
                                 <p class="dropdown-item" >Phụ kiện</p>
@@ -39,65 +112,18 @@
                 <div class="card-body">
                     <div class="list-group flex-row flex-wrap">
                         <!--item-->
-                        <div class="col-sm-6" style="padding: 5px">
-                            <div class="card text-center">
-                                <img class="card-img-top image"  height="150" src="user/images/try-clothes/image1.jpg" alt="Card image cap">
-                                <div class="card-body align-items-center">
-                                    <h5 class="card-title">Áo hoodie</h5>
-                                    <p class="card-text">200,000đ</p>
+                        <% products.forEach(function (product) {%>
+                            <div class="col-sm-6" style="padding: 5px" onclick="clickLocationProduct('<%=product.images[0]%>',2, '<%=product._id%>')">
+                                <div class="card text-center">
+                                    <img class="card-img-top image"  height="150" src="<%=product.images[0] %>" alt="Card image cap" >
+                                    <div class="card-body align-items-center">
+                                        <h5 class="card-title"><%= product.name%></h5>
+                                        <p class="card-text"><%= product.price%></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--item-->
-                        <div class="col-sm-6" style="padding: 5px">
-                            <div class="card text-center">
-                                <img class="card-img-top image" height="150" src="user/images/try-clothes/image1.jpg" alt="Card image cap">
-                                <div class="card-body align-items-center">
-                                    <h5 class="card-title">Áo hoodie</h5>
-                                    <p class="card-text">200,000đ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--item-->
-                        <div class="col-sm-6" style="padding: 5px">
-                            <div class="card text-center">
-                                <img class="card-img-top image"  height="150" src="user/images/try-clothes/image1.jpg" alt="Card image cap">
-                                <div class="card-body align-items-center">
-                                    <h5 class="card-title">Áo hoodie</h5>
-                                    <p class="card-text">200,000đ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--item-->
-                        <div class="col-sm-6" style="padding: 5px">
-                            <div class="card text-center">
-                                <img class="card-img-top image" height="150" src="user/images/try-clothes/image1.jpg" alt="Card image cap">
-                                <div class="card-body align-items-center">
-                                    <h5 class="card-title">Áo hoodie</h5>
-                                    <p class="card-text">200,000đ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--item-->
-                        <div class="col-sm-6" style="padding: 5px">
-                            <div class="card text-center">
-                                <img class="card-img-top image"  height="150" src="user/images/try-clothes/image1.jpg" alt="Card image cap">
-                                <div class="card-body align-items-center">
-                                    <h5 class="card-title">Áo hoodie</h5>
-                                    <p class="card-text">200,000đ</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--item-->
-                        <div class="col-sm-6" style="padding: 5px">
-                            <div class="card text-center">
-                                <img class="card-img-top image" height="150" src="user/images/try-clothes/image1.jpg" alt="Card image cap">
-                                <div class="card-body align-items-center">
-                                    <h5 class="card-title">Áo hoodie</h5>
-                                    <p class="card-text">200,000đ</p>
-                                </div>
-                            </div>
-                        </div>
+                        <% }); %>
+                        
                     </div>
                 </div>
             </div>
@@ -108,12 +134,12 @@
                     <!--Push model-->
                     <div class="col-sm-3">
                         <div class="card shadow">
-                            <img  src="user/images/try-clothes/image1.jpg" style="height:300px; border-radius: 8px">
+                            <img id="firstPic" src="user/images/try-clothes/image1.jpg" onload="loadPic()" style="height:300px; border-radius: 8px">
                             <div class="centered file-field">
                                 <button class="buttonFile" onclick="document.getElementById('file-input').click();">
                                     <img   src="user/images/try-clothes/file.png" style="height:70px;width: 70px">
                                 </button>
-                                <input id="file-input" type="file" name="name" style="display: none;" />
+                                <input id="file-input" type="file" name="name" style="display: none;" onchange="loadFile(event, 1)"/>
                             </div>
                         </div>
                     </div>
@@ -122,10 +148,13 @@
                             <i class="fa fa-plus fa-4x" ></i>
                         </div>
                     </div>
-                    <!--Clothes-->
                     <div class="col-sm-3">
                         <div class="card shadow">
-                            <img class="card-img-top" style="border-radius: 8px" height="300" src="user/images/try-clothes/image2.jpg" alt="Card image cap">
+                            <img id="secondPic" src="user/images/try-clothes/image2.jpg"  onload="loadPic()" style="height:300px; border-radius: 8px">
+                            <div class="centered file-field">
+                                
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="col-sm-1 my-auto">
@@ -142,14 +171,14 @@
                     </div>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 50px">
-                    <a href="checkout" style="font-size: large;" class="abc col-sm-3" >Thử đồ</a>
+                    <a  style="font-size: large;" class="abc col-sm-3" >Thử đồ</a>
                     <div class="col-sm-1"></div>
-                    <a href="checkout.html" style="font-size: large;" class="abc col-sm-3" >Chi tiết sản phẩm</a>
+                    <a style="font-size: large;" class="abc col-sm-3" onclick="toDetail()">Chi tiết sản phẩm</a>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 30px">
-                    <a href="checkout.html" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
+                    <a href="checkout" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
                     <div class="col-sm-1"></div>
-                    <a href="checkout.html" style="font-size: large;" class="abc col-sm-3" >Thêm vào giỏ hàng</a>
+                    <a style="font-size: large;" class="abc col-sm-3" >Thêm vào giỏ hàng</a>
                 </div>
             </div>
         </div>
