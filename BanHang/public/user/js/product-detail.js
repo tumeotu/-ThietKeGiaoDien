@@ -1,4 +1,4 @@
-$(document).onclick('.number-spinner button', function () {
+$(document).click('.number-spinner button', function () {
     var btn = $(this),
         oldValue = btn.closest('.number-spinner').find('input').val().trim(),
         newVal = 0;
