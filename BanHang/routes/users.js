@@ -11,18 +11,17 @@ router.get('/products-women' , userController.products_women);
 
 router.get('/checkout', userController.checkout);
 
-router.get('/login', function(req, res, next) {
-  res.render('user/login', { title: 'Đăng nhập' ,layout: 'user'});
-});
-router.get('/register', function(req, res, next) {
-  res.render('user/register', { title: 'Đăng ký',layout: 'user' });
-});
+// router.post('/login', userController.login_post);
+
+router.get('/login', userController.login_get);
+
+
+
+router.get('/register', userController.register);
 
 router.get('/products-detail', userController.products_detail);
 
-router.get('/products', function(req, res, next) {
-  res.render('user/products', { title: 'Sản phẩm' ,layout: 'user'});
-});
+router.get('/products', userController.products);
 
 router.get('/try-clothes', userController.try_clothes);
 

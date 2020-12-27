@@ -25,16 +25,31 @@ function deleteProduct(id, price) {
     })
 }
 
-function addOne(price){
+function addOne(id, price){
     $(document).ready(async function () {
+        const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
+        const oldValue = $(deletedProductAmountFinder).val().trim();
+        const newVal = parseInt(oldValue) + 1;
+        $(deletedProductAmountFinder).val(newVal);
+
+
         let costTotal = parseFloat($('#costTotal1').text()) + parseFloat(price);
         $('#costTotal1').text(costTotal + 'đ');
         $('#costTotal2').text(costTotal + 'đ');
     })
 }
 
-function subOne(price){
+function subOne(id, price){
     $(document).ready(async function () {
+        const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
+        const oldValue = $(deletedProductAmountFinder).val().trim();
+        if(oldValue == 1){
+            return;
+        }
+        const newVal = parseInt(oldValue) - 1;
+        $(deletedProductAmountFinder).val(newVal);
+
+
         let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price);
         $('#costTotal1').text(costTotal + 'đ');
         $('#costTotal2').text(costTotal + 'đ');

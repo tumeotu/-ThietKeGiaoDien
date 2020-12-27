@@ -67,3 +67,28 @@ $(document).ready(function(){
 
     });
 });
+
+function showImage(image){
+    $('#mainImage').attr('src', image);
+}
+
+function addOne(id){
+    $(document).ready(async function () {
+        const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
+        const oldValue = $(deletedProductAmountFinder).val().trim();
+        const newVal = parseInt(oldValue) + 1;
+        $(deletedProductAmountFinder).val(newVal);
+    })
+}
+
+function subOne(id){
+    $(document).ready(async function () {
+        const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
+        const oldValue = $(deletedProductAmountFinder).val().trim();
+        if(oldValue == 1){
+            return;
+        }
+        const newVal = parseInt(oldValue) - 1;
+        $(deletedProductAmountFinder).val(newVal);
+    })
+}

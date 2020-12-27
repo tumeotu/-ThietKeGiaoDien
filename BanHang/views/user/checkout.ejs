@@ -1,4 +1,5 @@
 <header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="/user/css/checkout.css" rel="stylesheet">
 <!--    <script src="/user/js/checkout.js"></script>-->
 </header>
@@ -17,7 +18,7 @@
                             <div class="card" style="padding: 0px; margin-bottom: 15px">
                                 <div class="row" style="padding: 0px; margin: 0px">
                                     <div class="col-sm-2" style="padding: 0px">
-                                        <img class="image" src="<%= product.images[0] %>">
+                                        <img class="image" src="<%= product.images[0] %>" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                                     </div>
                                     <div class="col-sm-5" style="padding-left: 30px">
                                         <div class="row" style="padding-top: 10px">
@@ -51,13 +52,13 @@
                                                 <div class="d-flex justify-content-center">
                                                     <div class="input-group number-spinner" style="width: 120px">
                                                         <span class="input-group-btn-sub">
-                                                            <button class="btn btn-default" data-dir="dwn">
+                                                            <button class="btn btn-default" data-dir="dwn" onclick="subOne('<%- product._id %>', '<%- product.price %>')">
                                                                 <i class="fas fa-minus"></i>
                                                             </button>
                                                         </span>
-                                                        <input type="text" class="form-control text-center" value="1">
+                                                        <input id="<%- product._id %>AMOUNT" type="text" class="form-control text-center" value="1">
                                                         <span class="input-group-btn-add">
-                                                            <button class="btn btn-default" data-dir="up">
+                                                            <button class="btn btn-default" data-dir="up" onclick="addOne('<%- product._id %>', '<%- product.price %>')">
                                                                 <i class="fa fa-plus" ></i>
                                                             </button>
                                                         </span>
@@ -140,22 +141,6 @@
     </div>
 </section>
 <script>
-    $(document).click('.number-spinner button', function () {
-        var btn = $(this),
-            oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-            newVal = 0;
-        if (btn.attr('data-dir') == 'up') {
-            newVal = parseInt(oldValue) + 1;
-        } else {
-            if (oldValue > 1) {
-                newVal = parseInt(oldValue) - 1;
-            } else {
-                newVal = 1;
-            }
-        }
-        btn.closest('.number-spinner').find('input').val(newVal);
-    });
-
     function deleteProduct(id, price) {
         const deletedProductFinder = '#'+ id + 'DIV';
         const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
@@ -167,16 +152,31 @@
         })
     }
 
-    function addOne(price){
+    function addOne(id, price){
         $(document).ready(async function () {
+            const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
+            const oldValue = $(deletedProductAmountFinder).val().trim();
+            const newVal = parseInt(oldValue) + 1;
+            $(deletedProductAmountFinder).val(newVal);
+
+
             let costTotal = parseFloat($('#costTotal1').text()) + parseFloat(price);
             $('#costTotal1').text(costTotal + 'đ');
             $('#costTotal2').text(costTotal + 'đ');
         })
     }
 
-    function subOne(price){
+    function subOne(id, price){
         $(document).ready(async function () {
+            const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
+            const oldValue = $(deletedProductAmountFinder).val().trim();
+            if(oldValue == 1){
+                return;
+            }
+            const newVal = parseInt(oldValue) - 1;
+            $(deletedProductAmountFinder).val(newVal);
+
+
             let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price);
             $('#costTotal1').text(costTotal + 'đ');
             $('#costTotal2').text(costTotal + 'đ');

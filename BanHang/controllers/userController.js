@@ -20,7 +20,7 @@ module.exports.checkout = async (req, res, next) => {
     selectedProducts.forEach(function (product){
         costTotal = costTotal + product.price;
     })
-    res.render('layout', {partial_content: 'user/checkout', selectedProducts: selectedProducts, costTotal: costTotal });
+    res.render('user/checkout', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal });
 }
 
 module.exports.products_men = async (req, res, next) => {
@@ -37,8 +37,24 @@ module.exports.products_women = async (req, res, next) => {
 
 
 module.exports.try_clothes = async (req, res, next) => {
-    res.render('layout', {partial_content: 'user/try-clothes' });
+    res.render('user/try-clothes', {layout: 'user' });
 }
+
+module.exports.products = async (req, res, next) => {
+    res.render('user/products', { layout: 'user'});
+}
+
+module.exports.register = async (req, res, next) => {
+    res.render('user/register', { layout: 'user'});
+}
+
+module.exports.login_get = async (req, res, next) => {
+    res.render('user/login', { layout: 'user'});
+}
+
+// module.exports.login_post = async (req, res, next) => {
+//     res.render('user/home', { layout: 'user'});
+// }
 
 
 
