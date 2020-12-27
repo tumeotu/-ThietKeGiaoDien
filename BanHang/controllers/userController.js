@@ -25,19 +25,41 @@ module.exports.checkout = async (req, res, next) => {
 
 module.exports.products_men = async (req, res, next) => {
     const type = await req.query.type;
-    const maleProducts = await productService.male_product_list(type);
+    let maleProducts = await productService.male_product_list(type);
+    if(req.query.type == '1')
+        maleProducts = await productService.male_product_list_shirt();
+    else if(req.query.type =='2')
+        maleProducts = await productService.male_product_list_pants();
     res.render('user/products-men', {layout: 'user',maleProducts: maleProducts});
 }
 
 module.exports.products_women = async (req, res, next) => {
     const type = await req.query.type;
-    const femaleProducts = await productService.female_product_list(type);
+    let femaleProducts = await productService.female_product_list(type);
+    if(req.query.type == '1')
+        femaleProducts = await productService.female_product_list_shirt()
+    else if(req.query.type =='2')
+        femaleProducts = await productService.female_product_list_pants();
     res.render('user/products-women', {layout: 'user',femaleProducts: femaleProducts});
 }
 
 
 module.exports.try_clothes = async (req, res, next) => {
-    res.render('user/try-clothes', {layout: 'user' });
+
+    let listProduct = await productService.male_product_list_shirt();
+    if(req.query.gender == '1' && req.query.type == '2')
+        listProduct = await productService.male_product_list_pants();
+    else if(req.query.gender == '2' && req.query.type == '1')
+        listProduct = await productService.female_product_list_shirt();
+    else if(req.query.gender == '2' && req.query.type == '2')
+        listProduct = await productService.female_product_list_pants();
+    if(req.query.gender == undefined && req.query.type == undefined)
+    {
+        req.query.gender = '2';
+        req.query.type = '2';
+    }
+
+    res.render('layout', {partial_content: 'user/try-clothes', products: listProduct, curGender: req.query.gender, curType: req.query.type});
 }
 
 module.exports.products = async (req, res, next) => {
