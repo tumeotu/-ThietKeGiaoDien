@@ -1,9 +1,11 @@
 const productService = require('../models/productService');
-
+const cartService = require('../models/cartService');
 module.exports.index = async (req, res, next) => {
+
     const highlightProducts = await productService.lighlight_product_list();
     const topsaleProducts = await productService.topsale_product_list();
-    res.render('user/home', {layout: 'user',highlightProducts: highlightProducts, topsaleProducts: topsaleProducts });
+    const cartNumber = await cartService.cart_length();
+    res.render('user/home', {layout: 'user',highlightProducts: highlightProducts, topsaleProducts: topsaleProducts, cartAmount: cartNumber });
 }
 
 module.exports.products_detail = async (req, res, next) => {
@@ -11,41 +13,55 @@ module.exports.products_detail = async (req, res, next) => {
     const relatedProduct1 = await productService.related_product_list();
     const relatedProduct2 = await productService.lighlight_product_list();
     const relatedProduct3 = await productService.topsale_product_list();
-    res.render('user/product-detail', {layout: 'user',product: product, relatedProduct1: relatedProduct1, relatedProduct2: relatedProduct2, relatedProduct3: relatedProduct3});
+    const cartNumber = await cartService.cart_length();
+    res.render('user/product-detail', {layout: 'user',product: product, relatedProduct1: relatedProduct1, relatedProduct2: relatedProduct2, relatedProduct3: relatedProduct3, cartAmount: cartNumber});
 }
 
 module.exports.checkout = async (req, res, next) => {
-    const selectedProducts = await productService.selected_product_list();
+    const cartNumber = await cartService.cart_length();
+    const selectedProducts = await cartService.cart_list();
     let costTotal = 0;
     selectedProducts.forEach(function (product){
         costTotal = costTotal + product.price;
     })
-    res.render('user/checkout', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal });
+    res.render('user/checkout', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal, cartAmount: cartNumber });
 }
 
 module.exports.products_men = async (req, res, next) => {
     const type = await req.query.type;
+    const cartNumber = await cartService.cart_length();
     let maleProducts = await productService.male_product_list(type);
     if(req.query.type == '1')
         maleProducts = await productService.male_product_list_shirt();
     else if(req.query.type =='2')
         maleProducts = await productService.male_product_list_pants();
-    res.render('user/products-men', {layout: 'user',maleProducts: maleProducts});
+    res.render('user/products-men', {layout: 'user',maleProducts: maleProducts, cartAmount: cartNumber});
+    
 }
 
 module.exports.products_women = async (req, res, next) => {
     const type = await req.query.type;
+    const cartNumber = await cartService.cart_length();
     let femaleProducts = await productService.female_product_list(type);
     if(req.query.type == '1')
         femaleProducts = await productService.female_product_list_shirt()
     else if(req.query.type =='2')
         femaleProducts = await productService.female_product_list_pants();
-    res.render('user/products-women', {layout: 'user',femaleProducts: femaleProducts});
+    res.render('user/products-women', {layout: 'user',femaleProducts: femaleProducts, cartAmount: cartNumber});
 }
 
 
 module.exports.try_clothes = async (req, res, next) => {
+    const cartNumber = await cartService.cart_length();
+    if(req.query.id != undefined)
+    {
+       
+        await cartService.add_cart(req.query.id, 1);
 
+        const newUrl = 'http://127.0.0.1:3000/try-clothes?gender=' + req.query.gender + '&&type=' + req.query.type;
+        res.redirect(newUrl);
+        return;
+    }
     let listProduct = await productService.male_product_list_shirt();
     if(req.query.gender == '1' && req.query.type == '2')
         listProduct = await productService.male_product_list_pants();
@@ -59,14 +75,16 @@ module.exports.try_clothes = async (req, res, next) => {
         req.query.type = '2';
     }
 
-    res.render('layout', {partial_content: 'user/try-clothes', products: listProduct, curGender: req.query.gender, curType: req.query.type});
+    res.render('layout', {partial_content: 'user/try-clothes', products: listProduct, curGender: req.query.gender, curType: req.query.type, cartAmount: cartNumber});
 }
 
 module.exports.products = async (req, res, next) => {
+    const cartNumber = await cartService.cart_length();
     res.render('user/products', { layout: 'user'});
 }
 
 module.exports.register = async (req, res, next) => {
+
     res.render('user/register', { layout: 'user'});
 }
 
@@ -77,6 +95,3 @@ module.exports.login_get = async (req, res, next) => {
 // module.exports.login_post = async (req, res, next) => {
 //     res.render('user/home', { layout: 'user'});
 // }
-
-
-
