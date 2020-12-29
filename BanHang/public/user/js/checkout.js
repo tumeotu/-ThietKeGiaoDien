@@ -1,19 +1,3 @@
-$(document).click('.number-spinner button', function () {
-    var btn = $(this),
-        oldValue = btn.closest('.number-spinner').find('input').val().trim(),
-        newVal = 0;
-    if (btn.attr('data-dir') == 'up') {
-        newVal = parseInt(oldValue) + 1;
-    } else {
-        if (oldValue > 1) {
-            newVal = parseInt(oldValue) - 1;
-        } else {
-            newVal = 1;
-        }
-    }
-    btn.closest('.number-spinner').find('input').val(newVal);
-});
-
 function deleteProduct(id, price) {
     const deletedProductFinder = '#'+ id + 'DIV';
     const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
@@ -22,11 +6,17 @@ function deleteProduct(id, price) {
         $('#costTotal1').text(costTotal + 'đ');
         $('#costTotal2').text(costTotal + 'đ');
         $(deletedProductFinder).css('display', 'none');
+
+        //Xóa số lượng sản phẩm đã chọn xóa trên Cart
+        const oldProductAmount = $('[name = "productAmount"]').first().text();
+        const newProductAmount = parseFloat(oldProductAmount) - parseInt($(deletedProductAmountFinder).val());
+        $('[name = "productAmount"]').text(newProductAmount);
     })
 }
 
 function addOne(id, price){
     $(document).ready(async function () {
+        //Cập nhật số lượng sản phẩm trên Cart
         const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
         const oldValue = $(deletedProductAmountFinder).val().trim();
         const newVal = parseInt(oldValue) + 1;
@@ -36,11 +26,18 @@ function addOne(id, price){
         let costTotal = parseFloat($('#costTotal1').text()) + parseFloat(price);
         $('#costTotal1').text(costTotal + 'đ');
         $('#costTotal2').text(costTotal + 'đ');
+
+
+        //Tăng số lượng sản phẩm đã chọn xóa trên Cart
+        const oldProductAmount = $('[name = "productAmount"]').first().text();
+        const newProductAmount = parseFloat(oldProductAmount) + 1;
+        $('[name = "productAmount"]').text(newProductAmount);
     })
 }
 
 function subOne(id, price){
     $(document).ready(async function () {
+        //Cập nhật số lượng sản phẩm trên Cart
         const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
         const oldValue = $(deletedProductAmountFinder).val().trim();
         if(oldValue == 1){
@@ -53,5 +50,10 @@ function subOne(id, price){
         let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price);
         $('#costTotal1').text(costTotal + 'đ');
         $('#costTotal2').text(costTotal + 'đ');
+
+        //Giảm số lượng sản phẩm đã chọn xóa trên Cart
+        const oldProductAmount = $('[name = "productAmount"]').first().text();
+        const newProductAmount = parseFloat(oldProductAmount) - 1;
+        $('[name = "productAmount"]').text(newProductAmount);
     })
 }

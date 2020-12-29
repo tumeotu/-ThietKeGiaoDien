@@ -49,5 +49,9 @@ module.exports.add_cart = async(id, amount) => {
 }
 
 module.exports.cart_length = async() =>{
-    return cart.length;
+    let cartAmount = 0;
+    cart.forEach(function (product){
+        cartAmount = cartAmount + product.amount;
+    })
+    return cartAmount;
 }

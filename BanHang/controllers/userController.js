@@ -22,7 +22,7 @@ module.exports.checkout = async (req, res, next) => {
     const selectedProducts = await cartService.cart_list();
     let costTotal = 0;
     selectedProducts.forEach(function (product){
-        costTotal = costTotal + product.price;
+        costTotal = costTotal + product.amount * product.price;
     })
     res.render('user/checkout', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal, cartAmount: cartNumber });
 }

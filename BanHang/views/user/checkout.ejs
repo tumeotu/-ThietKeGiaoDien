@@ -1,15 +1,7 @@
 <header>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="/user/css/checkout.css" rel="stylesheet">
-    <script>
-        let totalAmount = <%= selectedProducts.length%>;
-        let listProduct = [];
-        function loadTotal()
-        {
-            document.write(totalAmount);
-        }
-    </script>
-<!--    <script src="/user/js/checkout.js"></script>-->
+    <script src="/user/js/checkout.js"></script>
 </header>
 <section>
     <div class="container">
@@ -17,13 +9,13 @@
             <div class="col-sm-8">
                 <div class="d-flex flex-row mb-12" style="padding-left: 30px">
                     <p style="font-size: large">Giỏ hàng &nbsp;</p>
-                    <p style="font-size: large">(<span id="productAmount" style="font-weight: bolder;"><script type="text/javascript">loadTotal()</script></span> sản phẩm)</p>
+                    <p style="font-size: large">(<span name="productAmount" style="font-weight: bolder;"><%= cartAmount %></span> sản phẩm)</p>
                 </div>
                 <div class="list-group">
                     <% selectedProducts.forEach(function (product){ %>
                         <!--item-->
                         <script>
-                            listProduct.push(<%= product %>>);
+                            listProduct.push(<%= product %>);
                         </script>
                         <div id="<%- product._id %>DIV">
                             <div class="card" style="padding: 0px; margin-bottom: 15px">
@@ -151,46 +143,3 @@
         </div>
     </div>
 </section>
-<script>
-    function deleteProduct(id, price) {
-        const deletedProductFinder = '#'+ id + 'DIV';
-        const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
-        $(document).ready(async function () {
-            let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price) * parseInt($(deletedProductAmountFinder).val());
-            $('#costTotal1').text(costTotal + 'đ');
-            $('#costTotal2').text(costTotal + 'đ');
-            $(deletedProductFinder).css('display', 'none');
-        })
-    }
-
-    function addOne(id, price){
-        $(document).ready(async function () {
-            const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
-            const oldValue = $(deletedProductAmountFinder).val().trim();
-            const newVal = parseInt(oldValue) + 1;
-            $(deletedProductAmountFinder).val(newVal);
-
-
-            let costTotal = parseFloat($('#costTotal1').text()) + parseFloat(price);
-            $('#costTotal1').text(costTotal + 'đ');
-            $('#costTotal2').text(costTotal + 'đ');
-        })
-    }
-
-    function subOne(id, price){
-        $(document).ready(async function () {
-            const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
-            const oldValue = $(deletedProductAmountFinder).val().trim();
-            if(oldValue == 1){
-                return;
-            }
-            const newVal = parseInt(oldValue) - 1;
-            $(deletedProductAmountFinder).val(newVal);
-
-
-            let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price);
-            $('#costTotal1').text(costTotal + 'đ');
-            $('#costTotal2').text(costTotal + 'đ');
-        })
-    }
-</script>
