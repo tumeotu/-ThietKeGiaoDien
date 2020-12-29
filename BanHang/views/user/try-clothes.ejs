@@ -69,7 +69,12 @@
             let url = 'http://127.0.0.1:3000/products-detail?id=' + selectID;
             return window.location= url;
         }
-
+        function addCart()
+        {
+            // let url = 'http://127.0.0.1:3000/try-clothes?gender=' + gender + '&&type=' + type + '&&id=' + selectID;
+            let url = 'http://127.0.0.1:3000/try-clothes?gender=' + storeGender + '&&type=' + storeType + '&&id=' + selectID;
+            return window.location= url;
+        }
     </script>
 </header>
 
@@ -178,7 +183,7 @@
                 <div class="row justify-content-center" style="margin-top: 30px">
                     <a href="checkout" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
                     <div class="col-sm-1"></div>
-                    <a style="font-size: large;" class="abc col-sm-3" >Thêm vào giỏ hàng</a>
+                    <a style="font-size: large;" class="abc col-sm-3" onclick="addCart()">Thêm vào giỏ hàng</a>
                 </div>
             </div>
         </div>
