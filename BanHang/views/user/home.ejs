@@ -14,7 +14,7 @@
                                         <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                                         <div class="card-body align-items-center">
                                             <a style="text-align: center;"><%= product.name %></a><br>
-                                            <a style="text-align: center;"><%= product.price %> VND</a> <br>
+                                            <a style="text-align: center;"><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></a> <br>
                                             <a style="text-align: center;">M S L</a><br>
                                             <i style="color: #E07A5F" class="fa fa-square"></i>
                                             <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -35,7 +35,29 @@
                                         <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                                         <div class="card-body align-items-center">
                                             <a style="text-align: center;"><%= product.name %></a><br>
-                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;"><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></a> <br>
+                                            <a style="text-align: center;">M S L</a><br>
+                                            <i style="color: #E07A5F" class="fa fa-square"></i>
+                                            <i style=" color: #8C4DF3" class="fa fa-square"></i>
+                                            <i style="color: orange" class="fa fa-square"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <% highlightProducts.forEach(function (product){ %>
+
+                                <div class="col-lg-3 col-md-6" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                                    <div class="card text-center item-container">
+                                        <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
+                                        <div class="card-body align-items-center">
+                                            <a style="text-align: center;"><%= product.name %></a><br>
+                                            <a style="text-align: center;"><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></a> <br>
                                             <a style="text-align: center;">M S L</a><br>
                                             <i style="color: #E07A5F" class="fa fa-square"></i>
                                             <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -72,7 +94,7 @@
                                         <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                                         <div class="card-body align-items-center">
                                             <a style="text-align: center;"><%= product.name %></a><br>
-                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;"><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></a> <br>
                                             <a style="text-align: center;">M S L</a><br>
                                             <i style="color: #E07A5F" class="fa fa-square"></i>
                                             <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -93,7 +115,7 @@
                                         <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                                         <div class="card-body align-items-center">
                                             <a style="text-align: center;"><%= product.name %></a><br>
-                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;"><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></a> <br>
                                             <a style="text-align: center;">M S L</a><br>
                                             <i style="color: #E07A5F" class="fa fa-square"></i>
                                             <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -114,7 +136,7 @@
                                         <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                                         <div class="card-body align-items-center">
                                             <a style="text-align: center;"><%= product.name %></a><br>
-                                            <a style="text-align: center;"><%= product.price %></a> <br>
+                                            <a style="text-align: center;"><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></a> <br>
                                             <a style="text-align: center;">M S L</a><br>
                                             <i style="color: #E07A5F" class="fa fa-square"></i>
                                             <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -128,10 +150,10 @@
                 </div>
             </div>
             <a style="width: 20px"
-               class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+               class="carousel-control-prev" href="#carouselExampleDark2" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon fa-4x" aria-hidden="true"></span>
             </a>
-            <a style="width: 20px; margin: 40px" class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+            <a style="width: 20px; margin: 40px" class="carousel-control-next" href="#carouselExampleDark2" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </a>

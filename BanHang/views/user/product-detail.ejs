@@ -86,7 +86,7 @@
           <p>(30 đánh giá)</p>
         </div>
         <hr />
-        <h4 class="text-danger">Giá: <%= product.price %> VNĐ</h4>
+        <h4 class="text-danger">Giá: <%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h4>
         <div style="height: 16px;"></div>
         <h4>Chọn màu sắc: <span id="span-color">Đen</span></h4>
         <div>

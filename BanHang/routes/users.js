@@ -16,7 +16,6 @@ router.get('/checkout', userController.checkout);
 router.get('/login', userController.login_get);
 
 
-
 router.get('/register', userController.register);
 
 router.get('/products-detail', userController.products_detail);

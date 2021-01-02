@@ -42,13 +42,12 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="d-flex flex-row-reverse">
-                                                    <h5><%= product.price %>đ</h5>
+                                                    <h5><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h5>
                                                 </div>
                                                 <div class="d-flex flex-row-reverse" >
                                                     <h6 style="color: #6e6e6e">
                                                         &nbsp; | 50%</h6>
-                                                    <h6 style="text-decoration-line: line-through; color: #6e6e6e"><%= product.price * 2 %>
-                                                        đ</h6>
+                                                    <h6 style="text-decoration-line: line-through; color: #6e6e6e"><%= (product.price * 2).toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h6>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
@@ -108,7 +107,7 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h4 id="costTotal1"><%= costTotal %>đ</h4>
+                                        <h4 id="costTotal1"><%= costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h4>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +117,7 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h4>0đ</h4>
+                                        <h4><%= (0).toLocaleString('vi', {style : 'currency', currency : 'VND'});%></h4>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +127,7 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h4 id="costTotal2" style="color: crimson"><%= costTotal %>đ</h4>
+                                        <h4 id="costTotal2" style="color: crimson"><%= costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h4>
                                         <h5 style="color: #6e6e6e">(Đã bao gồm VAT nếu có)</h5>
                                     </div>
                                 </div>

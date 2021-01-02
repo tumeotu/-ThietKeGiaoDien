@@ -1,7 +1,6 @@
 const productService = require('../models/productService');
 const cartService = require('../models/cartService');
 module.exports.index = async (req, res, next) => {
-
     const highlightProducts = await productService.lighlight_product_list();
     const topsaleProducts = await productService.topsale_product_list();
     const cartNumber = await cartService.cart_length();
@@ -84,12 +83,13 @@ module.exports.products = async (req, res, next) => {
 }
 
 module.exports.register = async (req, res, next) => {
-
-    res.render('user/register', { layout: 'user'});
+    const cartNumber = await cartService.cart_length();
+    res.render('user/register', { layout: 'user', cartAmount: cartNumber});
 }
 
 module.exports.login_get = async (req, res, next) => {
-    res.render('user/login', { layout: 'user'});
+    const cartNumber = await cartService.cart_length();
+    res.render('user/login', { layout: 'user', cartAmount: cartNumber});
 }
 
 // module.exports.login_post = async (req, res, next) => {
