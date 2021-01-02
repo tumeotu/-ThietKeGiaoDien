@@ -126,8 +126,21 @@
     color: #efb914;
 }
 
+.star-yellow{
+    color: #efb914;
+}
+.star-grey{
+    color: #d3d3d3;
+}
+
 .isSelected{
     background: #8C4DF3;
     color: white;
+}
+
+.activePaginationButton{
+  
+    background-color: #8C4DF3;
+
 }
 

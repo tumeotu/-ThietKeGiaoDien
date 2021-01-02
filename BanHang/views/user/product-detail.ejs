@@ -2,60 +2,17 @@
 
   <link href="user/css/product-detail.css" rel="stylesheet">
   <script src="user/js/product-detail.js"></script>
-<!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+  <!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </header>
-<script>
-  $(document).ready(function(){
-    $("#btn-size-1").click(function(){
-      $("#span-size").text($("#btn-size-1").val());
-      $("#btn-size-1").addClass("isSelected");
-      $("#btn-size-2").removeClass("isSelected");
-      $("#btn-size-3").removeClass("isSelected");
-    });
-    $("#btn-size-2").click(function(){
-      $("#span-size").text($("#btn-size-2").val());
-      $("#btn-size-2").addClass("isSelected");
-      $("#btn-size-1").removeClass("isSelected");
-      $("#btn-size-3").removeClass("isSelected");
-    });
-    $("#btn-size-3").click(function(){
-      $("#span-size").text($("#btn-size-3").val());
-      $("#btn-size-3").addClass("isSelected");
-      $("#btn-size-2").removeClass("isSelected");
-      $("#btn-size-1").removeClass("isSelected");
-
-    });
-
-    $("#btn-color-1").click(function(){
-      $("#span-color").text($("#btn-color-1").val());
-      $("#btn-color-1").addClass("isSelected");
-      $("#btn-color-2").removeClass("isSelected");
-      $("#btn-color-3").removeClass("isSelected");
-    });
-    $("#btn-color-2").click(function(){
-      $("#span-color").text($("#btn-color-2").val());
-      $("#btn-color-2").addClass("isSelected");
-      $("#btn-color-1").removeClass("isSelected");
-      $("#btn-color-3").removeClass("isSelected");
-    });
-    $("#btn-color-3").click(function(){
-      $("#span-color").text($("#btn-color-3").val());
-      $("#btn-color-3").addClass("isSelected");
-      $("#btn-color-2").removeClass("isSelected");
-      $("#btn-color-1").removeClass("isSelected");
-
-    });
-  });
-</script>
-
 
 <section>
   <div class="container" style="margin-top: 32px;">
     <div class="row">
       <div class="col-sm-7 justify-content-center">
         <div class="d-flex justify-content-center">
-          <img id="mainImage" src="<%= product.images[0] %>" alt="avt" class="img-thumbnail" width="600px" height="400px">
+          <img id="mainImage" src="<%= product.images[0] %>" alt="avt" class="img-thumbnail" width="600px"
+            height="400px">
         </div>
         <div>
           <div id="carouselExampleDark-1" class="carousel carousel-dark slide" data-bs-ride="carousel">
@@ -65,30 +22,26 @@
                   <div class="row">
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
-                        <img class="d-block"
-                             src="<%= product.images[0] %>"
-                             alt="First slide" width="100px" height="100px" onclick="showImage('<%= product.images[0] %>')">
+                        <img class="d-block" src="<%= product.images[0] %>" alt="First slide" width="100px"
+                          height="100px" onclick="showImage('<%= product.images[0] %>')">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
-                        <img class="d-block"
-                             src="<%= product.images[1] %>"
-                             alt="First slide" width="100px" height="100px" onclick="showImage('<%= product.images[1] %>')">
+                        <img class="d-block" src="<%= product.images[1] %>" alt="First slide" width="100px"
+                          height="100px" onclick="showImage('<%= product.images[1] %>')">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
-                        <img class="d-block"
-                             src="<%= product.images[2] %>"
-                             alt="First slide" width="100px" height="100px" onclick="showImage('<%= product.images[2] %>')">
+                        <img class="d-block" src="<%= product.images[2] %>" alt="First slide" width="100px"
+                          height="100px" onclick="showImage('<%= product.images[2] %>')">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
-                        <img class="d-block"
-                             src="<%= product.images[3] %>"
-                             alt="First slide" width="100px" height="100px" onclick="showImage('<%= product.images[3] %>')">
+                        <img class="d-block" src="<%= product.images[3] %>" alt="First slide" width="100px"
+                          height="100px" onclick="showImage('<%= product.images[3] %>')">
                       </div>
                     </div>
                   </div>
@@ -99,20 +52,21 @@
                   <div class="row">
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
-                        <img class="d-block"
-                             src="<%= product.images[0] %>"
-                             alt="First slide" width="100px" height="100px">
+                        <img class="d-block" src="<%= product.images[0] %>" alt="First slide" width="100px"
+                          height="100px">
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <a style="width: 20px" class="carousel-control-prev" href="#carouselExampleDark-1" role="button" data-bs-slide="prev">
+            <a style="width: 20px" class="carousel-control-prev" href="#carouselExampleDark-1" role="button"
+              data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </a>
-            <a  style="width: 20px; margin-right: 30px" class="carousel-control-next" href="#carouselExampleDark-1" role="button" data-bs-slide="next">
+            <a style="width: 20px; margin-right: 30px" class="carousel-control-next" href="#carouselExampleDark-1"
+              role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
@@ -121,11 +75,13 @@
         </div>
       </div>
       <div class="col-sm-5">
-        <h2 class="font-weight-normal"><%= product.name %></h2>
+        <h2 class="font-weight-normal">
+          <%= product.name %>
+        </h2>
         <div class="d-flex flex-row mb-12">
           <div>
             <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                      class="fa fa-star"></i> </div>
+                class="fa fa-star"></i> </div>
           </div>
           <p>(30 đánh giá)</p>
         </div>
@@ -152,17 +108,17 @@
         <div class="flex-row">
           <div class="input-group number-spinner">
             <div class="input-group number-spinner" style="width: 120px">
-            <span class="input-group-btn-sub">
+              <span class="input-group-btn-sub">
                 <button class="btn btn-default" data-dir="dwn" onclick="subOne('<%- product._id %>')">
-                    <i class="fa fa-minus"></i>
+                  <i class="fa fa-minus"></i>
                 </button>
-            </span>
+              </span>
               <input id="<%- product._id %>AMOUNT" type="text" class="form-control text-center" value="1">
               <span class="input-group-btn-add">
                 <button class="btn btn-default" data-dir="up" onclick="addOne('<%- product._id %>')">
-                    <i class="fa fa-plus" ></i>
+                  <i class="fa fa-plus"></i>
                 </button>
-            </span>
+              </span>
             </div>
           </div>
           <div>Còn lại 10 sản phẩm</div>
@@ -189,7 +145,8 @@
       <div style="padding: 3em;">
 
         <p style="line-height: 1.5em;">
-          Áo sơ mi nam xưa nay vẫn là dòng sản phẩm được cánh mày râu ưa chuộng, Shop sẽ giới thiệu đến các bạn
+          Áo sơ mi nam xưa nay vẫn là dòng sản phẩm được cánh mày râu ưa chuộng, Shop sẽ giới thiệu đến các
+          bạn
           nam một mẫu mới ÁO SƠ MI NAM TAY DÀI KHÔNG NHĂN rất trẻ trung và phong cách.<br>
         <div style="height: 16px;"></div>
         Thiết kế cổ bẻ, tay dài, có nút gài phía trước chắc chắn, đường may tỉ mỉ, áo thiết kế form vừa vặn giúp tôn
@@ -220,7 +177,7 @@
           <div class="col-sm-1">
             <h3>4.5</h3>
             <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                      class="fa fa-star"></i>
+                class="fa fa-star"></i>
             </div>
             <h5>28 nhận xét</h5>
           </div>
@@ -228,12 +185,12 @@
             <div class="container">
               <div class="row">
                 <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i>(10)
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>(10)
                   </div>
                 </div>
                 <div class="col-sm-3">
-                  
+
                   <div class="progress" style="width: 200px; margin: auto;">
                     <div class="progress-bar" style="width:75%"></div>
                   </div>
@@ -241,8 +198,8 @@
               </div>
               <div class="row">
                 <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i>(8)
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>(8)
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -253,8 +210,8 @@
               </div>
               <div class="row">
                 <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i>(7)
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>(7)
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -265,8 +222,8 @@
               </div>
               <div class="row">
                 <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                            class="fa fa-star"></i>(3)
+                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>(3)
                   </div>
                 </div>
                 <div class="col-sm-3">
@@ -280,96 +237,49 @@
         </div>
       </div>
     </div>
-    <div style="margin-bottom: 16px; margin-left: 1em;">
-      <div class="row">
-        <div style="width: 50px; margin-right: 10px">
-          <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
-                     height="50"> </div>
-        </div>
-        <div class="col-sm-10">
-          <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-            <h5>Mèo Trắng</h5> 
-            <i style="color: #9e9e9e; padding-left: 10px;">27/01/2021</i>
-          </div>
-         
-          <div>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-          </div>
-          <p style="line-height: 1.5em;">
-            Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
-            mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
-            có
-            ý định mua tham khảo
-          </p>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div style="margin-bottom: 16px; margin-left: 1em;">
-      <div class="row">
-        <div style="width: 50px; margin-right: 10px">
-          <div> <img src="https://cdn2.thecatapi.com/images/32c.jpg" class="rounded-circle" alt="Cinque Terre" width="50"
-                     height="50"> </div>
-        </div>
-        <div class="col-sm-10">
-          <div style="display: flex; flex-direction: row; justify-content: flex-start;">
-            <h5>Mèo Vespa hồng</h5> 
-            <i style="color: #9e9e9e; padding-left: 10px;">04/12/2020</i>
-          </div>
-          <div>
-            <div class="stars">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-            </div>
-          </div>
-          <p style="line-height: 1.5em;">
-            Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình
-            mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn
-            có
-            ý định mua tham khảo
-          </p>
-          <div class="row" style="display: inline;">
-            <div style="margin: 1em; display: inline;">
-              <img
-                      src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-                      alt="avt" class="img-thumbnail" width="100px" height="100px">
-            </div>
-            <div style="margin: 1em; display: inline;">
-              <img
-                      src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-                      alt="avt" class="img-thumbnail" width="100px" height="100px">
-            </div>
-            <div style="margin: 1em; display: inline;">
-              <img
-                      src="https://www.chanel.com/images//t_fashion//q_auto,f_jpg,fl_lossy,dpr_2/w_620/chanel-19-large-flap-bag-black-tweed-gold-tone-silver-tone-ruthenium-finish-metal-tweed-gold-tone-silver-tone-ruthenium-finish-metal-packshot-default-as1161b0490094305-8832597032990.jpg"
-                      alt="avt" class="img-thumbnail" width="100px" height="100px">
-            </div>
 
+    <div id="data-comment"></div>
 
-          </div>
-        </div>
-      </div>
-    </div>
     <hr>
     <div class="d-flex justify-content-center">
-      <button type="button" class="button" style="width: auto; background-color: #ffffff;">
-        <div>
-          <h3 style="color:#0b7dda;">
-            Xem thêm
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-compact-down" viewBox="0 0 16 16" style="color:#0b7dda;">
-            <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67z"/>
-          </svg>
-
-        </div>
-      </button>
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li>
+            <a class="btn prev" id="btn-pgn-prev">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em"
+                width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z">
+                </path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class="btn activePaginationButton  " id="btn-pgn-1">
+              1
+            </a>
+          </li>
+          <li>
+            <a class="btn" id="btn-pgn-2">
+              2
+            </a>
+          </li>
+          <li>
+            <a class="btn" id="btn-pgn-3">
+              3
+            </a>
+          </li>
+          <li>
+            <a id="btn-pgn-next" class="btn next"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
+                viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z">
+                </path>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
     <hr />
     <div>
@@ -386,12 +296,16 @@
               <div class="row">
                 <% relatedProduct1.forEach(function (product){ %>
                   <div class="col-lg-3 col-md-6"
-                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                    onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                     <div class="card text-center item-container">
                       <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                       <div class="card-body align-items-center">
-                        <a style="text-align: center;"><%= product.name %></a><br>
-                        <a style="text-align: center;"><%= product.price %></a> <br>
+                        <a style="text-align: center;">
+                          <%= product.name %>
+                        </a><br>
+                        <a style="text-align: center;">
+                          <%= product.price %>
+                        </a> <br>
                         <a style="text-align: center;">M S L</a><br>
                         <i style="color: #E07A5F" class="fa fa-square"></i>
                         <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -399,7 +313,7 @@
                       </div>
                     </div>
                   </div>
-                <% }); %>
+                  <% }); %>
               </div>
             </div>
           </div>
@@ -408,12 +322,16 @@
               <div class="row">
                 <% relatedProduct2.forEach(function (product){ %>
                   <div class="col-lg-3 col-md-6"
-                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                    onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                     <div class="card text-center item-container">
                       <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                       <div class="card-body align-items-center">
-                        <a style="text-align: center;"><%= product.name %></a><br>
-                        <a style="text-align: center;"><%= product.price %></a> <br>
+                        <a style="text-align: center;">
+                          <%= product.name %>
+                        </a><br>
+                        <a style="text-align: center;">
+                          <%= product.price %>
+                        </a> <br>
                         <a style="text-align: center;">M S L</a><br>
                         <i style="color: #E07A5F" class="fa fa-square"></i>
                         <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -421,7 +339,7 @@
                       </div>
                     </div>
                   </div>
-                <% }); %>
+                  <% }); %>
               </div>
             </div>
           </div>
@@ -430,12 +348,16 @@
               <div class="row">
                 <% relatedProduct3.forEach(function (product){ %>
                   <div class="col-lg-3 col-md-6"
-                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                    onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                     <div class="card text-center item-container">
                       <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                       <div class="card-body align-items-center">
-                        <a style="text-align: center;"><%= product.name %></a><br>
-                        <a style="text-align: center;"><%= product.price %></a> <br>
+                        <a style="text-align: center;">
+                          <%= product.name %>
+                        </a><br>
+                        <a style="text-align: center;">
+                          <%= product.price %>
+                        </a> <br>
                         <a style="text-align: center;">M S L</a><br>
                         <i style="color: #E07A5F" class="fa fa-square"></i>
                         <i style=" color: #8C4DF3" class="fa fa-square"></i>
@@ -443,16 +365,17 @@
                       </div>
                     </div>
                   </div>
-                <% }); %>
+                  <% }); %>
               </div>
             </div>
           </div>
         </div>
-        <a style="width: 20px"
-           class="carousel-control-prev" href="#carouselExampleDark" role="button" data-bs-slide="prev">
+        <a style="width: 20px" class="carousel-control-prev" href="#carouselExampleDark" role="button"
+          data-bs-slide="prev">
           <span class="carousel-control-prev-icon fa-4x" aria-hidden="true"></span>
         </a>
-        <a style="width: 20px; margin: 40px" class="carousel-control-next" href="#carouselExampleDark" role="button" data-bs-slide="next">
+        <a style="width: 20px; margin: 40px" class="carousel-control-next" href="#carouselExampleDark" role="button"
+          data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </a>
@@ -462,3 +385,282 @@
 </section>
 
 
+<script>
+
+  $(document).ready(function () {
+    $("#data-comment").replaceWith('<div id="data-comment">' + buildListComment(0) + '</div');
+
+    $("#btn-size-1").click(function () {
+      $("#span-size").text($("#btn-size-1").val());
+      $("#btn-size-1").addClass("isSelected");
+      $("#btn-size-2").removeClass("isSelected");
+      $("#btn-size-3").removeClass("isSelected");
+    });
+    $("#btn-size-2").click(function () {
+      $("#span-size").text($("#btn-size-2").val());
+      $("#btn-size-2").addClass("isSelected");
+      $("#btn-size-1").removeClass("isSelected");
+      $("#btn-size-3").removeClass("isSelected");
+    });
+    $("#btn-size-3").click(function () {
+      $("#span-size").text($("#btn-size-3").val());
+      $("#btn-size-3").addClass("isSelected");
+      $("#btn-size-2").removeClass("isSelected");
+      $("#btn-size-1").removeClass("isSelected");
+
+    });
+
+    $("#btn-color-1").click(function () {
+      $("#span-color").text($("#btn-color-1").val());
+      $("#btn-color-1").addClass("isSelected");
+      $("#btn-color-2").removeClass("isSelected");
+      $("#btn-color-3").removeClass("isSelected");
+    });
+    $("#btn-color-2").click(function () {
+      $("#span-color").text($("#btn-color-2").val());
+      $("#btn-color-2").addClass("isSelected");
+      $("#btn-color-1").removeClass("isSelected");
+      $("#btn-color-3").removeClass("isSelected");
+    });
+    $("#btn-color-3").click(function () {
+      $("#span-color").text($("#btn-color-3").val());
+      $("#btn-color-3").addClass("isSelected");
+      $("#btn-color-2").removeClass("isSelected");
+      $("#btn-color-1").removeClass("isSelected");
+
+    });
+    $("#btn-pgn-prev").hide();
+    $("#btn-pgn-1").click(function () {
+      $("#btn-pgn-1").addClass("activePaginationButton").addClass("btn");
+      $("#btn-pgn-2").removeClass("activePaginationButton");
+      $("#btn-pgn-3").removeClass("activePaginationButton");
+      $("#btn-pgn-prev").hide();
+      $("#btn-pgn-next").show();
+      $("#data-comment").replaceWith('<div id="data-comment">' + buildListComment(0) + '</div');
+
+
+
+    });
+    $("#btn-pgn-2").click(function () {
+      $("#btn-pgn-2").addClass("activePaginationButton").addClass("btn");
+      $("#btn-pgn-1").removeClass("activePaginationButton");
+      $("#btn-pgn-3").removeClass("activePaginationButton");
+      $("#btn-pgn-prev").show();
+      $("#btn-pgn-next").show();
+      $("#data-comment").replaceWith('<div id="data-comment">' + buildListComment(1) + '</div');
+
+    });
+    $("#btn-pgn-3").click(function () {
+      $("#btn-pgn-3").addClass("activePaginationButton").addClass("btn");
+      $("#btn-pgn-1").removeClass("activePaginationButton");
+      $("#btn-pgn-2").removeClass("activePaginationButton");
+      $("#btn-pgn-prev").show();
+      $("#btn-pgn-next").hide();
+      $("#data-comment").replaceWith('<div id="data-comment">' + buildListComment(2) + '</div');
+
+    });
+    $("#btn-pgn-next").click(function () {
+      var prevIsHidden = $("#btn-pgn-prev").is(":hidden");
+      console.log(commentPagination);
+      if (prevIsHidden == true) {
+        $("#btn-pgn-2").click();
+      } else {
+        $("#btn-pgn-3").click();
+      }
+
+    });
+    $("#btn-pgn-prev").click(function () {
+      var nextIsHidden = $("#btn-pgn-next").is(":hidden");
+
+      if (nextIsHidden == true) {
+        $("#btn-pgn-2").click();
+      } else {
+        $("#btn-pgn-1").click();
+      }
+
+    });
+  });
+
+  const commentPagination = [
+    [
+      {
+        "avt": "https://cdn2.thecatapi.com/images/32c.jpg",
+        "name": "Mèo mướp",
+        "rating": 4,
+        "time": "24/12/2020",
+        "content": "Quá đẹp mà thích cho 4 sao đó thì sao nào!",
+        "images": [
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHH5TGI92EerVIEXeD_il1vBDZljbTh4ep1cwkq6CpbtnE3WeyPoyIfKU3eQ&usqp=CAc",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTneqLhzbFNNmS865qnQs-cLng9VtHn-9NIHkkrrIUHPVhks8jMhaDXFpKPNcJIyT3HdTVSTXka&usqp=CAc"
+        ]
+      },
+      {
+        "avt": "https://lh3.googleusercontent.com/ogw/ADGmqu82XsJmyZjcCq_OH3PMnZHvGCr8emkzn9qjjfdh=s83-c-mo",
+        "name": "Vịnh Ngô",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "Đặt hôm qua mà hôm nay có rồi, shop soạn hàng nhanh nữa, màu đẹp, vải ko quá dày cũng ko mỏng, mềm, mát, mình mua làm quà tặng Ngoại và ba nên ko tiện gỡ ra khỏi bịch, nhưng vẫn đánh giá có tâm nhất có thể cho những bạn có ý định mua tham khảo",
+        "images": [
+
+        ]
+      }
+    ],
+    [
+      {
+        "avt": "https://scontent.xx.fbcdn.net/v/t1.0-1/p100x100/48388293_2159715841012602_3257497325513211904_o.jpg?_nc_cat=111&ccb=2&_nc_sid=dbb9e7&_nc_ohc=TBQB1Zdkc5kAX8SFuM4&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=41fa8dd532c32dbb6c20faad09ed72b5&oe=601654AB",
+        "name": "Tú",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "Mua áo ở đây đúng là số 1 luôn á. love you 3000 <3 ",
+        "images": [
+
+        ]
+      },
+      {
+        "avt": "https://scontent.fvca1-1.fna.fbcdn.net/v/t1.0-1/p100x100/50787638_946272402229348_5975798959128444928_n.jpg?_nc_cat=105&ccb=2&_nc_sid=7206a8&_nc_ohc=dO28-qeuhWwAX8tCxaI&_nc_oc=AQkYPInuZKl06bdLEZXH1prAqzz0LIh2L_ApgRx2rip_WNy7201T_mfzUJeEDy9rQE4&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fvca1-1.fna&tp=6&oh=92187d500462113004382f0293ceee09&oe=6015F6EC",
+        "name": "Tuấn Tuấn Tuấn",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "Nhà anh giàu anh mua cả shop.",
+        "images": [
+
+        ]
+      },
+      {
+        "avt": "https://scontent.fhan4-1.fna.fbcdn.net/v/t1.0-1/p200x200/52008476_1206548782841338_8038084775396769792_o.jpg?_nc_cat=108&ccb=2&_nc_sid=7206a8&_nc_ohc=Iwg_1jFNnDEAX_s_V1N&_nc_ht=scontent.fhan4-1.fna&tp=6&oh=3136cfd90b0609f417af393fb5265c49&oe=60172C47",
+        "name": "Tùng Tùng Tùng",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "Tùng tùng tùng thế là vào năm học mới, mình mua áo sơ mi trắng ở đây đi học, tán gái thì đúng rồi luôn.",
+        "images": [
+
+        ]
+      },
+      {
+        "avt": "https://scontent.xx.fbcdn.net/v/t1.0-1/p200x200/16427214_380319605659149_778255772739184548_n.jpg?_nc_cat=106&ccb=2&_nc_sid=bbed71&_nc_ohc=2MKV_zRcFW0AX89TPPK&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=6&oh=5fa8b272400378bcaa51b1e8f442d34f&oe=6014D085",
+        "name": "Mã",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "hôm bữa mua đồ tặng người yêu, người yêu thích lắm, cho hẵn 5 sao cao vàng =))",
+        "images": [
+
+        ]
+      }
+    ],
+    [
+      {
+        "avt": "https://upload.wikimedia.org/wikipedia/commons/d/da/Seal_of_the_Federal_Bureau_of_Investigation.svg",
+        "name": "Thanh tra FBI",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "Xem trộm thông tin trên internet, tìm ra được cái trang bán hàng ngon vãi. Bán đồ dõm là hách luôn.",
+        "images": [
+          "https://www.aothunthongdiep.com/files/600x/425501F-tshirt-kmB3CHAaOf.png"
+        ]
+      },
+      {
+        "avt": "data:image/jpeg;base64,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",
+        "name": "Chúc mừng năm mới",
+        "rating": 5,
+        "time": "24/12/2020",
+        "content": "Chúc mọi người năm mới an lành <3",
+        "images": [
+
+        ]
+      }
+    ]
+  ]
+  var itemComment = (avt, name, rating, time, content, images) => {
+    return '<div style="margin-bottom: 16px; margin-left: 1em;">\
+      <div class="row">\
+        <div style="width: 50px; margin-right: 10px">\
+          <div> <img src="'+avt+'" class="rounded-circle" alt="Cinque Terre" width="50"\
+                     height="50"> </div>\
+        </div>\
+        <div class="col-sm-10">\
+          <div style="display: flex; flex-direction: row; justify-content: flex-start;">\
+            <h5>'+name+'</h5> \
+            <i style="color: #9e9e9e; padding-left: 10px;">'+time+'</i>\
+          </div>\
+          <div>\
+            <div class="stars">\
+              '+ buildRatingStars(rating) + '\
+            </div>\
+          </div>\
+          <p style="line-height: 1.5em;">\
+            '+ content + '\
+          </p>\
+          <div class="row" style="display: inline;">\
+            '+ buildListImageFeedback(images) + '\
+        </div>\
+        </div>\
+      </div>\
+    </div>\
+    <hr>';
+  }
+
+  const buildRatingStars = (ratingNumber) => {
+    const yellow = '<i class="fa fa-star star-yellow"></i>';
+    const grey = '<i class="fa fa-star star-grey"></i>';
+    let rs = "";
+    for (var i = 0; i < ratingNumber; i++) {
+      rs += yellow;
+    }
+    for (var i = ratingNumber; i < 5; i++) {
+      rs += grey;
+    }
+    return rs;
+  }
+
+  const buildListImageFeedback = (images) => {
+    let rs = "";
+    for (var i = 0; i < images.length; i++) {
+      rs += ' <div style="margin: 1em; display: inline;">\
+        <img\
+          src="'+ images[i] + ' "\
+          alt="avt" class="img-thumbnail" width="100px" height="100px">\
+      </div>';
+    }
+    return rs;
+  }
+
+  const buildListComment = (index) => {
+    var rs = "";
+    for (var i = 0; i < commentPagination[index].length; i++) {
+      rs += itemComment(commentPagination[index][i].avt, commentPagination[index][i].name, commentPagination[index][i].rating, commentPagination[index][i].time, commentPagination[index][i].content, commentPagination[index][i].images);
+    }
+    console.log(rs);
+    return rs;
+  }
+
+
+
+  const a=()=>{
+    return '<div style="margin-bottom: 16px; margin-left: 1em;">\
+      <div class="row">\
+        <div style="width: 50px; margin-right: 10px">\
+          <div> <img src="'+avt+'" class="rounded-circle" alt="Cinque Terre" width="50"\
+                     height="50"> </div>\
+        </div>\
+        <div class="col-sm-10">\
+          <div style="display: flex; flex-direction: row; justify-content: flex-start;">\
+            <h5>'+name+'</h5> \
+            <i style="color: #9e9e9e; padding-left: 10px;">'+tine+'</i>\
+          </div>\
+          <div>\
+            <div class="stars">\
+              '+ buildRatingStars(rating) + '\
+            </div>\
+          </div>\
+          <p style="line-height: 1.5em;">\
+            '+ content + '\
+          </p>\
+          <div class="row" style="display: inline;">\
+            '+ buildListImageFeedback(images) + '\
+        </div>\
+        </div>\
+      </div>\
+    </div>';
+  }
+
+</script>
