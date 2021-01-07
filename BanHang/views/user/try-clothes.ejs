@@ -56,7 +56,7 @@
                 localStorage.settItem(pic1Key, firsPicDefaultPath)
             if(localStorage.getItem(pic2Key) == 'undefined')
                 localStorage.setItem(pic2Key, secondPicDefaulPath)
-
+            localStorage.settItem(pic1Key, firsPicDefaultPath)
             document.getElementById('firstPic').src = localStorage.getItem(pic1Key);  
             document.getElementById('secondPic').src = localStorage.getItem(pic2Key);
         }
@@ -157,8 +157,6 @@
                         <div class="card shadow">
                             <img id="secondPic" src="user/images/try-clothes/image2.jpg"  onload="loadPic()" style="height:300px; border-radius: 8px">
                             <div class="centered file-field">
-                                
-                                
                             </div>
                         </div>
                     </div>
@@ -176,14 +174,14 @@
                     </div>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 50px">
-                    <a  style="font-size: large;" class="abc col-sm-3" >Thử đồ</a>
+                    <a href="/"  style="font-size: large;" class="abc col-sm-3" >Thử đồ</a>
                     <div class="col-sm-1"></div>
-                    <a style="font-size: large;" class="abc col-sm-3" onclick="toDetail()">Chi tiết sản phẩm</a>
+                    <a href="/" style="font-size: large;" class="abc col-sm-3" onclick="toDetail()">Chi tiết sản phẩm</a>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 30px">
-                    <a href="checkout" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
+                    <a href="/checkout" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
                     <div class="col-sm-1"></div>
-                    <a style="font-size: large;" class="abc col-sm-3" onclick="addCart()">Thêm vào giỏ hàng</a>
+                    <a href="/checkout" style="font-size: large;" class="abc col-sm-3" onclick="addCart()">Thêm vào giỏ hàng</a>
                 </div>
             </div>
         </div>
