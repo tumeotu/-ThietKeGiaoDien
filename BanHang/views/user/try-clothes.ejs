@@ -75,6 +75,10 @@
             let url = 'http://127.0.0.1:3000/try-clothes?gender=' + storeGender + '&&type=' + storeType + '&&id=' + selectID;
             return window.location= url;
         }
+        function tryClothes()
+        {
+            document.getElementById('resultPic').src = "user/images/try-clothes/image4.jpg"
+        }
     </script>
 </header>
 
@@ -169,14 +173,14 @@
                     <!--Result-->
                     <div class="col-sm-3">
                         <div class="card shadow">
-                            <img class="card-img-top" style="border-radius: 8px" height="300" src="user/images/try-clothes/image3.jpg" alt="Card image cap">
+                            <img id="resultPic" class="card-img-top" style="border-radius: 8px" height="300" src="user/images/try-clothes/image3.jpg" alt="Card image cap">
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 50px">
-                    <a href="/"  style="font-size: large;" class="abc col-sm-3" >Thử đồ</a>
+                    <a style="font-size: large;" class="abc col-sm-3" onclick="tryClothes()">Thử đồ</a>
                     <div class="col-sm-1"></div>
-                    <a href="/" style="font-size: large;" class="abc col-sm-3" onclick="toDetail()">Chi tiết sản phẩm</a>
+                    <a style="font-size: large;" class="abc col-sm-3" onclick="toDetail()">Chi tiết sản phẩm</a>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 30px">
                     <a href="/checkout" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
