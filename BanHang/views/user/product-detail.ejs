@@ -100,7 +100,7 @@
           <button class="defaultBtn" id="btn-size-2" value="M">M</button>
           <button class="defaultBtn" id="btn-size-3" value="L">L</button>
         </div>
-        <h4 style="margin-top: 20px" class="text-danger">Giá: <%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h4>
+        <h4 style="margin-top: 20px" class="text-danger">Giá: <%= product.price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h4>
         <div style="height: 10px;"></div>
         <h4>Số lượng</h4>
         <div class="flex-row">

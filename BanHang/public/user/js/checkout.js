@@ -4,8 +4,8 @@ function deleteProduct(id, price) {
     $(document).ready(async function () {
         let costTotal = parseFloat($('#costTotal').text()) - parseFloat(price) * parseInt($(deletedProductAmountFinder).val());
         $('#costTotal').text(costTotal);
-        $('#costTotal1').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
-        $('#costTotal2').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
+        $('#costTotal1').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");
+        $('#costTotal2').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");
         $(deletedProductFinder).css('display', 'none');
 
         //Xóa số lượng sản phẩm đã chọn xóa trên Cart
@@ -26,8 +26,8 @@ function addOne(id, price){
 
         let costTotal = parseFloat($('#costTotal').text()) + parseFloat(price);
         $('#costTotal').text(costTotal);
-        $('#costTotal1').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
-        $('#costTotal2').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
+        $('#costTotal1').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");
+        $('#costTotal2').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");
 
 
         //Tăng số lượng sản phẩm đã chọn xóa trên Cart
@@ -51,8 +51,8 @@ function subOne(id, price){
 
         let costTotal = parseFloat($('#costTotal').text()) - parseFloat(price);
         $('#costTotal').text(costTotal);
-        $('#costTotal1').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
-        $('#costTotal2').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
+        $('#costTotal1').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");
+        $('#costTotal2').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");
 
         //Giảm số lượng sản phẩm đã chọn xóa trên Cart
         const oldProductAmount = $('[name = "productAmount"]').first().text();

@@ -42,12 +42,12 @@
                                         <div class="row">
                                             <div class="col-sm-6">
                                                 <div class="d-flex flex-row-reverse">
-                                                    <h5><%= product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h5>
+                                                    <h5><%= product.price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h5>
                                                 </div>
                                                 <div class="d-flex flex-row-reverse" >
                                                     <h6 style="color: #6e6e6e">
                                                         &nbsp; | 50%</h6>
-                                                    <h6 style="text-decoration-line: line-through; color: #6e6e6e"><%= (product.price * 2).toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h6>
+                                                    <h6 style="text-decoration-line: line-through; color: #6e6e6e"><%= (product.price * 2).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h6>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6">
@@ -108,7 +108,7 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h5 id="costTotal1"><%= costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h5>
+                                        <h5 id="costTotal1"><%= costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h5>
                                     </div>
                                 </div>
                             </div>
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h5><%= (0).toLocaleString('vi', {style : 'currency', currency : 'VND'});%></h5>
+                                        <h5><%= (0).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ";%></h5>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 </div>
                                 <div class="p-2 bd-highlight">
                                     <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
-                                        <h5 id="costTotal2" style="color: crimson"><%= costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}); %></h5>
+                                        <h5 id="costTotal2" style="color: crimson"><%= costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h5>
                                         <h6 style="color: #6e6e6e">(Đã bao gồm VAT nếu có)</h6>
                                     </div>
                                 </div>
