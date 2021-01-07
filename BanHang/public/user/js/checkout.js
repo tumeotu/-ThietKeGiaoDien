@@ -2,9 +2,10 @@ function deleteProduct(id, price) {
     const deletedProductFinder = '#'+ id + 'DIV';
     const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
     $(document).ready(async function () {
-        let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price) * parseInt($(deletedProductAmountFinder).val());
-        $('#costTotal1').text(costTotal + 'đ');
-        $('#costTotal2').text(costTotal + 'đ');
+        let costTotal = parseFloat($('#costTotal').text()) - parseFloat(price) * parseInt($(deletedProductAmountFinder).val());
+        $('#costTotal').text(costTotal);
+        $('#costTotal1').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
+        $('#costTotal2').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
         $(deletedProductFinder).css('display', 'none');
 
         //Xóa số lượng sản phẩm đã chọn xóa trên Cart
@@ -23,9 +24,10 @@ function addOne(id, price){
         $(deletedProductAmountFinder).val(newVal);
 
 
-        let costTotal = parseFloat($('#costTotal1').text()) + parseFloat(price);
-        $('#costTotal1').text(costTotal + 'đ');
-        $('#costTotal2').text(costTotal + 'đ');
+        let costTotal = parseFloat($('#costTotal').text()) + parseFloat(price);
+        $('#costTotal').text(costTotal);
+        $('#costTotal1').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
+        $('#costTotal2').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
 
 
         //Tăng số lượng sản phẩm đã chọn xóa trên Cart
@@ -47,9 +49,10 @@ function subOne(id, price){
         $(deletedProductAmountFinder).val(newVal);
 
 
-        let costTotal = parseFloat($('#costTotal1').text()) - parseFloat(price);
-        $('#costTotal1').text(costTotal + 'đ');
-        $('#costTotal2').text(costTotal + 'đ');
+        let costTotal = parseFloat($('#costTotal').text()) - parseFloat(price);
+        $('#costTotal').text(costTotal);
+        $('#costTotal1').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
+        $('#costTotal2').text(costTotal.toLocaleString('vi', {style : 'currency', currency : 'VND'}));
 
         //Giảm số lượng sản phẩm đã chọn xóa trên Cart
         const oldProductAmount = $('[name = "productAmount"]').first().text();

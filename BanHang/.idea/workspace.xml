@@ -19,26 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa giao diện">
-      <change afterPath="$PROJECT_DIR$/public/user/images/login/login.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/fsevents.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/fsevents.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/fsevents.node" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/fsevents/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/css/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/css/try-clothes.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/css/try-clothes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/element/user/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/footer.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/checkout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/checkout.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/login.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/login.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/product-detail.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/product-detail.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/products-men.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/products-men.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/products-women.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/products-women.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/try-clothes.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/try-clothes.ejs" afterDir="false" />
-    </list>
+    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa giao diện" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PA4/BanHang" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -142,6 +123,7 @@
       <workItem from="1609079240529" duration="2731000" />
       <workItem from="1609082237385" duration="4248000" />
       <workItem from="1609228885214" duration="5484000" />
+      <workItem from="1610007280196" duration="1402000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -225,5 +207,27 @@
     <MESSAGE value="! Chỉnh sửa bố cục trang thanh toán" />
     <MESSAGE value="! Chỉnh sửa bố cục trang home&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nam&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nữ&#10;! Chỉnh sửa bố cục trang chi tiết sản phẩm&#10;! Chỉnh sửa bố cục trang thanh toán" />
     <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa bố cục trang home&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nam&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nữ&#10;! Chỉnh sửa bố cục trang chi tiết sản phẩm&#10;! Chỉnh sửa bố cục trang thanh toán" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="124" key="FileChooserDialogImpl" timestamp="1610007888543">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="124" key="FileChooserDialogImpl/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1610007888543" />
+    <state width="1360" height="187" key="GridCell.Tab.0.bottom" timestamp="1610008685930">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1360" height="187" key="GridCell.Tab.0.bottom/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1610008685930" />
+    <state width="1360" height="187" key="GridCell.Tab.0.center" timestamp="1610008685930">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1360" height="187" key="GridCell.Tab.0.center/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1610008685930" />
+    <state width="1360" height="187" key="GridCell.Tab.0.left" timestamp="1610008685930">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1360" height="187" key="GridCell.Tab.0.left/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1610008685930" />
+    <state width="1360" height="187" key="GridCell.Tab.0.right" timestamp="1610008685930">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state width="1360" height="187" key="GridCell.Tab.0.right/0.0.1366.738/1366.0.1366.738@0.0.1366.738" timestamp="1610008685930" />
   </component>
 </project>
