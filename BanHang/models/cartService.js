@@ -39,6 +39,16 @@ module.exports.cart_list = async() => {
 module.exports.add_cart = async(id, amount) => {
     console.log(id);
     let product = await productService.product_detail(id);
+
+    const exist = cart.findIndex(x => x._id == id);
+
+    if(exist != -1)
+    {
+        cart[exist].amount += amount;
+        return;
+    }
+       
+
     let record = {
         _id: product._id,
         amount : amount,
