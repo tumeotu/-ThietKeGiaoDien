@@ -4,6 +4,13 @@
   <script src="user/js/product-detail.js"></script>
   <!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    function addCart(){
+      const num = document.getElementById('<%- product._id %>AMOUNT').value;
+      const url =' http://127.0.0.1:3000/products-detail?id=<%= product._id %>&&add=' + num;
+      return window.location= url;
+    }
+  </script>
 </header>
 
 <section>
@@ -124,7 +131,7 @@
         <div style="height: 16px;"></div>
         <div class="row">
           <div class="col-sm" style="margin-top: 1em;">
-            <button type="button" class="button" onclick="location.href='http://127.0.0.1:3000/'">
+            <button type="button" class="button" onclick="addCart()">
               THÊM VÀO GIỎ HÀNG
             </button>
           </div>
