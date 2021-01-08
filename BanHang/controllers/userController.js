@@ -8,6 +8,10 @@ module.exports.index = async (req, res, next) => {
 }
 
 module.exports.products_detail = async (req, res, next) => {
+    if(req.query.add >= 1)
+    {
+        await cartService.add_cart(req.query.id, parseInt(req.query.add));
+    }
     const product = await productService.product_detail(req.query.id);
     const relatedProduct1 = await productService.related_product_list();
     const relatedProduct2 = await productService.lighlight_product_list();
