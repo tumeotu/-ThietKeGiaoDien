@@ -21,27 +21,30 @@
     margin-bottom: 60px;
 }
 
-.tag-item1{
-    background-color: #FFA45E;
-    width: 350px;
-    height: 150px;
-    border-radius: 20px;
-}
 
-
-.tag-item2{
-    background-color: #1E48BB;
-    width: 350px;
-    height: 150px;
-    border-radius: 20px;
-}
-
-.tag-item3{
-    background-color: #9773D0;
-    width: 350px;
-    height: 150px;
-    border-radius: 20px;
-}
 .tag-font-color{
     color: white;
+}
+
+.background-intro{
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 20px;
+}
+
+.intro-container{
+    margin-top: 100px;
+    display: flex;
+    background-color: #EFF0F5;
+    margin-bottom: 100px;
+}
+
+.intro-picture{
+    width: 350px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.img-style{
+    width: 350px;
 }
