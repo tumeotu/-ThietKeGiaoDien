@@ -19,21 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ">
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/atm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/cod.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/credit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/mo-mo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/now.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/standard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/zalo-pay.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/user/checkout-final.ejs" afterDir="false" />
+    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/cartService.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/cartService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/css/checkout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/checkout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/checkout.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/element/user/headers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/headers.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +131,7 @@
       <workItem from="1610026324023" duration="646000" />
       <workItem from="1610071052535" duration="1391000" />
       <workItem from="1611221803398" duration="6251000" />
-      <workItem from="1611246865527" duration="5240000" />
+      <workItem from="1611246865527" duration="5285000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -222,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611230176407</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công">
+      <created>1611252125221</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611252125222</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +243,7 @@
     <MESSAGE value="! Chỉnh sửa bố cục trang home&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nam&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nữ&#10;! Chỉnh sửa bố cục trang chi tiết sản phẩm&#10;! Chỉnh sửa bố cục trang thanh toán" />
     <MESSAGE value="! Chỉnh sửa giao diện" />
     <MESSAGE value="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ" />
-    <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ" />
+    <MESSAGE value="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công" />
+    <option name="LAST_COMMIT_MESSAGE" value="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công" />
   </component>
 </project>
