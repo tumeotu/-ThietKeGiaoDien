@@ -1,0 +1,200 @@
+<header>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="/user/css/checkout.css" rel="stylesheet">
+    <script>
+        function Success(){
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+        }
+        function  closeModel()
+        {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+
+</header>
+
+<section>
+    <div class="container">
+        <div class="row" style="padding-top:20px; padding-bottom: 20px">
+            <div class="col-sm-8">
+                <div class="row">
+                    <h3> 1. Chọn hình thức giao hàng</h3>
+                    <div class="form-check" style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault5" checked>
+                        <label class="form-check-label" for="flexRadioDefault5">
+                            <img src="/user/images/checkount-final/now.png">
+                            Giao hàng nhanh trong ngày
+                        </label>
+                    </div>
+                    <div class="form-check" style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault1" id="flexRadioDefault6">
+                        <label class="form-check-label" for="flexRadioDefault6">
+                            <img src="/user/images/checkount-final/standard.png">
+                            Giao hàng tiêu chuẩn
+                        </label>
+                    </div>
+                </div>
+                <div class="row" style="margin-top:10px ">
+                    <h3> 2. Chọn hình thức thanh toán</h3>
+                    <div class="form-check" style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <img src="/user/images/checkount-final/cod.svg">
+                            Thanh toán tiền mặt khi nhận hàng
+                        </label>
+                    </div>
+                    <div class="form-check" style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            <img src="/user/images/checkount-final/credit.svg">
+                            Thanh toán bằng thẻ quốc tế Visa, Master, JCB
+                        </label>
+                    </div>
+                    <div class="form-check"  style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            <img src="/user/images/checkount-final/amt.svg">
+                            Thẻ ATM nội địa/Internet Banking (Miễn phí thanh toán)
+                        </label>
+                    </div>
+                    <div class="form-check"  style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            <img src="/user/images/checkount-final/mo-mo.svg">
+                            Thanh toán bằng ví MoMo
+                        </label>
+                    </div>
+                    <div class="form-check" style="margin-left: 30px; margin-top: 10px">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            <img src="/user/images/checkount-final/zalo-pay.svg">
+                            Thanh toán bằng ZaloPay
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-row mb-12 justify-content-center" style="margin: 20px">
+                            <a onclick="Success()" target="_blank"
+                               style="font-size: large;padding: 15px"
+                               class="abc col-sm-3 col-sm-9" >Đặt mua</a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
+            <div class="col-sm-4" style=" padding: 0px">
+                <div>
+                    <div class="card" style="margin-top: 0px;">
+                        <div class="card-top">
+                            <div class="d-flex justify-content-between" style="padding: 0px; margin: 0px">
+                                <div class="mr-auto p-2 bd-highlight">
+                                    <h5>Địa chỉ nhập hàng</h5>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <h5 style="color: #0b7dda">Thay đổi</h5>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row mb-12" style="padding-left: 25px; margin-top: 10px">
+                                <div class="col">
+                                    <div class="d-flex flex-row mb-12">
+                                        <p style="font-size: medium">Trương Văn Tú</p>
+                                        <p style="font-size: medium">&nbsp;|&nbsp;</p>
+                                        <p style="font-size: medium">0978966563</p>
+                                    </div>
+                                    <div class="d-flex flex-row mb-12">
+                                        <p style="color: #6e6e6e">64 Tản Đà, P.11, Q.5, Tp.HCM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="card" style="margin-top: 5px;">
+                        <div class="card-top">
+                            <div class="list-group" style="height: 200px">
+                                <% selectedProducts.forEach(function (product){ %>
+                                    <!--item-->
+                                    <script>
+                                        listProduct.push(<%= product %>);
+                                    </script>
+                                    <div id="<%- product._id %>DIV">
+                                        <div class="row" style="padding: 0px; margin: 0px">
+                                            <div class="col-sm-2">
+                                                <img style="height: 50px;width: 50px" class="image" src="<%= product.images[0] %>" onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                                            </div>
+                                            <div class="col-sm-8" style="padding-left: 20px">
+                                                <p><%= product.name %></p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <p>x <%= product.amount%></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <% }); %>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p id="costTotal" style="display: none;"><%= costTotal %></p>
+                            <div class="d-flex justify-content-between" style="padding: 0px; margin: 0px">
+                                <div class="mr-auto p-2 bd-highlight">
+                                    <h6 style="color: #7A7676">Tạm tính</h6>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
+                                        <h6 id="costTotal1"><%= costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between" style="padding: 0px; margin: 0px">
+                                <div class="mr-auto p-2 bd-highlight">
+                                    <h6 style="color: #7A7676">Phí vận chuyển</h6>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
+                                        <h6><%= (20000).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ";%></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between" style="padding: 0px; margin: 0px">
+                                <div class="mr-auto p-2 bd-highlight">
+                                    <h6 style="color: #7A7676">Thành tiền</h6>
+                                </div>
+                                <div class="p-2 bd-highlight">
+                                    <div class="col d-flex align-items-end flex-column" style=" padding: 0px">
+                                        <h6 id="costTotal2" style="color: crimson"><%= (costTotal+20000).toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ"; %></h6>
+                                        <h6 style="color: #6e6e6e">(Đã bao gồm VAT nếu có)</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Đặt hàng thành công</h5>
+                <button onclick="closeModel()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Cảm ơn quý khách đã đặt hàng</p>
+                <p>Thông tin chi tiết về đơn hàng sẽ được gửi tới email</p>
+                <p>Nếu có bất kỳ sự cố nào quý khách có thể liên hệ trực tiếp với shop thông qua thông tin liên lạc phía dưới</p>
+                <p>Xin chân thành cảm ơn!!!</p>
+            </div>
+            <div class="modal-footer">
+                <button style="background: #8C4DF3" onclick="closeModel()" type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

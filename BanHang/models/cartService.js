@@ -4,6 +4,7 @@ const productService = require('../models/productService');
 const cart = [
     {
         _id: 1,
+        name: "HANOI TEE",
         amount: 1,
         price: 249000,
         images: ["https://cdn.leanservices.work/wp-content/uploads/2020/09/hanoiteeLB.jpg",
@@ -13,6 +14,7 @@ const cart = [
     },
     {
         _id: 2,
+        name: "SIGHT TEE",
         amount: 2,
         price: 280000,
         images: ["https://cdn.leanservices.work/wp-content/uploads/2020/08/SightTee-xam.jpg",
@@ -22,6 +24,7 @@ const cart = [
     },
     {
         _id: 3,
+        name: "SSS' WIDE PANTS",
         amount: 1,
         price: 449000,
         images: ["https://ssstutter.com/wp-content/uploads/2020/12/WidePants_Xam_PT_2.jpg",
@@ -47,11 +50,11 @@ module.exports.add_cart = async(id, amount) => {
         cart[exist].amount += amount;
         return;
     }
-       
 
     let record = {
         _id: product._id,
         amount : amount,
+        name: product.name,
         price: product.price,
         images: product.images
     }

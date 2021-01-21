@@ -8,8 +8,9 @@ router.get('/products-men' , userController.products_men);
 
 router.get('/products-women' , userController.products_women);
 
-
 router.get('/checkout', userController.checkout);
+
+router.get('/checkout-final', userController.checkout_final);
 
 // router.post('/login', userController.login_post);
 

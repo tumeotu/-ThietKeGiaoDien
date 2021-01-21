@@ -19,14 +19,21 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa giao diện">
-      <change afterPath="$PROJECT_DIR$/public/user/images/try-clothes/image5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" afterDir="false" />
+    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ">
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/atm.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/cod.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/credit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/mo-mo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/now.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/standard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/checkount-final/zalo-pay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/user/checkout-final.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/user/css/try-clothes.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/css/try-clothes.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/home.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/product-detail.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/product-detail.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/user/try-clothes.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/try-clothes.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/cartService.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/cartService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/css/checkout.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/css/checkout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/checkout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/checkout.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +60,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/user/images/try-clothes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/user/images/checkount-final" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -67,13 +74,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\checkount-final" />
       <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\try-clothes" />
       <recent name="D:\OneDrive\Desktop\ThietKeGiaoDien-main\ThietKeGiaoDien-main\BanHang\public" />
       <recent name="D:\OneDrive\Desktop\ThietKeGiaoDien-main\ThietKeGiaoDien-main\BanHang" />
       <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\register" />
-      <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\user\images\home_admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\checkount-final" />
       <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\admin\css" />
       <recent name="D:\GitHub\ThietKeGiaoDien\BanHang\public\admin\images" />
     </key>
@@ -134,7 +142,8 @@
       <workItem from="1610007280196" duration="1402000" />
       <workItem from="1610026324023" duration="646000" />
       <workItem from="1610071052535" duration="1391000" />
-      <workItem from="1611221803398" duration="6076000" />
+      <workItem from="1611221803398" duration="6251000" />
+      <workItem from="1611246865527" duration="5240000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -206,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610027552515</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ">
+      <created>1611230176407</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611230176407</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,6 +247,7 @@
     <MESSAGE value="! Chỉnh sửa bố cục trang thanh toán" />
     <MESSAGE value="! Chỉnh sửa bố cục trang home&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nam&#10;! Chỉnh sửa bố cục trang danh sách sản phẩm nữ&#10;! Chỉnh sửa bố cục trang chi tiết sản phẩm&#10;! Chỉnh sửa bố cục trang thanh toán" />
     <MESSAGE value="! Chỉnh sửa giao diện" />
-    <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa giao diện" />
+    <MESSAGE value="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ" />
+    <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ" />
   </component>
 </project>

@@ -30,6 +30,17 @@ module.exports.checkout = async (req, res, next) => {
     res.render('user/checkout', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal, cartAmount: cartNumber });
 }
 
+module.exports.checkout_final = async (req, res, next) => {
+    const cartNumber = await cartService.cart_length();
+    const selectedProducts = await cartService.cart_list();
+    let costTotal = 0;
+    selectedProducts.forEach(function (product){
+        costTotal = costTotal + product.amount * product.price;
+    })
+    res.render('user/checkout-final', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal, cartAmount: cartNumber });
+}
+
+
 module.exports.products_men = async (req, res, next) => {
     const type = await req.query.type;
     const cartNumber = await cartService.cart_length();
@@ -58,9 +69,7 @@ module.exports.try_clothes = async (req, res, next) => {
     const cartNumber = await cartService.cart_length();
     if(req.query.id != undefined)
     {
-       
         await cartService.add_cart(req.query.id, 1);
-
         const newUrl = 'http://127.0.0.1:3000/try-clothes?gender=' + req.query.gender + '&&type=' + req.query.type;
         res.redirect(newUrl);
         return;
