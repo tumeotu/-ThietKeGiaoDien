@@ -8,6 +8,7 @@
         const pic1Key = 'firstPicPath';
         const pic2Key = 'secondPicPath';
         let pic = false;
+        let picLocal = false;
         let selectID = '';
         function myClick(gender, type)
         {
@@ -43,9 +44,6 @@
                     localStorage.setItem(pic2Key,imgPath)
                 }
             }
-         
-
-
         }
         function loadPic()
         {
@@ -58,23 +56,51 @@
             document.getElementById('secondPic').src = localStorage.getItem(pic2Key);
         }
         function loadFile(event, id)
-        {   
+        {
             clickLocationProduct(URL.createObjectURL(event.target.files[0]), id);
+            picLocal= true;
         }
         function toDetail()
         {
-            let url = 'http://127.0.0.1:3000/products-detail?id=' + selectID;
-            return window.location= url;
+            if(selectID!='')
+            {
+                let url = 'http://127.0.0.1:3000/products-detail?id=' + selectID;
+                return window.location= url;
+            }
+            else{
+                var modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
+        }
+        function  closeModel()
+        {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
         }
         function addCart()
         {
+            if(selectID!='')
+            {
+                let url = 'http://127.0.0.1:3000/try-clothes?gender=' + storeGender + '&&type=' + storeType + '&&id=' + selectID;
+                return window.location= url;
+            }
+            else{
+                var modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
             // let url = 'http://127.0.0.1:3000/try-clothes?gender=' + gender + '&&type=' + type + '&&id=' + selectID;
-            let url = 'http://127.0.0.1:3000/try-clothes?gender=' + storeGender + '&&type=' + storeType + '&&id=' + selectID;
-            return window.location= url;
         }
         function tryClothes()
         {
-            document.getElementById('resultPic').src = "user/images/try-clothes/image4.jpg"
+            if(selectID!=''&&picLocal==true)
+            {
+                document.getElementById('resultPic').src = "user/images/try-clothes/image3.jpg"
+            }
+            else{
+                var modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
+
         }
     </script>
 </header>
@@ -123,7 +149,7 @@
                                 <div class="card text-center">
                                     <img class="card-img-top image"  height="150" src="<%=product.images[0] %>" alt="Card image cap" >
                                     <div class="card-body align-items-center">
-                                        <h5 class="card-title"><%= product.name%></h5>
+                                        <h6 class="card-title"><%= product.name%></h6>
                                         <p class="card-text"><%= product.price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ";%></p>
                                     </div>
                                 </div>
@@ -170,7 +196,7 @@
                     <!--Result-->
                     <div class="col-sm-3">
                         <div class="card shadow">
-                            <img id="resultPic" class="card-img-top" style="border-radius: 8px" height="300" src="user/images/try-clothes/image3.jpg" alt="Card image cap">
+                            <img id="resultPic" class="card-img-top" style="border-radius: 8px" height="300" src="user/images/try-clothes/image5.jpg" alt="Card image cap">
                         </div>
                     </div>
                 </div>
@@ -188,6 +214,24 @@
         </div>
     </div>
 </section>
+
+<div id="myModal" class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Lỗi</h5>
+                <button onclick="closeModel()" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Bạn chưa chọn sản phẩm!</p>
+                <p>Vui lòng chọn 1 sản phẩm trong danh sách!</p>
+            </div>
+            <div class="modal-footer">
+                <button style="background: #8C4DF3" onclick="closeModel()" type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     $(document).ready(function() {
