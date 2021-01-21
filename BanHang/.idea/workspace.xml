@@ -19,9 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công">
+    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa tên trang web">
+      <change afterPath="$PROJECT_DIR$/public/user/images/home/email.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/home/location.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/user/images/home/phone.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/element/user/footer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/footer.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/element/user/headers.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/element/user/headers.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/home.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/user/images/checkount-final" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/user/images/home" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -62,11 +67,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\home" />
       <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\checkount-final" />
       <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\try-clothes" />
       <recent name="D:\OneDrive\Desktop\ThietKeGiaoDien-main\ThietKeGiaoDien-main\BanHang\public" />
       <recent name="D:\OneDrive\Desktop\ThietKeGiaoDien-main\ThietKeGiaoDien-main\BanHang" />
-      <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\register" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="H:\NAM 4\TKGD\DoAn\ThietKeGiaoDien\BanHang\public\user\images\checkount-final" />
@@ -131,7 +136,7 @@
       <workItem from="1610026324023" duration="646000" />
       <workItem from="1610071052535" duration="1391000" />
       <workItem from="1611221803398" duration="6251000" />
-      <workItem from="1611246865527" duration="5285000" />
+      <workItem from="1611246865527" duration="6366000" />
     </task>
     <task id="LOCAL-00001" summary="add tempplate">
       <created>1608056877340</created>
@@ -217,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611252125222</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="! Chỉnh sửa tên trang web">
+      <created>1611252185635</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611252185635</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +256,7 @@
     <MESSAGE value="! Chỉnh sửa giao diện" />
     <MESSAGE value="! Chỉnh sửa màu sắc chi tiết sản phẩm&#10;+ Thêm thông báo lỗi khi chưa chọn sản phẩm ở trang thử đồ" />
     <MESSAGE value="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công" />
-    <option name="LAST_COMMIT_MESSAGE" value="+ Thêm trang các hình thức thanh toán&#10;+ Thêm thông báo thanh toán toán thành công" />
+    <MESSAGE value="! Chỉnh sửa tên trang web" />
+    <option name="LAST_COMMIT_MESSAGE" value="! Chỉnh sửa tên trang web" />
   </component>
 </project>
