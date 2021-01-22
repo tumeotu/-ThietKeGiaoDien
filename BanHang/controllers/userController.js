@@ -135,3 +135,14 @@ module.exports.products_delete = async (req, res, next) => {
     const productId = req.body.id;
     await cartService.delete_cart(productId);
 }
+
+module.exports.quick_buy = async (req, res, next) => {
+    await cartService.add_cart(req.query.id, parseInt(req.query.amount));
+    const cartNumber = await cartService.cart_length();
+    const selectedProducts = await cartService.cart_list();
+    let costTotal = 0;
+    selectedProducts.forEach(function (product){
+        costTotal = costTotal + product.amount * product.price;
+    })
+    res.render('user/checkout', {layout: 'user', selectedProducts: selectedProducts, costTotal: costTotal, cartAmount: cartNumber });  
+}
