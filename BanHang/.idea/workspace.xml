@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa tên trang web" />
+    <list default="true" id="279e3fe2-7468-442f-b55e-ce30b9ae5ba7" name="Default Changelist" comment="! Chỉnh sửa tên trang web">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_12_2020_10_59_PM__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/user/js/checkout.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/user/js/checkout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/checkout.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/checkout.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/home.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/home.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/product-detail.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/product-detail.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/user/try-clothes.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/user/try-clothes.ejs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

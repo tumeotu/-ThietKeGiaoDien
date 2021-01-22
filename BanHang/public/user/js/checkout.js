@@ -67,3 +67,15 @@ function subOne(id, price){
         $('[name = "productAmount"]').text(newProductAmount);
     })
 }
+
+function Checkout_final(cartAmount){
+    if(cartAmount>0)
+    {
+        let url = 'http://127.0.0.1:3000/checkout-final';
+        return window.location= url;
+    }
+    else
+    {
+        alert("Giỏ hàng trống!!!");
+    }
+}
