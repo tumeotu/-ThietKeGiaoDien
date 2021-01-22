@@ -107,6 +107,19 @@
                 modal.style.display = "block";
             }
         }
+        function quickBuy()
+        {
+            if(selectID!='')
+            {
+                const num = 1;
+                let url = 'http://127.0.0.1:3000/quick-buy?id=' + selectID  + '&&amount=' + num;
+                return window.location= url;
+            }
+            else{
+                var modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
+        }
     </script>
 </header>
 
@@ -245,7 +258,7 @@
 
                 </div>
                 <div class="row justify-content-center" style="margin-top: 30px">
-                    <a onclick="location.href='http://127.0.0.1:3000/checkout'" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
+                    <a onclick="quickBuy()" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
                     <div class="col-sm-1"></div>
                     <a style="font-size: large;" class="abc col-sm-3" onclick="addCart()">Thêm vào giỏ hàng</a>
                 </div>
