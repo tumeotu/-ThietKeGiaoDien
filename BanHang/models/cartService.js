@@ -1,7 +1,7 @@
 const productService = require('../models/productService');
 
 
-const cart = [
+let cart = [
     {
         _id: 1,
         name: "HANOI TEE",
@@ -67,4 +67,19 @@ module.exports.cart_length = async() =>{
         cartAmount = cartAmount + product.amount;
     })
     return cartAmount;
+}
+
+
+module.exports.delete_cart = async(id) => {
+    console.log(id);
+
+    const exist = cart.findIndex(x => x._id == id);
+
+    if(exist != -1)
+    {
+        cart = cart.filter((function (product){
+            return product._id != id;
+        }))
+        return;
+    }
 }

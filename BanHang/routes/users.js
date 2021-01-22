@@ -23,6 +23,8 @@ router.get('/products-detail', userController.products_detail);
 
 router.get('/products', userController.products);
 
+router.post('/products/delete', userController.products_delete);
+
 router.get('/try-clothes', userController.try_clothes);
 
 module.exports = router;

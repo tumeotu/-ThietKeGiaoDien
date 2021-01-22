@@ -2,6 +2,13 @@ function deleteProduct(id, price) {
     const deletedProductFinder = '#'+ id + 'DIV';
     const deletedProductAmountFinder = '#'+ id + 'AMOUNT';
     $(document).ready(async function () {
+        $.ajax({
+            type: "POST",
+            url: "/products/delete",
+            data: "id=" + id
+            }
+        );
+        console.log("Hello");
         let costTotal = parseFloat($('#costTotal').text()) - parseFloat(price) * parseInt($(deletedProductAmountFinder).val());
         $('#costTotal').text(costTotal);
         $('#costTotal1').text(costTotal.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ");

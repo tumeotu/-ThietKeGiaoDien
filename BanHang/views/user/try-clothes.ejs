@@ -108,43 +108,15 @@
 <section style="background: #E7EDF0; padding: 20px">
     <div class="row">
         <div class="col-sm-3">
-            <div class="card">
-                <div class=" row" style="margin-top: 10px">
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-5">
-                        <div class="dropdown">
-                            <% let genderDisplay = curGender == '1'? 'Nam' : 'Nữ'%>
-                            <% let typeDisplay = curType == '1' ? 'Áo' : 'Quần' %>
-                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
-                                <b style="font-size: x-large;"><%=genderDisplay%></b>
-                            </button>
-                            <div class="dropdown-menu">
-                                <p class="dropdown-item" onclick="myClick(1, storeType)">Nam</p>
-                                <p class="dropdown-item" onclick="myClick(2,storeType)">Nữ</p>
-                            </div>
-                        </div>
+            <% if(selectedProducts.length > 0) {%>
+                <div class="card">
+                    <div class="row" style="font-size: x-large; font-weight: bolder; margin: auto; width: 75%; padding: 10px;">
+                            Giỏ hàng của bạn
                     </div>
-                    <div class="col-sm-5" >
-                        <div class="dropdown">
-                            <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" >
-                                <b style="font-size: x-large;"><%= typeDisplay %></b>
-                            </button>
-                            <div class="dropdown-menu">
-                                <p class="dropdown-item" >Mới</p>
-                                <p class="dropdown-item" onclick="myClick(storeGender, 1)">Áo</p>
-                                <p class="dropdown-item" onclick="myClick(storeGender, 2)">Quần</p>
-                                <p class="dropdown-item" >Túi xách</p>
-                                <p class="dropdown-item" >Túi xách</p>
-                                <p class="dropdown-item" >Phụ kiện</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1"></div>
-                </div>
-                <div class="card-body">
-                    <div class="list-group flex-row flex-wrap">
-                        <!--item-->
-                        <% products.forEach(function (product) {%>
+                    <div class="card-body">
+                        <div class="list-group flex-row flex-wrap">
+                            <!--item-->
+                            <% selectedProducts.forEach(function (product) {%>
                             <div class="col-sm-6" style="padding: 5px" onclick="clickLocationProduct('<%=product.images[0]%>',2, '<%=product._id%>')">
                                 <div class="card text-center">
                                     <img class="card-img-top image"  height="150" src="<%=product.images[0] %>" alt="Card image cap" >
@@ -154,11 +126,64 @@
                                     </div>
                                 </div>
                             </div>
-                        <% }); %>
-                        
+                            <% }); %>
+
+                        </div>
                     </div>
                 </div>
-            </div>
+            <%} else {%>
+                <div class="card">
+                    <div class=" row" style="margin-top: 10px">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-5">
+                            <div class="dropdown">
+                                <% let genderDisplay = curGender == '1'? 'Nam' : 'Nữ'%>
+                                <% let typeDisplay = curType == '1' ? 'Áo' : 'Quần' %>
+                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown">
+                                    <b style="font-size: x-large;"><%=genderDisplay%></b>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <p class="dropdown-item" onclick="myClick(1, storeType)">Nam</p>
+                                    <p class="dropdown-item" onclick="myClick(2,storeType)">Nữ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5" >
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-light dropdown-toggle" data-toggle="dropdown" >
+                                    <b style="font-size: x-large;"><%= typeDisplay %></b>
+                                </button>
+                                <div class="dropdown-menu">
+                                    <p class="dropdown-item" >Mới</p>
+                                    <p class="dropdown-item" onclick="myClick(storeGender, 1)">Áo</p>
+                                    <p class="dropdown-item" onclick="myClick(storeGender, 2)">Quần</p>
+                                    <p class="dropdown-item" >Túi xách</p>
+                                    <p class="dropdown-item" >Túi xách</p>
+                                    <p class="dropdown-item" >Phụ kiện</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group flex-row flex-wrap">
+                            <!--item-->
+                            <% products.forEach(function (product) {%>
+                            <div class="col-sm-6" style="padding: 5px" onclick="clickLocationProduct('<%=product.images[0]%>',2, '<%=product._id%>')">
+                                <div class="card text-center">
+                                    <img class="card-img-top image"  height="150" src="<%=product.images[0] %>" alt="Card image cap" >
+                                    <div class="card-body align-items-center">
+                                        <h6 class="card-title"><%= product.name%></h6>
+                                        <p class="card-text"><%= product.price.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")+" đ";%></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }); %>
+
+                        </div>
+                    </div>
+                </div>
+            <%}%>
         </div>
         <div class="col-sm-9 my-auto">
             <div class="col-12 ">

@@ -67,27 +67,33 @@ module.exports.products_women = async (req, res, next) => {
 
 module.exports.try_clothes = async (req, res, next) => {
     const cartNumber = await cartService.cart_length();
-    if(req.query.id != undefined)
-    {
+    const selectedProducts = await cartService.cart_list();
+    if (req.query.id != undefined) {
         await cartService.add_cart(req.query.id, 1);
         const newUrl = 'http://127.0.0.1:3000/try-clothes?gender=' + req.query.gender + '&&type=' + req.query.type;
         res.redirect(newUrl);
         return;
     }
     let listProduct = await productService.male_product_list_shirt();
-    if(req.query.gender == '1' && req.query.type == '2')
+    if (req.query.gender == '1' && req.query.type == '2')
         listProduct = await productService.male_product_list_pants();
-    else if(req.query.gender == '2' && req.query.type == '1')
+    else if (req.query.gender == '2' && req.query.type == '1')
         listProduct = await productService.female_product_list_shirt();
-    else if(req.query.gender == '2' && req.query.type == '2')
+    else if (req.query.gender == '2' && req.query.type == '2')
         listProduct = await productService.female_product_list_pants();
-    if(req.query.gender == undefined && req.query.type == undefined)
-    {
+    if (req.query.gender == undefined && req.query.type == undefined) {
         req.query.gender = '2';
         req.query.type = '2';
     }
 
-    res.render('layout', {partial_content: 'user/try-clothes', products: listProduct, curGender: req.query.gender, curType: req.query.type, cartAmount: cartNumber});
+    res.render('layout', {
+        partial_content: 'user/try-clothes',
+        products: listProduct,
+        curGender: req.query.gender,
+        curType: req.query.type,
+        cartAmount: cartNumber,
+        selectedProducts: selectedProducts
+    });
 }
 
 module.exports.products = async (req, res, next) => {
@@ -108,3 +114,8 @@ module.exports.login_get = async (req, res, next) => {
 // module.exports.login_post = async (req, res, next) => {
 //     res.render('user/home', { layout: 'user'});
 // }
+
+module.exports.products_delete = async (req, res, next) => {
+    const productId = req.body.id;
+    await cartService.delete_cart(productId);
+}
