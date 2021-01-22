@@ -24,7 +24,7 @@ let cart = [
     },
     {
         _id: 3,
-        name: "SSS' WIDE PANTS",
+        name: "WIDE PANTS",
         amount: 1,
         price: 449000,
         images: ["https://ssstutter.com/wp-content/uploads/2020/12/WidePants_Xam_PT_2.jpg",

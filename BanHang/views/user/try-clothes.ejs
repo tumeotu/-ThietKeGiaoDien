@@ -10,6 +10,7 @@
         let pic = false;
         let picLocal = false;
         let selectID = '';
+
         function myClick(gender, type)
         {
             storeGender = gender;
@@ -60,11 +61,16 @@
             clickLocationProduct(URL.createObjectURL(event.target.files[0]), id);
             picLocal= true;
         }
-        function toDetail()
+        function toDetail(id)
         {
             if(selectID!='')
             {
                 let url = 'http://127.0.0.1:3000/products-detail?id=' + selectID;
+                return window.location= url;
+            }
+            else if(id!=null)
+            {
+                let url = 'http://127.0.0.1:3000/products-detail?id=' + id;
                 return window.location= url;
             }
             else{
@@ -100,7 +106,6 @@
                 var modal = document.getElementById("myModal");
                 modal.style.display = "block";
             }
-
         }
     </script>
 </header>
@@ -207,7 +212,11 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="card shadow">
-                            <img id="secondPic" src="user/images/try-clothes/image2.jpg"  onload="loadPic()" style="height:300px; border-radius: 8px">
+                            <% if(producted!=null){ %>
+                                <img id="secondPic" src="<%=producted.images[0]%>"  onload="loadPic()" style="height:300px; border-radius: 8px">
+                            <% } else{ %>
+                                <img id="secondPic" src="user/images/try-clothes/image2.jpg"  onload="loadPic()" style="height:300px; border-radius: 8px">
+                            <% } %>
                             <div class="centered file-field">
                             </div>
                         </div>
@@ -228,7 +237,12 @@
                 <div class="row justify-content-center" style="margin-top: 50px">
                     <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="tryClothes()">Thử đồ</a>
                     <div class="col-sm-1"></div>
-                    <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="toDetail()">Chi tiết sản phẩm</a>
+                    <% if(producted!=null){ %>
+                        <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="toDetail(<%=producted._id%>)">Chi tiết sản phẩm</a>
+                    <% } else{ %>
+                    <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="toDetail(null)">Chi tiết sản phẩm</a>
+                    <% } %>
+
                 </div>
                 <div class="row justify-content-center" style="margin-top: 30px">
                     <a onclick="location.href='http://127.0.0.1:3000/checkout'" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>

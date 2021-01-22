@@ -24,7 +24,7 @@ const products = [{
     },
     {
         _id: 3,
-        name: "SSS' WIDE PANTS",
+        name: "WIDE PANTS",
         price: 449000,
         gender: "Male",
         category: "Quần",
@@ -60,7 +60,7 @@ const products = [{
     },
     {
         _id: 6,
-        name: "NATTY JEANS",
+        name: "NATY JEANS",
         price: 449000,
         gender: "Female",
         category: "Quần",
@@ -72,7 +72,7 @@ const products = [{
     },
     {
         _id: 7,
-        name: "GAME START TEE",
+        name: "GAME TEA",
         price: 249000,
         gender: "Female",
         category: "Áo",

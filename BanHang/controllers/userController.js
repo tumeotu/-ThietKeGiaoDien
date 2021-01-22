@@ -68,12 +68,13 @@ module.exports.products_women = async (req, res, next) => {
 module.exports.try_clothes = async (req, res, next) => {
     const cartNumber = await cartService.cart_length();
     const selectedProducts = await cartService.cart_list();
-    if (req.query.id != undefined) {
+    if (req.query.id !== undefined) {
         await cartService.add_cart(req.query.id, 1);
         const newUrl = 'http://127.0.0.1:3000/try-clothes?gender=' + req.query.gender + '&&type=' + req.query.type;
         res.redirect(newUrl);
         return;
     }
+
     let listProduct = await productService.male_product_list_shirt();
     if (req.query.gender == '1' && req.query.type == '2')
         listProduct = await productService.male_product_list_pants();
@@ -86,10 +87,25 @@ module.exports.try_clothes = async (req, res, next) => {
         req.query.type = '2';
     }
 
+    if (req.query.product !== undefined) {
+        const product = await productService.product_detail(req.query.product);
+        res.render('layout', {
+            partial_content: 'user/try-clothes',
+            producted: product,
+            products: listProduct,
+            curGender: req.query.gender,
+            curType: req.query.type,
+            cartAmount: cartNumber,
+            selectedProducts: selectedProducts
+        });
+        return;
+    }
+
     res.render('layout', {
         partial_content: 'user/try-clothes',
         products: listProduct,
         curGender: req.query.gender,
+        producted: undefined,
         curType: req.query.type,
         cartAmount: cartNumber,
         selectedProducts: selectedProducts
