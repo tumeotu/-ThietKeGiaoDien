@@ -27,4 +27,6 @@ router.post('/products/delete', userController.products_delete);
 
 router.get('/try-clothes', userController.try_clothes);
 
+router.get('/quick-buy', userController.quick_buy);
+
 module.exports = router;
