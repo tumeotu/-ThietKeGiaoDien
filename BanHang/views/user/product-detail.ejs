@@ -45,25 +45,25 @@
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block" src="<%= product.images[0] %>" alt="First slide" width="100px"
-                          height="100px" onclick="showImage('<%= product.images[0] %>')">
+                             height="100px" onclick="showImage('<%= product.images[0] %>')">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block" src="<%= product.images[1] %>" alt="First slide" width="100px"
-                          height="100px" onclick="showImage('<%= product.images[1] %>')">
+                             height="100px" onclick="showImage('<%= product.images[1] %>')">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block" src="<%= product.images[2] %>" alt="First slide" width="100px"
-                          height="100px" onclick="showImage('<%= product.images[2] %>')">
+                             height="100px" onclick="showImage('<%= product.images[2] %>')">
                       </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block" src="<%= product.images[3] %>" alt="First slide" width="100px"
-                          height="100px" onclick="showImage('<%= product.images[3] %>')">
+                             height="100px" onclick="showImage('<%= product.images[3] %>')">
                       </div>
                     </div>
                   </div>
@@ -75,7 +75,7 @@
                     <div class="col-lg-3 col-md-6">
                       <div style="margin: 1rem;">
                         <img class="d-block" src="<%= product.images[0] %>" alt="First slide" width="100px"
-                          height="100px">
+                             height="100px">
                       </div>
                     </div>
                   </div>
@@ -83,12 +83,12 @@
               </div>
             </div>
             <a style="width: 20px" class="carousel-control-prev" href="#carouselExampleDark-1" role="button"
-              data-bs-slide="prev">
+               data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </a>
             <a style="width: 20px; margin-left: 30px" class="carousel-control-next" href="#carouselExampleDark-1"
-              role="button" data-bs-slide="next">
+               role="button" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </a>
@@ -103,9 +103,9 @@
         <div class="d-flex flex-row mb-12">
           <div>
             <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                class="fa fa-star"></i> </div>
+                      class="fa fa-star"></i> </div>
           </div>
-          <p>(30 đánh giá)</p>
+          <p style="margin-left: 7px">(30 đánh giá)</p>
         </div>
         <div style="height: 16px;"></div>
         <h4>Chọn màu sắc: <span id="span-color">Cam</span></h4>
@@ -200,65 +200,115 @@
     <div>
       <h1>Đánh giá sản phẩm</h1>
       <div class="container">
-        <div class="row" style="margin-left: 32px; margin-top: 32px;">
-          <div class="col-sm-2">
-            <h3>4.5</h3>
-            <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
-                class="fa fa-star"></i>
+        <div class="row" style="margin-top: 32px;">
+          <div class="col-sm-2" style="padding: 0px; margin: 0px">
+            <div class="row justify-content-center" >
+              <div class="col-5">
+                <h4>4.0</h4>
+              </div>
             </div>
-            <h5>28 nhận xét</h5>
+            <div class="row justify-content-center">
+              <div class="col-7">
+                <div class="stars">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <p class="col-8">28 nhận xét</p>
+            </div>
           </div>
-          <div class="col-sm-7" style="padding-left: 2em;">
+          <div class="col-md-7" style="padding-left: 2em;">
             <div class="container">
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>(10)
+              <div class="row align-items-center">
+                <div class="col-sm-3" style="margin: 0px; padding: 0px">
+                  <div class="stars" style="margin: 0px; padding: 0px">
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
                   </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-4" style="margin: 0px; padding: 0px">
+                  <div class="progress" style="margin: 0px; padding: 0px">
+                    <div class="progress-bar" style="margin: 0px; padding: 0px;width:35%"></div>
+                  </div>
+                </div>
+                <div class="col-sm-2" style="margin: 0px; padding: 0px;padding-left: 10px">
+                  10
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-sm-3" style="margin: 0px; padding: 0px">
+                  <div class="stars" style="margin: 0px; padding: 0px">
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                  </div>
+                </div>
+                <div class="col-sm-4" style="margin: 0px; padding: 0px">
+                  <div class="progress" style="margin: 0px; padding: 0px">
+                    <div class="progress-bar" style="margin: 0px; padding: 0px;width:25%"></div>
+                  </div>
+                </div>
+                <div class="col-sm-2" style="margin: 0px; padding: 0px;padding-left: 10px">
+                  7
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-sm-3" style="margin: 0px; padding: 0px">
+                  <div class="stars" style="margin: 0px; padding: 0px">
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                  </div>
+                </div>
+                <div class="col-sm-4" style="margin: 0px; padding: 0px">
+                  <div class="progress" style="margin: 0px; padding: 0px">
+                    <div class="progress-bar" style="margin: 0px; padding: 0px;width:28%"></div>
+                  </div>
+                </div>
+                <div class="col-sm-2" style="margin: 0px; padding: 0px;padding-left: 10px">
+                  8
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-sm-3" style="margin: 0px; padding: 0px">
+                  <div class="stars" style="margin: 0px; padding: 0px">
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                  </div>
+                </div>
+                <div class="col-sm-4" style="margin: 0px; padding: 0px">
+                  <div class="progress" style="margin: 0px; padding: 0px">
+                    <div class="progress-bar" style="margin: 0px; padding: 0px;width:4%"></div>
+                  </div>
+                </div>
+                <div class="col-sm-2" style="margin: 0px; padding: 0px;padding-left: 10px">
+                  2
+                </div>
+              </div>
+              <div class="row align-items-center">
+                <div class="col-sm-3" style="margin: 0px; padding: 0px">
+                  <div class="stars" style="margin: 0px; padding: 0px">
+                    <i class="fa fa-star" style="margin: 0px; padding: 0px"></i>
+                  </div>
+                </div>
+                <div class="col-sm-4" style="margin: 0px; padding: 0px">
+                  <div class="progress" style="margin: 0px; padding: 0px">
+                    <div class="progress-bar" style="margin: 0px; padding: 0px;width:3%"></div>
+                  </div>
+                </div>
+                <div class="col-sm-2" style="margin: 0px; padding: 0px;padding-left: 10px">
+                  1
+                </div>
+              </div>
 
-                  <div class="progress" style="width: 200px; margin: auto;">
-                    <div class="progress-bar" style="width:75%"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>(8)
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="progress" style="width: 200px; margin: auto;">
-                    <div class="progress-bar" style="width:50%"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>(7)
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="progress" style="width: 200px; margin: auto;">
-                    <div class="progress-bar" style="width:45%"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-sm-3">
-                  <div class="stars"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>(3)
-                  </div>
-                </div>
-                <div class="col-sm-3">
-                  <div class="progress" style="width: 200px; margin: auto;">
-                    <div class="progress-bar" style="width:10%"></div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -272,9 +322,9 @@
           <li>
             <a class="btn prev" id="btn-pgn-prev">
               <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 512" height="1em"
-                width="1em" xmlns="http://www.w3.org/2000/svg">
+                   width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z">
+                        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z">
                 </path>
               </svg>
             </a>
@@ -296,9 +346,9 @@
           </li>
           <li>
             <a id="btn-pgn-next" class="btn next"><svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                       viewBox="0 0 256 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z">
+                        d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z">
                 </path>
               </svg>
             </a>
@@ -320,7 +370,7 @@
               <div class="row">
                 <% relatedProduct1.forEach(function (product){ %>
                   <div class="col-lg-3 col-md-6"
-                    onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                     <div class="card text-center item-container">
                       <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                       <div class="card-body align-items-center">
@@ -337,7 +387,7 @@
                       </div>
                     </div>
                   </div>
-                  <% }); %>
+                <% }); %>
               </div>
             </div>
           </div>
@@ -346,7 +396,7 @@
               <div class="row">
                 <% relatedProduct2.forEach(function (product){ %>
                   <div class="col-lg-3 col-md-6"
-                    onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                     <div class="card text-center item-container">
                       <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                       <div class="card-body align-items-center">
@@ -363,7 +413,7 @@
                       </div>
                     </div>
                   </div>
-                  <% }); %>
+                <% }); %>
               </div>
             </div>
           </div>
@@ -372,7 +422,7 @@
               <div class="row">
                 <% relatedProduct3.forEach(function (product){ %>
                   <div class="col-lg-3 col-md-6"
-                    onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
+                       onclick="location.href='http://127.0.0.1:3000/products-detail?id=<%= product._id %>'">
                     <div class="card text-center item-container">
                       <img class="card-img-top image" height="150px" src="<%= product.images[0] %>">
                       <div class="card-body align-items-center">
@@ -389,17 +439,17 @@
                       </div>
                     </div>
                   </div>
-                  <% }); %>
+                <% }); %>
               </div>
             </div>
           </div>
         </div>
         <a style="width: 20px" class="carousel-control-prev" href="#carouselExampleDark" role="button"
-          data-bs-slide="prev">
+           data-bs-slide="prev">
           <span class="carousel-control-prev-icon fa-4x" aria-hidden="true"></span>
         </a>
         <a style="width: 20px; margin-left:30px" class="carousel-control-next" href="#carouselExampleDark" role="button"
-          data-bs-slide="next">
+           data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </a>
@@ -537,10 +587,10 @@
         "images": [
 
         ]
-      },  
+      },
     ],
     [
-     
+
       {
         "avt": "https://scontent.fvca1-1.fna.fbcdn.net/v/t1.0-1/p100x100/50787638_946272402229348_5975798959128444928_n.jpg?_nc_cat=105&ccb=2&_nc_sid=7206a8&_nc_ohc=dO28-qeuhWwAX8tCxaI&_nc_oc=AQkYPInuZKl06bdLEZXH1prAqzz0LIh2L_ApgRx2rip_WNy7201T_mfzUJeEDy9rQE4&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.fvca1-1.fna&tp=6&oh=92187d500462113004382f0293ceee09&oe=6015F6EC",
         "name": "Tuấn Tuấn Tuấn",

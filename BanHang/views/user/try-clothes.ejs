@@ -83,11 +83,16 @@
             var modal = document.getElementById("myModal");
             modal.style.display = "none";
         }
-        function addCart()
+        function addCart(id)
         {
             if(selectID!='')
             {
                 let url = 'http://127.0.0.1:3000/try-clothes?gender=' + storeGender + '&&type=' + storeType + '&&id=' + selectID;
+                return window.location= url;
+            }
+            else if(id!=null)
+            {
+                let url = 'http://127.0.0.1:3000/try-clothes?gender=' + storeGender + '&&type=' + storeType + '&&id=' + id;
                 return window.location= url;
             }
             else{
@@ -107,12 +112,18 @@
                 modal.style.display = "block";
             }
         }
-        function quickBuy()
+        function quickBuy(id)
         {
             if(selectID!='')
             {
                 const num = 1;
                 let url = 'http://127.0.0.1:3000/quick-buy?id=' + selectID  + '&&amount=' + num;
+                return window.location= url;
+            }
+            else if(id!=null)
+            {
+                const num = 1;
+                let url = 'http://127.0.0.1:3000/quick-buy?id=' + id  + '&&amount=' + num;
                 return window.location= url;
             }
             else{
@@ -128,7 +139,7 @@
         <div class="col-sm-3">
             <% if(selectedProducts.length > 0) {%>
                 <div class="card">
-                    <div class="row" style="font-size: x-large; font-weight: bolder; margin: auto; width: 75%; padding: 10px;">
+                    <div class="row justify-content-md-center" style="font-size: x-large; font-weight: bolder; margin: auto; width: 75%; padding: 10px;">
                             Giỏ hàng của bạn
                     </div>
                     <div class="card-body">
@@ -238,7 +249,6 @@
                         <div class="row justify-content-center">
                             <i class="fas fa-equals fa-4x"></i>
                         </div>
-
                     </div>
                     <!--Result-->
                     <div class="col-sm-3">
@@ -258,9 +268,18 @@
 
                 </div>
                 <div class="row justify-content-center" style="margin-top: 30px">
-                    <a onclick="quickBuy()" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
-                    <div class="col-sm-1"></div>
-                    <a style="font-size: large;" class="abc col-sm-3" onclick="addCart()">Thêm vào giỏ hàng</a>
+
+                    <% if(producted!=null){ %>
+                        <a onclick="quickBuy(<%=producted._id%>)" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
+                        <div class="col-sm-1"></div>
+                        <a style="font-size: large;" class="abc col-sm-3" onclick="addCart(<%=producted._id%>)">Thêm vào giỏ hàng</a>
+                    <% } else{ %>
+                            <a onclick="quickBuy(null)" style="font-size: large;" class="abc col-sm-3" >Mua ngay</a>
+                            <div class="col-sm-1"></div>
+                            <a style="font-size: large;" class="abc col-sm-3" onclick="addCart(null)">Thêm vào giỏ hàng</a>
+                    <% } %>
+
+
                 </div>
             </div>
         </div>
