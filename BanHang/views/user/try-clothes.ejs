@@ -101,11 +101,16 @@
             }
             // let url = 'http://127.0.0.1:3000/try-clothes?gender=' + gender + '&&type=' + type + '&&id=' + selectID;
         }
-        function tryClothes()
+        function tryClothes(id)
         {
             if(selectID!=''&&picLocal==true)
             {
                 document.getElementById('resultPic').src = "user/images/try-clothes/image3.jpg"
+            }
+            else if(id!=null&&picLocal==true)
+            {
+                document.getElementById('resultPic').src = "user/images/try-clothes/image3.jpg"
+                return window.location= url;
             }
             else{
                 var modal = document.getElementById("myModal");
@@ -258,12 +263,15 @@
                     </div>
                 </div>
                 <div class="row justify-content-center" style="margin-top: 50px">
-                    <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="tryClothes()">Thử đồ</a>
-                    <div class="col-sm-1"></div>
+
                     <% if(producted!=null){ %>
+                        <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="tryClothes(<%=producted._id%>)">Thử đồ</a>
+                        <div class="col-sm-1"></div>
                         <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="toDetail(<%=producted._id%>)">Chi tiết sản phẩm</a>
                     <% } else{ %>
-                    <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="toDetail(null)">Chi tiết sản phẩm</a>
+                        <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="tryClothes(null)">Thử đồ</a>
+                        <div class="col-sm-1"></div>
+                        <a style="font-size: large;" target="_blank" class="abc col-sm-3" onclick="toDetail(null)">Chi tiết sản phẩm</a>
                     <% } %>
 
                 </div>
